@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP | yogeshsn</title>
+<meta property="og:title" content="Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP | yogeshsn" />
+<meta name="twitter:title" content="Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP | yogeshsn" />
+<meta itemprop="name" content="Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP | yogeshsn" />
+<meta name="application-name" content="Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP | yogeshsn" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="www.yogeshsn.com.np" />
+  <meta property="og:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image:src" content="www.yogeshsn.com.np" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.1">
+
+    
+
+    <link rel="canonical" href="www.yogeshsn.com.np/references/optimization/minlp/">
+    <link href="/www.yogeshsn.com.np/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/www.yogeshsn.com.np/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/www.yogeshsn.com.np/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/www.yogeshsn.com.np/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/www.yogeshsn.com.np/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/www.yogeshsn.com.np/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/www.yogeshsn.com.np/favicon.ico">
+
+
+
+
+<link rel="manifest" href="/www.yogeshsn.com.np/site.webmanifest">
+
+<meta name="msapplication-config" content="/www.yogeshsn.com.np/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/www.yogeshsn.com.np/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "" class="notransition">
+
+<script src="/www.yogeshsn.com.np/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="www.yogeshsn.com.np/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/about/yogesh">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/references/">
+                        References
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-07-04T17:53:39&#43;05:45" itemprop="datePublished"> Jul 4, 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h3 id="setting-up-the-environment">Setting up the Environment</h3>
+<ol>
+<li>
+<p><strong>Download and Install Couenne</strong>: Couenne is an open-source solver for MINLP problems, developed as part of the COIN-OR project. You can download the latest version of Couenne from the <a href="https://www.coin-or.org/downloading/">COIN-OR download page</a>. Make sure to download the binary package that matches your operating system.</p>
+</li>
+<li>
+<p><strong>Add Couenne to your System Path</strong>: After downloading and extracting the Couenne package, you need to add the location of the <code>couenne.exe</code> executable to your system&rsquo;s <code>PATH</code> environment variable. This will allow Pyomo to find and use the Couenne solver.</p>
+<ul>
+<li>On Windows, you can do this by right-clicking on &ldquo;This PC&rdquo; (or &ldquo;Computer&rdquo;), selecting &ldquo;Properties&rdquo;, then &ldquo;Advanced system settings&rdquo;, and finally the &ldquo;Environment Variables&rdquo; button. In the system variables, find the <code>PATH</code> variable and add the path to the Couenne <code>bin</code> directory (e.g., <code>C:\path\to\Couenne\bin</code>).</li>
+<li>On Linux or macOS, you can add the Couenne <code>bin</code> directory to your <code>PATH</code> by editing your shell configuration file (e.g., <code>.bashrc</code>, <code>.bash_profile</code>, or <code>.zshrc</code>) and adding the following line: <code>export PATH=&quot;/path/to/Couenne/bin:$PATH&quot;</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Install Pyomo</strong>: If you haven&rsquo;t already, install the Pyomo optimization modeling language. You can do this using pip: <code>pip install pyomo</code>.</p>
+</li>
+</ol>
+<p>Now that your environment is set up, let&rsquo;s solve a MINLP problem using Pyomo and Couenne.</p>
+<h3 id="solving-a-minlp-problem">Solving a MINLP Problem</h3>
+<p>Consider the following MINLP problem:</p>
+<pre tabindex="0"><code>Minimize: (x - 2)^2 + (y - 2)^2
+Subject to:
+  x + 2y &lt;= 3
+  8x + 5y &gt;= 10
+  x, y &gt;= 0
+  x is integer
+</code></pre><p>We can model and solve this problem using Pyomo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pyomo.environ</span> <span class="k">as</span> <span class="nn">pyo</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyomo.environ</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyomo.opt</span> <span class="kn">import</span> <span class="n">SolverFactory</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create model</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">ConcreteModel</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create variables</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">within</span><span class="o">=</span><span class="n">Integers</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Var</span><span class="p">(</span><span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Constraints</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">C1</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">C2</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="mi">8</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Objective Function</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">Objective</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sense</span><span class="o">=</span><span class="n">minimize</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Solve the model using Couenne</span>
+</span></span><span class="line"><span class="cl"><span class="n">optimum</span> <span class="o">=</span> <span class="n">SolverFactory</span><span class="p">(</span><span class="s1">&#39;couenne&#39;</span><span class="p">,</span> <span class="n">executable</span><span class="o">=</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">path</span><span class="se">\\</span><span class="s1">to</span><span class="se">\\</span><span class="s1">couenne.exe&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">results</span> <span class="o">=</span> <span class="n">optimum</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x_value</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y_value</span> <span class="o">=</span> <span class="n">pyo</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Optimal values: x = </span><span class="si">{</span><span class="n">x_value</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, y = </span><span class="si">{</span><span class="n">y_value</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Here&rsquo;s what&rsquo;s happening in the code:</p>
+<ol>
+<li>We import the necessary Pyomo modules.</li>
+<li>We create a <code>ConcreteModel</code> instance to hold our problem definition.</li>
+<li>We define the decision variables <code>x</code> and <code>y</code>, with <code>x</code> being an integer variable and <code>y</code> being a continuous variable.</li>
+<li>We add the constraints to the model using the <code>Constraint</code> class.</li>
+<li>We define the objective function using the <code>Objective</code> class.</li>
+<li>We create a Couenne solver instance using <code>SolverFactory('couenne', executable='...')</code> and provide the path to the <code>couenne.exe</code> executable.</li>
+<li>We solve the model using the <code>solve</code> method and print the optimal values of <code>x</code> and <code>y</code>.</li>
+</ol>
+<p>When you run this code, it will output the optimal solution:</p>
+<pre tabindex="0"><code>Optimal values: x = 1.000, y = 1.000
+</code></pre><p><img src="https://images2.imgbox.com/51/92/ggItWhio_o.png" alt=""></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>In this tutorial, you learned how to solve a mixed integer nonlinear programming problem using Pyomo and the Couenne solver. By setting up your environment correctly and using the appropriate Pyomo constructs, you can leverage the power of Couenne to tackle a wide range of MINLP problems. Remember to update the path to the <code>couenne.exe</code> executable in your code to match the location on your system.</p>
+<h2 id="solving-mixed-integer-nonlinear-programs-with-pyscipopt">Solving Mixed Integer Nonlinear Programs with PySCIPOpt</h2>
+<p>In addition to Couenne solver, lets use SCIP. we will solve a mixed integer nonlinear programming (MINLP) problem using the PySCIPOpt library, which provides a Python interface to the SCIP optimization suite.</p>
+<h3 id="setting-up-the-environment-1">Setting up the Environment</h3>
+<ol>
+<li>
+<p><strong>Install PySCIPOpt</strong>: You can install PySCIPOpt using pip:</p>
+<pre tabindex="0"><code>pip install pyscipopt
+</code></pre></li>
+<li>
+<p><strong>Install SCIP</strong>: PySCIPOpt requires the SCIP optimization suite to be installed on your system. You can download and install SCIP from the <a href="https://www.scipopt.org/index.php#download">SCIP Optimization Suite website</a>.</p>
+</li>
+</ol>
+<p>Now that your environment is set up, let&rsquo;s solve a MINLP problem using PySCIPOpt.</p>
+<h3 id="solving-a-minlp-problem-1">Solving a MINLP Problem</h3>
+<p>Consider the following MINLP problem:</p>
+<pre tabindex="0"><code>Maximize: z
+Subject to:
+  z = -x^2 - y^2 + 4x + 6y
+  x + y &lt;= 2
+  -2x + 12 - 3y &gt;= 0
+  x, z &gt;= 0
+  y is integer
+</code></pre><p>We can model and solve this problem using PySCIPOpt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyscipopt</span> <span class="kn">import</span> <span class="n">Model</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="s1">&#39;NON-LINEAR&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addVar</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addVar</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">vtype</span><span class="o">=</span><span class="s2">&#34;INTEGER&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">addVar</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set objective function</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">setObjective</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">sense</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">addCons</span><span class="p">(</span><span class="n">z</span> <span class="o">==</span> <span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">addCons</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">addCons</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">sol</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">getBestSol</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">sol</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
+</span></span></code></pre></div><p>Here&rsquo;s what&rsquo;s happening in the code:</p>
+<ol>
+<li>We import the <code>Model</code> class from the <code>pyscipopt</code> module.</li>
+<li>We create a <code>Model</code> instance with the name &lsquo;NON-LINEAR&rsquo;.</li>
+<li>We define the decision variables <code>x</code>, <code>y</code>, and <code>z</code> using the <code>addVar</code> method. We specify <code>y</code> as an integer variable using the <code>vtype</code> parameter.</li>
+<li>We set the objective function using the <code>setObjective</code> method, specifying <code>z</code> as the objective variable and the maximization sense.</li>
+<li>We add the constraints to the model using the <code>addCons</code> method.</li>
+<li>We optimize the model using the <code>optimize</code> method.</li>
+<li>We retrieve the optimal solution using the <code>getBestSol</code> method and print the values of <code>x</code> and <code>y</code>.</li>
+</ol>
+<p>When you run this code, it will output the optimal solution:</p>
+<pre tabindex="0"><code>0, 2
+</code></pre><p><img src="https://images2.imgbox.com/0d/e2/UcbmdF5m_o.png" alt=""></p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>In this tutorial, you learned how to solve a mixed integer nonlinear programming problem using PySCIPOpt. By leveraging the power of the SCIP optimization suite through the PySCIPOpt library, you can tackle a wide range of MINLP problems in Python. PySCIPOpt provides a user-friendly interface for defining variables, constraints, and objective functions, making it easy to model and solve optimization problems.</p>
+<p>Remember to install both PySCIPOpt and the SCIP optimization suite to ensure that your environment is properly set up for solving MINLP problems.</p>
+<p>Citations:
+[1] <a href="https://www.coin-or.org/downloading/">https://www.coin-or.org/downloading/</a>
+[2] <a href="https://www.coin-or.org/Couenne/">https://www.coin-or.org/Couenne/</a>
+[3] <a href="https://ampl.com/products/solvers/all-solvers-for-ampl/">https://ampl.com/products/solvers/all-solvers-for-ampl/</a>
+[4] <a href="https://en.wikipedia.org/wiki/Couenne">https://en.wikipedia.org/wiki/Couenne</a>
+[5] <a href="https://github.com/coin-or/Couenne">https://github.com/coin-or/Couenne</a>
+[6] <a href="https://github.com/coin-or/Couenne/blob/master/src/couenne.opt">https://github.com/coin-or/Couenne/blob/master/src/couenne.opt</a>
+[7] <a href="https://stackoverflow.com/questions/48055852/installing-couenne-solver-on-pythons-pymo-extension">https://stackoverflow.com/questions/48055852/installing-couenne-solver-on-pythons-pymo-extension</a>
+[8] <a href="https://stackoverflow.com/questions/78186211/pyomo-not-loading-solvers-couenne-bonmin-from-ampl">https://stackoverflow.com/questions/78186211/pyomo-not-loading-solvers-couenne-bonmin-from-ampl</a>
+[9] <a href="https://discourse.julialang.org/t/couenne-with-julia/43216">https://discourse.julialang.org/t/couenne-with-julia/43216</a>
+[10] <a href="https://coin-or.github.io/user_introduction.html">https://coin-or.github.io/user_introduction.html</a>
+[11] <a href="https://www.youtube.com/watch?v=f0uwyRaXmcw">https://www.youtube.com/watch?v=f0uwyRaXmcw</a>
+[12] <a href="https://www.coin-or.org/Couenne/couenne-user-manual.pdf">https://www.coin-or.org/Couenne/couenne-user-manual.pdf</a>
+[13] <a href="https://groups.google.com/g/pyomo-forum/c/X84xr2RXMuc">https://groups.google.com/g/pyomo-forum/c/X84xr2RXMuc</a>
+[14] <a href="http://www.jdhp.org/docs/notebook/python_pyomo_getting_started_0_installation_instructions_pyomo_and_solvers.html">http://www.jdhp.org/docs/notebook/python_pyomo_getting_started_0_installation_instructions_pyomo_and_solvers.html</a></p>
+
+            </div>
+        </article></main>
+</div>
+
+
+        <hr>
+        <div style="text-align: center; font-weight: 800; margin: 20px; color:red">
+            <p class="quote" id="daily-quote">
+                
+            </p>
+        </div><footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://x.com/yogesh__sn" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/@palpasky6909/videos" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/yogesh-sn%f0%9f%87%b3%f0%9f%87%b5-1926b8184" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://www.instagram.com/livingonnature" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Yogesh SN.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="/www.yogeshsn.com.np/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
+<script>
+    
+    const quotes = [
+"The day a man becomes superior to pleasure he will also be superior to pain - Seneca",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment - Buddha",
+"Life is what happens when you're busy making other plans - John Lennon",
+"To live is the rarest thing in the world. Most people exist, that is all - Oscar Wilde",
+"The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela",
+"In the end, we will remember not the words of our enemies, but the silence of our friends - Martin Luther King Jr.",
+"The best way to predict the future is to create it - Peter Drucker",
+"You miss 100% of the shots you don't take - Wayne Gretzky",
+"I have not failed. I've just found 10,000 ways that won't work - Thomas Edison",
+"The only limit to our realization of tomorrow is our doubts of today - Franklin D. Roosevelt",
+"The purpose of our lives is to be happy - Dalai Lama",
+"Life is really simple, but we insist on making it complicated - Confucius",
+"May you live all the days of your life - Jonathan Swift",
+"Good friends, good books, and a sleepy conscience: this is the ideal life - Mark Twain",
+"To love and be loved is to feel the sun from both sides - David Viscott",
+"Keep calm and carry on - British Government, 1939",
+"Believe you can and you're halfway there - Theodore Roosevelt",
+"Act as if what you do makes a difference. It does - William James",
+"Success is not final, failure is not fatal: It is the courage to continue that counts - Winston Churchill",
+"Never bend your head. Always hold it high. Look the world straight in the eye - Helen Keller",
+"What you get by achieving your goals is not as important as what you become by achieving your goals - Zig Ziglar",
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one that has been opened for us - Helen Keller",
+"It is never too late to be what you might have been - George Eliot",
+"You must be the change you wish to see in the world - Mahatma Gandhi",
+"If you want to live a happy life, tie it to a goal, not to people or things - Albert Einstein",
+"The only impossible journey is the one you never begin - Tony Robbins",
+"It does not matter how slowly you go as long as you do not stop - Confucius",
+"Everything you’ve ever wanted is on the other side of fear - George Addair",
+"Change your thoughts and you change your world - Norman Vincent Peale",
+"No one can make you feel inferior without your consent - Eleanor Roosevelt",
+"Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
+"The best way to find yourself is to lose yourself in the service of others - Mahatma Gandhi",
+"The future belongs to those who believe in the beauty of their dreams - Eleanor Roosevelt",
+"Don't watch the clock; do what it does. Keep going - Sam Levenson",
+"If life were predictable it would cease to be life, and be without flavor - Eleanor Roosevelt",
+"In the end, it’s not the years in your life that count. It’s the life in your years - Abraham Lincoln",
+"Success usually comes to those who are too busy to be looking for it - Henry David Thoreau",
+"Hardships often prepare ordinary people for an extraordinary destiny - C.S. Lewis",
+"What lies behind us and what lies before us are tiny matters compared to what lies within us - Ralph Waldo Emerson",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle - Christian D. Larson",
+"Perfection is not attainable, but if we chase perfection we can catch excellence - Vince Lombardi",
+"Life is what happens when you're busy making other plans - John Lennon",
+"When we strive to become better than we are, everything around us becomes better too - Paulo Coelho",
+"I can't change the direction of the wind, but I can adjust my sails to always reach my destination - Jimmy Dean",
+"Life is 10% what happens to us and 90% how we react to it - Charles R. Swindoll",
+"You are never too old to set another goal or to dream a new dream - C.S. Lewis",
+"A journey of a thousand miles begins with a single step - Lao Tzu",
+"Happiness is not a goal...it's a by-product of a life well-lived - Eleanor Roosevelt",
+"In three words I can sum up everything I've learned about life: it goes on - Robert Frost",
+"You only live once, but if you do it right, once is enough - Mae West",
+"The best time to plant a tree was 20 years ago. The second best time is now - Chinese Proverb",
+"Do not wait to strike till the iron is hot; but make it hot by striking - William Butler Yeats",
+"The biggest adventure you can take is to live the life of your dreams - Oprah Winfrey",
+"If you can dream it, you can achieve it - Zig Ziglar",
+"The best way out is always through - Robert Frost",
+"The only person you are destined to become is the person you decide to be - Ralph Waldo Emerson",
+"The greatest pleasure in life is doing what people say you cannot do - Walter Bagehot",
+"Success is not how high you have climbed, but how you make a positive difference to the world - Roy T. Bennett",
+"Your time is limited, don't waste it living someone else's life - Steve Jobs",
+"The best revenge is massive success - Frank Sinatra",
+"Do what you can, with what you have, where you are - Theodore Roosevelt",
+"You have within you right now, everything you need to deal with whatever the world can throw at you - Brian Tracy",
+"The mind is everything. What you think you become - Buddha",
+"The only way to achieve the impossible is to believe it is possible - Charles Kingsleigh",
+"Don’t let yesterday take up too much of today - Will Rogers",
+"What we think, we become - Buddha",
+"We must not allow other people's limited perceptions to define us - Virginia Satir",
+"If you want to lift yourself up, lift up someone else - Booker T. Washington",
+"Start where you are. Use what you have. Do what you can - Arthur Ashe",
+"I find that the harder I work, the more luck I seem to have - Thomas Jefferson",
+"Life is short, and it is up to you to make it sweet - Sarah Louise Delany",
+"When the going gets tough, the tough get going - Joseph Kennedy",
+"When you cease to dream you cease to live - Malcolm Forbes",
+"You can't go back and change the beginning, but you can start where you are and change the ending - C.S. Lewis",
+"Your life does not get better by chance, it gets better by change - Jim Rohn",
+"The harder the conflict, the more glorious the triumph - Thomas Paine",
+"You are enough just as you are - Meghan Markle",
+"Every moment is a fresh beginning - T.S. Eliot",
+"The unexamined life is not worth living - Socrates",
+"Dream big and dare to fail - Norman Vaughan",
+"Turn your wounds into wisdom - Oprah Winfrey",
+"Don't wait. The time will never be just right - Napoleon Hill",
+"You get what you give - Jennifer Lopez",
+"Tough times never last, but tough people do - Robert H. Schuller",
+"If you do what you’ve always done, you’ll get what you’ve always gotten - Tony Robbins",
+"The secret of getting ahead is getting started - Mark Twain",
+"Only those who dare to fail greatly can ever achieve greatly - Robert F. Kennedy",
+"Keep your eyes on the stars and your feet on the ground - Theodore Roosevelt",
+"Success is not in what you have, but who you are - Bo Bennett",
+"Do not follow where the path may lead. Go instead where there is no path and leave a trail - Ralph Waldo Emerson",
+"The best way to appreciate your job is to imagine yourself without one - Oscar Wilde",
+"Change your life today. Don’t gamble on the future, act now, without delay - Simone de Beauvoir",
+"Your worth consists in what you are and not in what you have - Thomas Edison",
+"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart - Roy T. Bennett",
+"Every man must learn this simple truth: Pain is inevitable and suffering is optional",
+"In the heat of battle, the fog of war, under pressure,   The undisciplined die "
+];
+
+    
+    function displayDailyQuote() {
+        const randomIndex = Math.floor(Math.random()*quotes.length);
+        const quote = quotes[randomIndex];
+        document.getElementById('daily-quote').innerText = quote;
+    }
+
+    
+    displayDailyQuote();
+</script>

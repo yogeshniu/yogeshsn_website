@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Python Tutorial: Using random and numpy Libraries | yogeshsn</title>
+<meta property="og:title" content="Python Tutorial: Using random and numpy Libraries | yogeshsn" />
+<meta name="twitter:title" content="Python Tutorial: Using random and numpy Libraries | yogeshsn" />
+<meta itemprop="name" content="Python Tutorial: Using random and numpy Libraries | yogeshsn" />
+<meta name="application-name" content="Python Tutorial: Using random and numpy Libraries | yogeshsn" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="www.yogeshsn.com.np" />
+  <meta property="og:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image:src" content="www.yogeshsn.com.np" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-05-31T09:16:04&#43;0545 />
+    <meta property="article:published_time" content=2024-05-31T09:16:04&#43;0545 />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Python Tutorial: Using random and numpy Libraries",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-05-31",
+        "description": "",
+        "wordCount":  642 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-05-31",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "yogeshsn"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.121.1">
+
+    
+
+    <link rel="canonical" href="www.yogeshsn.com.np/posts/python_numpyrand/">
+    <link href="/www.yogeshsn.com.np/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/www.yogeshsn.com.np/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/www.yogeshsn.com.np/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/www.yogeshsn.com.np/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/www.yogeshsn.com.np/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/www.yogeshsn.com.np/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/www.yogeshsn.com.np/favicon.ico">
+
+
+
+
+<link rel="manifest" href="/www.yogeshsn.com.np/site.webmanifest">
+
+<meta name="msapplication-config" content="/www.yogeshsn.com.np/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/www.yogeshsn.com.np/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "" class="notransition">
+
+<script src="/www.yogeshsn.com.np/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="www.yogeshsn.com.np/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/about/yogesh">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/references/">
+                        References
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Python Tutorial: Using random and numpy Libraries</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-05-31T09:16:04&#43;05:45" itemprop="datePublished"> May 31, 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="python-tutorial-using-random-and-numpy-libraries">Python Tutorial: Using <code>random</code> and <code>numpy</code> Libraries</h1>
+<p>In this tutorial, we&rsquo;ll learn how to use the <code>random</code> and <code>numpy</code> libraries in Python. These libraries are powerful tools for generating random numbers and performing numerical operations. We&rsquo;ll cover everything step-by-step so it&rsquo;s easy to understand.</p>
+<h2 id="importing-libraries">Importing Libraries</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span></code></pre></div><ul>
+<li><code>import random</code>: This imports the <code>random</code> module, which allows us to generate random numbers and make random choices.</li>
+<li><code>import numpy as np</code>: This imports the <code>numpy</code> library, a powerful tool for numerical operations, and we use the alias <code>np</code> for convenience.</li>
+</ul>
+<h2 id="using-the-random-module">Using the <code>random</code> Module</h2>
+<h3 id="generating-random-numbers">Generating Random Numbers</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Random Integer between 1 and 10:&#34;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><code>random.randint(1, 10)</code>: Generates a random integer between 1 and 10 (inclusive).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Random float between 0 and 1: </span><span class="si">{:.3f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+</span></span></code></pre></div><ul>
+<li><code>random.random()</code>: Generates a random float between 0.0 and 1.0.</li>
+<li><code>&quot;{:.3f}&quot;.format(value)</code>: Formats the float to three decimal places.</li>
+</ul>
+<h3 id="choosing-a-random-element-from-a-list">Choosing a Random Element from a List</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Random choice from list:&#34;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Nepal&#39;</span><span class="p">,</span> <span class="s1">&#39;India&#39;</span><span class="p">,</span> <span class="s1">&#39;China&#39;</span><span class="p">,</span> <span class="s1">&#39;Bhutan&#39;</span><span class="p">,</span> <span class="s1">&#39;Bangladesh&#39;</span><span class="p">,</span> <span class="s1">&#39;Pakistan&#39;</span><span class="p">,</span> <span class="s1">&#39;Afghanistan&#39;</span><span class="p">,</span> <span class="s1">&#39;Iran&#39;</span><span class="p">,</span> <span class="s1">&#39;Iraq&#39;</span><span class="p">,</span> <span class="s1">&#39;Turkey&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Greece&#39;</span><span class="p">,</span> <span class="s1">&#39;Italy&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">,</span> <span class="s1">&#39;Portugal&#39;</span><span class="p">,</span> <span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span> <span class="s1">&#39;Ireland&#39;</span><span class="p">,</span> <span class="s1">&#39;Iceland&#39;</span><span class="p">,</span> <span class="s1">&#39;Canada&#39;</span><span class="p">,</span> <span class="s1">&#39;United States&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]))</span>
+</span></span></code></pre></div><ul>
+<li><code>random.choice(list)</code>: Selects a random element from the provided list.</li>
+</ul>
+<h3 id="shuffling-a-list">Shuffling a List</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Random shuffled list: </span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="mi">7</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>random.sample(range(8), 7)</code>: Returns a list of 7 unique elements randomly chosen from the range 0 to 7 (essentially a shuffled list).</li>
+</ul>
+<h3 id="setting-a-seed-for-reproducibility">Setting a Seed for Reproducibility</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Random Integer with seed 42:&#34;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><code>random.seed(42)</code>: Sets the seed for the random number generator to 42, ensuring that the sequence of random numbers can be reproduced.</li>
+<li><code>random.randint(1, 10)</code>: Generates a random integer between 1 and 10, which will be the same every time the seed is set to 42.</li>
+</ul>
+<h2 id="using-numpy-for-numerical-operations">Using <code>numpy</code> for Numerical Operations</h2>
+<h3 id="generating-random-numbers-with-numpy">Generating Random Numbers with <code>numpy</code></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">random_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Random Integer Array:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">random_int_array</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>np.random.randint(1, 10, size=(3, 3))</code>: Creates a 3x3 array with random integers between 1 and 9.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">random_float_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Random Float Array:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">random_float_array</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>np.random.rand(3, 3)</code>: Creates a 3x3 array with random floats between 0.0 and 1.0.</li>
+</ul>
+<h3 id="generating-numbers-from-a-normal-distribution">Generating Numbers from a Normal Distribution</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">normal_dist_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Normal Distribution Array:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">normal_dist_array</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>np.random.normal(0, 1, size=(3, 3))</code>: Creates a 3x3 array with random numbers from a normal (Gaussian) distribution with mean 0 and standard deviation 1.</li>
+</ul>
+<h3 id="setting-a-seed-for-reproducibility-in-numpy">Setting a Seed for Reproducibility in <code>numpy</code></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Random Float with seed 42:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><code>np.random.seed(42)</code>: Sets the seed for NumPy&rsquo;s random number generator to 42.</li>
+<li><code>np.random.rand(3, 3)</code>: Creates a 3x3 array with random floats between 0.0 and 1.0, which will be the same every time the seed is set to 42.</li>
+</ul>
+<h2 id="array-operations-with-numpy">Array Operations with <code>numpy</code></h2>
+<h3 id="basic-array-operations">Basic Array Operations</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Array1:&#34;</span><span class="p">,</span> <span class="n">array1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Array2:&#34;</span><span class="p">,</span> <span class="n">array2</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>np.array([1, 2, 3])</code>: Creates a NumPy array from the list <code>[1, 2, 3]</code>.</li>
+<li><code>np.array([4, 5, 6])</code>: Creates a NumPy array from the list <code>[4, 5, 6]</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Sum of Arrays:&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><code>np.add(array1, array2)</code>: Adds <code>array1</code> and <code>array2</code> element-wise.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Element-wise Multiplication:&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><code>np.multiply(array1, array2)</code>: Multiplies <code>array1</code> and <code>array2</code> element-wise.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Dot Product:&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><code>np.dot(array1, array2)</code>: Computes the dot product of <code>array1</code> and <code>array2</code>.</li>
+</ul>
+<h3 id="statistical-operations">Statistical Operations</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Data Mean: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Data Standard Deviation: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Data Variance: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>np.random.rand(1000)</code>: Creates an array of 1000 random floats between 0.0 and 1.0.</li>
+<li><code>np.mean(data)</code>: Calculates the mean (average) of the data.</li>
+<li><code>np.std(data)</code>: Calculates the standard deviation of the data.</li>
+<li><code>np.var(data)</code>: Calculates the variance of the data.</li>
+</ul>
+<h3 id="reshaping-arrays">Reshaping Arrays</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">reshaped_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Reshaped Array:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">reshaped_array</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><code>np.arange(12)</code>: Creates an array with values from 0 to 11.</li>
+<li><code>reshape((3, 4))</code>: Reshapes the array into a 3x4 array.</li>
+</ul>
+<h3 id="slicing-arrays">Slicing Arrays</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Sliced Array:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">reshaped_array</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</span></span></code></pre></div><ul>
+<li><code>reshaped_array[:, 1:3]</code>: Slices the array to extract all rows and columns 1 and 2 (excluding column 3).</li>
+</ul>
+<p>This tutorial covers the basics of using the <code>random</code> and <code>numpy</code> libraries in Python. By following these examples, you&rsquo;ll gain a solid understanding of how to generate random numbers, perform numerical operations, and manipulate arrays. Happy coding!</p>
+
+            </div>
+        </article></main>
+</div>
+
+
+        <hr>
+        <div style="text-align: center; font-weight: 800; margin: 20px; color:red">
+            <p class="quote" id="daily-quote">
+                
+            </p>
+        </div><footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://x.com/yogesh__sn" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/@palpasky6909/videos" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/yogesh-sn%f0%9f%87%b3%f0%9f%87%b5-1926b8184" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://www.instagram.com/livingonnature" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Yogesh SN.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="/www.yogeshsn.com.np/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
+<script>
+    
+    const quotes = [
+"The day a man becomes superior to pleasure he will also be superior to pain - Seneca",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment - Buddha",
+"Life is what happens when you're busy making other plans - John Lennon",
+"To live is the rarest thing in the world. Most people exist, that is all - Oscar Wilde",
+"The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela",
+"In the end, we will remember not the words of our enemies, but the silence of our friends - Martin Luther King Jr.",
+"The best way to predict the future is to create it - Peter Drucker",
+"You miss 100% of the shots you don't take - Wayne Gretzky",
+"I have not failed. I've just found 10,000 ways that won't work - Thomas Edison",
+"The only limit to our realization of tomorrow is our doubts of today - Franklin D. Roosevelt",
+"The purpose of our lives is to be happy - Dalai Lama",
+"Life is really simple, but we insist on making it complicated - Confucius",
+"May you live all the days of your life - Jonathan Swift",
+"Good friends, good books, and a sleepy conscience: this is the ideal life - Mark Twain",
+"To love and be loved is to feel the sun from both sides - David Viscott",
+"Keep calm and carry on - British Government, 1939",
+"Believe you can and you're halfway there - Theodore Roosevelt",
+"Act as if what you do makes a difference. It does - William James",
+"Success is not final, failure is not fatal: It is the courage to continue that counts - Winston Churchill",
+"Never bend your head. Always hold it high. Look the world straight in the eye - Helen Keller",
+"What you get by achieving your goals is not as important as what you become by achieving your goals - Zig Ziglar",
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one that has been opened for us - Helen Keller",
+"It is never too late to be what you might have been - George Eliot",
+"You must be the change you wish to see in the world - Mahatma Gandhi",
+"If you want to live a happy life, tie it to a goal, not to people or things - Albert Einstein",
+"The only impossible journey is the one you never begin - Tony Robbins",
+"It does not matter how slowly you go as long as you do not stop - Confucius",
+"Everything you’ve ever wanted is on the other side of fear - George Addair",
+"Change your thoughts and you change your world - Norman Vincent Peale",
+"No one can make you feel inferior without your consent - Eleanor Roosevelt",
+"Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
+"The best way to find yourself is to lose yourself in the service of others - Mahatma Gandhi",
+"The future belongs to those who believe in the beauty of their dreams - Eleanor Roosevelt",
+"Don't watch the clock; do what it does. Keep going - Sam Levenson",
+"If life were predictable it would cease to be life, and be without flavor - Eleanor Roosevelt",
+"In the end, it’s not the years in your life that count. It’s the life in your years - Abraham Lincoln",
+"Success usually comes to those who are too busy to be looking for it - Henry David Thoreau",
+"Hardships often prepare ordinary people for an extraordinary destiny - C.S. Lewis",
+"What lies behind us and what lies before us are tiny matters compared to what lies within us - Ralph Waldo Emerson",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle - Christian D. Larson",
+"Perfection is not attainable, but if we chase perfection we can catch excellence - Vince Lombardi",
+"Life is what happens when you're busy making other plans - John Lennon",
+"When we strive to become better than we are, everything around us becomes better too - Paulo Coelho",
+"I can't change the direction of the wind, but I can adjust my sails to always reach my destination - Jimmy Dean",
+"Life is 10% what happens to us and 90% how we react to it - Charles R. Swindoll",
+"You are never too old to set another goal or to dream a new dream - C.S. Lewis",
+"A journey of a thousand miles begins with a single step - Lao Tzu",
+"Happiness is not a goal...it's a by-product of a life well-lived - Eleanor Roosevelt",
+"In three words I can sum up everything I've learned about life: it goes on - Robert Frost",
+"You only live once, but if you do it right, once is enough - Mae West",
+"The best time to plant a tree was 20 years ago. The second best time is now - Chinese Proverb",
+"Do not wait to strike till the iron is hot; but make it hot by striking - William Butler Yeats",
+"The biggest adventure you can take is to live the life of your dreams - Oprah Winfrey",
+"If you can dream it, you can achieve it - Zig Ziglar",
+"The best way out is always through - Robert Frost",
+"The only person you are destined to become is the person you decide to be - Ralph Waldo Emerson",
+"The greatest pleasure in life is doing what people say you cannot do - Walter Bagehot",
+"Success is not how high you have climbed, but how you make a positive difference to the world - Roy T. Bennett",
+"Your time is limited, don't waste it living someone else's life - Steve Jobs",
+"The best revenge is massive success - Frank Sinatra",
+"Do what you can, with what you have, where you are - Theodore Roosevelt",
+"You have within you right now, everything you need to deal with whatever the world can throw at you - Brian Tracy",
+"The mind is everything. What you think you become - Buddha",
+"The only way to achieve the impossible is to believe it is possible - Charles Kingsleigh",
+"Don’t let yesterday take up too much of today - Will Rogers",
+"What we think, we become - Buddha",
+"We must not allow other people's limited perceptions to define us - Virginia Satir",
+"If you want to lift yourself up, lift up someone else - Booker T. Washington",
+"Start where you are. Use what you have. Do what you can - Arthur Ashe",
+"I find that the harder I work, the more luck I seem to have - Thomas Jefferson",
+"Life is short, and it is up to you to make it sweet - Sarah Louise Delany",
+"When the going gets tough, the tough get going - Joseph Kennedy",
+"When you cease to dream you cease to live - Malcolm Forbes",
+"You can't go back and change the beginning, but you can start where you are and change the ending - C.S. Lewis",
+"Your life does not get better by chance, it gets better by change - Jim Rohn",
+"The harder the conflict, the more glorious the triumph - Thomas Paine",
+"You are enough just as you are - Meghan Markle",
+"Every moment is a fresh beginning - T.S. Eliot",
+"The unexamined life is not worth living - Socrates",
+"Dream big and dare to fail - Norman Vaughan",
+"Turn your wounds into wisdom - Oprah Winfrey",
+"Don't wait. The time will never be just right - Napoleon Hill",
+"You get what you give - Jennifer Lopez",
+"Tough times never last, but tough people do - Robert H. Schuller",
+"If you do what you’ve always done, you’ll get what you’ve always gotten - Tony Robbins",
+"The secret of getting ahead is getting started - Mark Twain",
+"Only those who dare to fail greatly can ever achieve greatly - Robert F. Kennedy",
+"Keep your eyes on the stars and your feet on the ground - Theodore Roosevelt",
+"Success is not in what you have, but who you are - Bo Bennett",
+"Do not follow where the path may lead. Go instead where there is no path and leave a trail - Ralph Waldo Emerson",
+"The best way to appreciate your job is to imagine yourself without one - Oscar Wilde",
+"Change your life today. Don’t gamble on the future, act now, without delay - Simone de Beauvoir",
+"Your worth consists in what you are and not in what you have - Thomas Edison",
+"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart - Roy T. Bennett",
+"Every man must learn this simple truth: Pain is inevitable and suffering is optional",
+"In the heat of battle, the fog of war, under pressure,   The undisciplined die "
+];
+
+    
+    function displayDailyQuote() {
+        const randomIndex = Math.floor(Math.random()*quotes.length);
+        const quote = quotes[randomIndex];
+        document.getElementById('daily-quote').innerText = quote;
+    }
+
+    
+    displayDailyQuote();
+</script>

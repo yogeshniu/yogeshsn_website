@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">BigM Method, Python Program | yogeshsn</title>
+<meta property="og:title" content="BigM Method, Python Program | yogeshsn" />
+<meta name="twitter:title" content="BigM Method, Python Program | yogeshsn" />
+<meta itemprop="name" content="BigM Method, Python Program | yogeshsn" />
+<meta name="application-name" content="BigM Method, Python Program | yogeshsn" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="www.yogeshsn.com.np" />
+  <meta property="og:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image:src" content="www.yogeshsn.com.np" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.1">
+
+    
+
+    <link rel="canonical" href="www.yogeshsn.com.np/references/programming/bigm_method/">
+    <link href="/www.yogeshsn.com.np/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/www.yogeshsn.com.np/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/www.yogeshsn.com.np/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/www.yogeshsn.com.np/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/www.yogeshsn.com.np/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/www.yogeshsn.com.np/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/www.yogeshsn.com.np/favicon.ico">
+
+
+
+
+<link rel="manifest" href="/www.yogeshsn.com.np/site.webmanifest">
+
+<meta name="msapplication-config" content="/www.yogeshsn.com.np/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/www.yogeshsn.com.np/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "" class="notransition">
+
+<script src="/www.yogeshsn.com.np/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="www.yogeshsn.com.np/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/about/yogesh">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/references/">
+                        References
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">BigM Method, Python Program</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-06-17T13:23:35&#43;05:45" itemprop="datePublished"> Jun 17, 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>This is done as per the assignment of System Mathematics in First Semester of Hydropower Engineering by Yogesh Sharma Neupane and Submitted to Prof Dr. Bhola Nath Ghimire.</p>
+<hr>
+<h2 id="linear-programming--simplex-method">Linear Programming ~~ Simplex Method</h2>
+<p>This Python script solves linear programming problems using the Simplex Method. The code handles both maximization and minimization problems and includes error handling to ensure valid user input.</p>
+<h3 id="step-1-import-libraries-and-define-helper-functions">Step 1: Import Libraries and Define Helper Functions</h3>
+<h4 id="import-libraries">Import Libraries</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># For defining arrays and performing numerical operations</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s2">&#34;fixed&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="c1"># For printing only two decimal places</span>
+</span></span></code></pre></div><ul>
+<li><strong>numpy</strong>: This library is used to handle array operations efficiently.</li>
+<li><strong>set_printoptions</strong>: Configures the display of numpy arrays to show only two decimal places.</li>
+</ul>
+<h4 id="define-wrong_input-function">Define <code>wrong_input</code> Function</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">wrong_input</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Print an error message for invalid input</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error!!! Invalid Input. Please input the valid data: &#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>wrong_input</strong>: This function prints an error message when the user provides invalid input.</li>
+</ul>
+<h4 id="define-find_zj-function">Define <code>find_zj</code> Function</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_zj</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Calculate Zj value which is the sum of the product of basic values and corresponding xi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_col</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">basic_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">zj</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">col_index</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">zj_cj</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">-</span> <span class="n">cj</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span></code></pre></div><ul>
+<li><strong>find_zj</strong>: This function calculates the Zj values, representing the objective function coefficients for the current solution.</li>
+</ul>
+<h3 id="step-2-define-functions-to-find-pivot-column-and-row">Step 2: Define Functions to Find Pivot Column and Row</h3>
+<h4 id="define-find_pivot_col-function">Define <code>find_pivot_col</code> Function</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_pivot_col</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Finds the entering variable (pivot column) for the next iteration</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">opt_type</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">smallest</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">zj_cj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">smallest</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">largest</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">zj_cj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">largest</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">zj_cj</span><span class="p">)</span> <span class="k">if</span> <span class="n">opt_type</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">zj_cj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pc</span>
+</span></span></code></pre></div><ul>
+<li><strong>find_pivot_col</strong>: This function identifies the pivot column, which determines the entering variable for the next iteration.</li>
+</ul>
+<h4 id="define-find_pivot_row-function">Define <code>find_pivot_row</code> Function</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_pivot_row</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Finds the leaving variable (pivot row) for the next iteration</span>
+</span></span><span class="line"><span class="cl">    <span class="n">min_ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pivot_row</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">pc</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">col_index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ratio</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">col_index</span><span class="p">]</span> <span class="o">/</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">pc</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">ratio</span> <span class="o">&lt;</span> <span class="n">min_ratio</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">min_ratio</span> <span class="o">=</span> <span class="n">ratio</span>
+</span></span><span class="line"><span class="cl">                <span class="n">pivot_row</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">min_ratio</span> <span class="o">==</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basic_vars</span><span class="p">[</span><span class="n">pivot_row</span><span class="p">]</span> <span class="o">=</span> <span class="n">cj</span><span class="p">[</span><span class="n">pc</span><span class="p">]</span>  <span class="c1"># Update basic_vars with the leaving variable&#39;s coefficient</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Basic vars</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">basic_vars</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pivot_row</span>
+</span></span></code></pre></div><ul>
+<li><strong>find_pivot_row</strong>: This function identifies the pivot row, which determines the leaving variable for the next iteration.</li>
+</ul>
+<h3 id="step-3-update-rows-based-on-pivot-element">Step 3: Update Rows Based on Pivot Element</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">new_rows</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Updates the table by performing row operations to find the new pivot row</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pivot_element</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">pr</span><span class="p">][</span><span class="n">pc</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_col</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">table</span><span class="p">[</span><span class="n">pr</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">pr</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">/</span> <span class="n">pivot_element</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># To find other rows except pivot row</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">pr</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pivot_coeff</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">pc</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_col</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">-=</span> <span class="n">pivot_coeff</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="n">pr</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span></span></code></pre></div><ul>
+<li><strong>new_rows</strong>: This function updates the table by performing row operations to ensure all rows (except the pivot row) are adjusted correctly.</li>
+</ul>
+<h3 id="step-4-print-final-output">Step 4: Print Final Output</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">final_output</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Prints the final solution and the optimum value</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">opt_type</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">********** Maximization Successful!!! ************</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">********** Minimization Successful!!! ************</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">table</span><span class="p">[:,</span> <span class="n">j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2"> for X</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">col_index</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">The Optimum value is </span><span class="si">{</span><span class="n">zj</span><span class="p">[</span><span class="n">col_index</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>final_output</strong>: This function prints the final solution and the optimum value.</li>
+</ul>
+<h3 id="step-5-get-user-input-for-equations-and-variables">Step 5: Get User Input for Equations and Variables</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;************* LINEAR PROGRAMMING ~~ Simplex Method **********************</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter the number of equations: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter the number of variables: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Initialize matrix</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>  <span class="c1"># ARRAY</span>
+</span></span><span class="line"><span class="cl"><span class="n">signs</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">M</span> <span class="o">=</span> <span class="mi">10000000</span>  <span class="c1"># Big value for artificial variables</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ask coefficients, signs, and rhs</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Equation </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Enter coefficient for X</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">wrong_input</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sign</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter sign (E for &#39;=&#39;, G for &#39;&gt;=&#39;, S for &#39;&lt;=&#39;): &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">sign</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sign</span> <span class="o">=</span> <span class="s1">&#39;S&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">signs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sign</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rhs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter RHS Value: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">wrong_input</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get coefficients of the objective function</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Enter coefficient for Z function, X</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: &#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">wrong_input</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ask for type of optimization (max or min)</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">opt_type</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter optimization type M for max and m for min: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">opt_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">wrong_input</span><span class="p">()</span>
+</span></span></code></pre></div><ul>
+<li><strong>User Input</strong>: This section collects the number of equations, variables, coefficients, signs, RHS values, and the type of optimization from the user.</li>
+</ul>
+<h3 id="step-6-initialize-and-set-up-matrices">Step 6: Initialize and Set Up Matrices</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">count_a</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">signs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">count_a</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">artificial_var</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">s_var</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">signs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s_var</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="n">artificial_var</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">signs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s_var</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="n">artificial_var</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">signs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s_var</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="n">artificial_var</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">combined_table</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">A</span><span class="p">,</span> <span class="n">s_var</span><span class="p">,</span> <span class="n">artificial_var</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">combined_table</span> <span class="o">=</span> <span class="n">combined_table</span><span class="p">[:,</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">combined_table</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">table</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">combined_table</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">col_index</span> <span class="o">=</span> <span class="n">combined_table</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">total_col</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">cj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">col_index</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col_index</span> <span class="o">-</span> <span class="n">count_a</span><span class="p">,</span> <span class="n">col_index</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cj</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">M</span> <span class="k">if</span> <span class="n">opt_type</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span> <span class="k">else</span> <span class="n">M</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cj</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Total number of artificial variable introduced is &#34;</span><span class="p">,</span> <span class="n">count_a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2"> cj: &#34;</span><span class="p">,</span> <span class="n">cj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Initialize Matrices</strong>: This section sets up the initial matrices, including slack and artificial variables, and combines them into the final tableau.</li>
+</ul>
+<h3 id="step-7-define-basic-variables-and-perform-simplex-iterations">Step 7: Define Basic Variables and Perform Simplex Iterations</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">basic_vars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col_index</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">combined_table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">basic_vars</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cj</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Initial Basic values are: &#34;</span><span class="p">,</span> <span class="n">basic_vars</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">zj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">total_col</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">zj_cj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">col_index</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">find_zj</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pc</span> <span class="o">=</span> <span class="n">find_pivot_col</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Solution is found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">message</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Pivot column: &#34;</span><span class="p">,</span> <span class="n">pc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pr</span> <span class="o">=</span> <span class="n">find_pivot_row</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;No solution is found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">message</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Pivot row: &#34;</span><span class="p">,</span> <span class="n">pr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">new_rows</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Iteration &#34;</span><span class="p">,</span> <span class="n">counter</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">round</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">message</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">final_output</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;The problem has no feasible solution&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>Define Basic Variables</strong>: This section initializes the basic variables and performs the Simplex iterations until the optimal solution is found or the problem is determined to be infeasible.</li>
+</ul>
+<hr>
+<h1 id="full-code">Full Code</h1>
+<pre tabindex="0"><code>import numpy as np #for defining array
+np.set_printoptions(precision=2, floatmode=&#34;fixed&#34;) 
+#for printing only two points after decimals
+
+def wrong_input():
+     #print Error message for invalid input
+     print(&#34;Error!!! Invalid Input. Please input the valid data: &#34;)
+
+def find_zj():
+     # calculate Zj value which is basically the sum of product of basicvalues and corresponding xi
+     for j in range(total_col):
+          sum = 0
+          for i in range(m):
+               sum = sum + basic_vars[i]*table[i][j]
+          zj[j] = sum
+          if j &lt; col_index:
+               zj_cj[j]=sum - cj[j]
+
+def find_pivot_col():
+     &#34;&#34;&#34;
+     finds the entering variable( pivot column) for the next iteration
+     &#34;&#34;&#34;
+     if opt_type == &#39;M&#39;:
+          smallest = np.min(zj_cj)
+          if smallest &gt;= 0:
+               return None
+     else:
+          largest = np.max(zj_cj)
+          if largest &lt;= 0:
+               return None
+     pc = np.argmin(zj_cj) if opt_type == &#39;M&#39; else np.argmax(zj_cj)
+     return pc
+
+
+def find_pivot_row():
+     &#34;&#34;&#34;
+     Finds the leaving variable (pivot row) for the next iteration.
+     &#34;&#34;&#34;
+     min_ratio =float(&#39;inf&#39;)
+     pivot_row =None
+     for i in range(m):
+          if(table[i][pc]&gt;0 and table[i][col_index] &gt; 0):
+               ratio = table[i][col_index]/table[i][pc]
+               if ratio &lt; min_ratio:
+                    min_ratio = ratio
+                    pivot_row = i
+     if(min_ratio == float(&#39;inf&#39;)):
+          return None
+     basic_vars[pivot_row] = cj[pc]  # Update basic_vars with leaving variable&#39;s coefficient
+     print(&#34;basic var \n&#34;, basic_vars)
+     return pivot_row
+
+
+def new_rows():
+     &#34;&#34;&#34;
+     Updates the table by performing row operations to find the new pivot row.
+     &#34;&#34;&#34;
+     pivot_element = table[pr][pc]
+     for j in range(total_col):
+          table[pr][j]=table[pr][j]/pivot_element
+     #to find other rows except pivot row
+     for i in range(m):
+          if i != pr:
+               pivot_coeff = table[i][pc]
+               for j in range(total_col):
+                    table[i][j] -=pivot_coeff*table[pr][j]
+
+def final_output():
+    &#34;&#34;&#34;
+    Prints the final solution and the optimum value.
+    &#34;&#34;&#34;
+    if(opt_type== &#39;M&#39;):
+         print (&#34;\n **********   Maximization Successful!!!************\n&#34;)
+    else:
+         print (&#34;\n **********   Minimization Successful!!!************\n&#34;)
+
+    for i in range(m):
+        for j in range(n):
+            if table[i][j]==1:
+                if np.sum(table[:, j]) == 1:
+                    print(f&#34;\t for X{j+1} == {table[i][col_index]:.2f}&#34;)
+    print(f&#34;\n The Optimum value is { zj[col_index]:.2f}&#34;)
+
+
+#Ask for equations and variables
+print(&#34;*************   LINEAR PROGRAMMING ~~ Simplex Method **********************\n&#34;)
+
+m = int(input(&#34;Enter the number of equations: &#34;))
+n = int(input(&#34;Enter the number of variables: &#34;))
+
+#Initialize matrix
+A=np.zeros((m,n)) #ARRAY
+signs = []
+b=[]
+M = 10000000 # Putting big value
+
+#ask coefficients, signs and rhs
+for i in range(m):
+    print(f&#34;Equation {i+1}&#34;)
+    for j in range(n):
+         #Error handling using try and except, to make sure user input only numbers as coefficients
+         while True:
+            try:
+                A[i, j] = float(input(f&#34;Enter coefficient for X{j+1}: &#34;))
+                break  # Break out of the loop if valid input is entered
+            except ValueError:
+                wrong_input()
+    sign=input(&#34;Enter sign (E for &#39;=&#39;, G for&#39;&gt;=&#39; , S for &#39;&lt;=&#39;): &#34;)
+    if sign not in [&#39;G&#39;, &#39;g&#39;, &#39;E&#39;, &#39;e&#39;, &#39;S&#39;, &#39;s&#39;]:
+         sign = &#39;S&#39;
+    signs.append(sign)
+    while True:
+         try:
+              rhs=float(input(&#34;Enter RHS Value: &#34;))
+              break #for valid input
+         except ValueError:
+              wrong_input()
+    b.append(rhs)
+
+# Get coefficient of the objective function
+c=np.zeros(n)
+for j in range(n):
+          while True:
+               try:
+                    c[j] = float(input(f&#34;Enter coefficient for Z function, X{j+1}: &#34;))
+                    break
+               except ValueError:
+                    wrong_input()
+
+#Ask for type of optimization (mac or min)
+while True:
+     opt_type = input(&#34;Enter optimization type M for max and m for min: &#34;)
+     if(opt_type in [&#39;M&#39;,&#39;m&#39;]):
+          break
+     else:
+          wrong_input()
+
+#Count number of greater or equal to function
+count_a=0
+for i in range(m):
+    if signs[i] in [&#39;G&#39;, &#39;g&#39;, &#39;E&#39;, &#39;e&#39;]:
+        count_a = count_a +1
+#adding slack/surplus and artificial 
+artificial_var =np.zeros((m,m))
+s_var=np.zeros((m,m))
+for i in range(m):
+    if signs[i] in [&#39;G&#39;,&#39;g&#39;]:
+            for j in range(m):
+                 s_var[i][j] = -1 if i==j else 0
+                 artificial_var[i][j] = 1 if i==j else 0
+    elif signs[i] in [&#39;S&#39;,&#39;s&#39;]:
+            for j in range(m):
+                 s_var[i][j] = 1 if i==j else 0
+                 artificial_var[i][j] = 0 if i==j else 0
+    elif signs[i] in [&#39;E&#39;,&#39;e&#39;]:
+            for j in range(m):
+                 s_var[i][j] = 0
+                 artificial_var[i][j] = 1  if i == j else 0
+
+#print(s_var, artificial_var)
+# Combine matrices A, s_var, artificial_var by excluding columns with all zeros
+combined_table = np.hstack((A, s_var, artificial_var))
+combined_table = combined_table[:, ~np.all(combined_table == 0, axis=0)]
+#reshape b to column vector
+b=np.reshape(b,(m,1))
+#combine table
+table = np.hstack((combined_table,b))
+col_index = combined_table.shape[1]
+total_col = table.shape[1]
+cj = np.zeros(col_index)
+for i in range(col_index-count_a,col_index):
+     cj[i]= -M if opt_type == &#39;M&#39; else M
+for i in range(n):
+     cj[i]=c[i]
+print(&#34;Total number of artificial variable introduced is &#34;, count_a)
+print(&#34;\n cj: &#34;,cj)
+
+print(table)
+
+# define basic variables
+basic_vars = np.zeros(m)
+for i in range(m):
+     for j in range(n+1,col_index):
+          if combined_table[i][j] == 1:
+               basic_vars[i] = cj[j]
+print(&#34;Initial Basic values are : &#34;, basic_vars)
+zj=np.zeros(total_col)
+zj_cj = np.zeros(col_index)
+counter = 1
+
+while True:
+     find_zj()
+     pc = find_pivot_col()
+     if pc == None:
+          print(&#34;Solution is found&#34;)
+          message = 1
+          break
+     print(&#34;\nPivot column: &#34;,pc)
+     pr = find_pivot_row()
+     if pr == None:
+          print(&#34; No solution is found&#34;)
+          message = 0
+          break
+     print(&#34;\nPivot row: &#34;,pr)
+     new_rows()
+     print(&#34;\n Iteration &#34;, counter )
+     print(table.round(2))
+     counter +=1 
+
+if message == 1:
+     final_output()
+else:
+     print(&#34;Unbounded solution, Please try again&#34;)
+</code></pre>
+            </div>
+        </article></main>
+</div>
+
+
+        <hr>
+        <div style="text-align: center; font-weight: 800; margin: 20px; color:red">
+            <p class="quote" id="daily-quote">
+                
+            </p>
+        </div><footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://x.com/yogesh__sn" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/@palpasky6909/videos" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/yogesh-sn%f0%9f%87%b3%f0%9f%87%b5-1926b8184" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://www.instagram.com/livingonnature" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Yogesh SN.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="/www.yogeshsn.com.np/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
+<script>
+    
+    const quotes = [
+"The day a man becomes superior to pleasure he will also be superior to pain - Seneca",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment - Buddha",
+"Life is what happens when you're busy making other plans - John Lennon",
+"To live is the rarest thing in the world. Most people exist, that is all - Oscar Wilde",
+"The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela",
+"In the end, we will remember not the words of our enemies, but the silence of our friends - Martin Luther King Jr.",
+"The best way to predict the future is to create it - Peter Drucker",
+"You miss 100% of the shots you don't take - Wayne Gretzky",
+"I have not failed. I've just found 10,000 ways that won't work - Thomas Edison",
+"The only limit to our realization of tomorrow is our doubts of today - Franklin D. Roosevelt",
+"The purpose of our lives is to be happy - Dalai Lama",
+"Life is really simple, but we insist on making it complicated - Confucius",
+"May you live all the days of your life - Jonathan Swift",
+"Good friends, good books, and a sleepy conscience: this is the ideal life - Mark Twain",
+"To love and be loved is to feel the sun from both sides - David Viscott",
+"Keep calm and carry on - British Government, 1939",
+"Believe you can and you're halfway there - Theodore Roosevelt",
+"Act as if what you do makes a difference. It does - William James",
+"Success is not final, failure is not fatal: It is the courage to continue that counts - Winston Churchill",
+"Never bend your head. Always hold it high. Look the world straight in the eye - Helen Keller",
+"What you get by achieving your goals is not as important as what you become by achieving your goals - Zig Ziglar",
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one that has been opened for us - Helen Keller",
+"It is never too late to be what you might have been - George Eliot",
+"You must be the change you wish to see in the world - Mahatma Gandhi",
+"If you want to live a happy life, tie it to a goal, not to people or things - Albert Einstein",
+"The only impossible journey is the one you never begin - Tony Robbins",
+"It does not matter how slowly you go as long as you do not stop - Confucius",
+"Everything you’ve ever wanted is on the other side of fear - George Addair",
+"Change your thoughts and you change your world - Norman Vincent Peale",
+"No one can make you feel inferior without your consent - Eleanor Roosevelt",
+"Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
+"The best way to find yourself is to lose yourself in the service of others - Mahatma Gandhi",
+"The future belongs to those who believe in the beauty of their dreams - Eleanor Roosevelt",
+"Don't watch the clock; do what it does. Keep going - Sam Levenson",
+"If life were predictable it would cease to be life, and be without flavor - Eleanor Roosevelt",
+"In the end, it’s not the years in your life that count. It’s the life in your years - Abraham Lincoln",
+"Success usually comes to those who are too busy to be looking for it - Henry David Thoreau",
+"Hardships often prepare ordinary people for an extraordinary destiny - C.S. Lewis",
+"What lies behind us and what lies before us are tiny matters compared to what lies within us - Ralph Waldo Emerson",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle - Christian D. Larson",
+"Perfection is not attainable, but if we chase perfection we can catch excellence - Vince Lombardi",
+"Life is what happens when you're busy making other plans - John Lennon",
+"When we strive to become better than we are, everything around us becomes better too - Paulo Coelho",
+"I can't change the direction of the wind, but I can adjust my sails to always reach my destination - Jimmy Dean",
+"Life is 10% what happens to us and 90% how we react to it - Charles R. Swindoll",
+"You are never too old to set another goal or to dream a new dream - C.S. Lewis",
+"A journey of a thousand miles begins with a single step - Lao Tzu",
+"Happiness is not a goal...it's a by-product of a life well-lived - Eleanor Roosevelt",
+"In three words I can sum up everything I've learned about life: it goes on - Robert Frost",
+"You only live once, but if you do it right, once is enough - Mae West",
+"The best time to plant a tree was 20 years ago. The second best time is now - Chinese Proverb",
+"Do not wait to strike till the iron is hot; but make it hot by striking - William Butler Yeats",
+"The biggest adventure you can take is to live the life of your dreams - Oprah Winfrey",
+"If you can dream it, you can achieve it - Zig Ziglar",
+"The best way out is always through - Robert Frost",
+"The only person you are destined to become is the person you decide to be - Ralph Waldo Emerson",
+"The greatest pleasure in life is doing what people say you cannot do - Walter Bagehot",
+"Success is not how high you have climbed, but how you make a positive difference to the world - Roy T. Bennett",
+"Your time is limited, don't waste it living someone else's life - Steve Jobs",
+"The best revenge is massive success - Frank Sinatra",
+"Do what you can, with what you have, where you are - Theodore Roosevelt",
+"You have within you right now, everything you need to deal with whatever the world can throw at you - Brian Tracy",
+"The mind is everything. What you think you become - Buddha",
+"The only way to achieve the impossible is to believe it is possible - Charles Kingsleigh",
+"Don’t let yesterday take up too much of today - Will Rogers",
+"What we think, we become - Buddha",
+"We must not allow other people's limited perceptions to define us - Virginia Satir",
+"If you want to lift yourself up, lift up someone else - Booker T. Washington",
+"Start where you are. Use what you have. Do what you can - Arthur Ashe",
+"I find that the harder I work, the more luck I seem to have - Thomas Jefferson",
+"Life is short, and it is up to you to make it sweet - Sarah Louise Delany",
+"When the going gets tough, the tough get going - Joseph Kennedy",
+"When you cease to dream you cease to live - Malcolm Forbes",
+"You can't go back and change the beginning, but you can start where you are and change the ending - C.S. Lewis",
+"Your life does not get better by chance, it gets better by change - Jim Rohn",
+"The harder the conflict, the more glorious the triumph - Thomas Paine",
+"You are enough just as you are - Meghan Markle",
+"Every moment is a fresh beginning - T.S. Eliot",
+"The unexamined life is not worth living - Socrates",
+"Dream big and dare to fail - Norman Vaughan",
+"Turn your wounds into wisdom - Oprah Winfrey",
+"Don't wait. The time will never be just right - Napoleon Hill",
+"You get what you give - Jennifer Lopez",
+"Tough times never last, but tough people do - Robert H. Schuller",
+"If you do what you’ve always done, you’ll get what you’ve always gotten - Tony Robbins",
+"The secret of getting ahead is getting started - Mark Twain",
+"Only those who dare to fail greatly can ever achieve greatly - Robert F. Kennedy",
+"Keep your eyes on the stars and your feet on the ground - Theodore Roosevelt",
+"Success is not in what you have, but who you are - Bo Bennett",
+"Do not follow where the path may lead. Go instead where there is no path and leave a trail - Ralph Waldo Emerson",
+"The best way to appreciate your job is to imagine yourself without one - Oscar Wilde",
+"Change your life today. Don’t gamble on the future, act now, without delay - Simone de Beauvoir",
+"Your worth consists in what you are and not in what you have - Thomas Edison",
+"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart - Roy T. Bennett",
+"Every man must learn this simple truth: Pain is inevitable and suffering is optional",
+"In the heat of battle, the fog of war, under pressure,   The undisciplined die "
+];
+
+    
+    function displayDailyQuote() {
+        const randomIndex = Math.floor(Math.random()*quotes.length);
+        const quote = quotes[randomIndex];
+        document.getElementById('daily-quote').innerText = quote;
+    }
+
+    
+    displayDailyQuote();
+</script>

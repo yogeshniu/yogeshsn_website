@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Numpy Basics | yogeshsn</title>
+<meta property="og:title" content="Numpy Basics | yogeshsn" />
+<meta name="twitter:title" content="Numpy Basics | yogeshsn" />
+<meta itemprop="name" content="Numpy Basics | yogeshsn" />
+<meta name="application-name" content="Numpy Basics | yogeshsn" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="www.yogeshsn.com.np" />
+  <meta property="og:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image:src" content="www.yogeshsn.com.np" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.1">
+
+    
+
+    <link rel="canonical" href="www.yogeshsn.com.np/references/programming/numpy_basics/">
+    <link href="/www.yogeshsn.com.np/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/www.yogeshsn.com.np/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/www.yogeshsn.com.np/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/www.yogeshsn.com.np/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/www.yogeshsn.com.np/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/www.yogeshsn.com.np/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/www.yogeshsn.com.np/favicon.ico">
+
+
+
+
+<link rel="manifest" href="/www.yogeshsn.com.np/site.webmanifest">
+
+<meta name="msapplication-config" content="/www.yogeshsn.com.np/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/www.yogeshsn.com.np/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "" class="notransition">
+
+<script src="/www.yogeshsn.com.np/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="www.yogeshsn.com.np/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/about/yogesh">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/references/">
+                        References
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Numpy Basics</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-06-19T15:07:54&#43;05:45" itemprop="datePublished"> Jun 19, 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>The following program is sourced from <a href="https://github.com/btn6364/Numpy-Tutorial/blob/main/numpy_tutorial.ipynb">Bao Nguyen</a></p>
+<h4 id="installing-numpy">Installing NumPy</h4>
+<p>Before using NumPy, ensure it is installed on your system. Run the following command in the terminal or command prompt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install numPy
+</span></span></code></pre></div><h4 id="importing-numpy">Importing NumPy</h4>
+<p>First, import the NumPy library. This allows us to use its functionality in your code.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span></code></pre></div><h4 id="basics-of-numpy-arrays">Basics of NumPy Arrays</h4>
+<ol>
+<li>
+<p><strong>Creating an Array</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Array = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.array([1, 2, 3])</code></strong>: Creates a one-dimensional NumPy array with elements 1, 2, and 3.</li>
+<li><strong><code>print(f&quot;Array = {a}&quot;)</code></strong>: Prints the array.</li>
+</ul>
+</li>
+<li>
+<p><strong>Array Attributes</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Number of dimensions = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Shape = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Data type = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Item size in bytes = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a.ndim</code></strong>: Returns the number of dimensions of the array.</li>
+<li><strong><code>a.shape</code></strong>: Returns the shape of the array (number of rows and columns).</li>
+<li><strong><code>a.dtype</code></strong>: Returns the data type of the elements in the array.</li>
+<li><strong><code>a.itemsize</code></strong>: Returns the size of each element in the array in bytes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Creating Arrays with Different Data Types</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">5.2</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Data type = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.array([[1, 2, 3], [3.2, 4, 5], [1, 3, 5.2]])</code></strong>: Creates a two-dimensional array with mixed data types (integers and floats).</li>
+<li><strong><code>a.dtype</code></strong>: NumPy automatically determines the best data type to accommodate all elements.</li>
+</ul>
+</li>
+</ol>
+<h4 id="indexing-and-slicing">Indexing and Slicing</h4>
+<ol>
+<li>
+<p><strong>Indexing Specific Elements</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a[0, 2]</code></strong>: Accesses the element at the first row and third column.</li>
+<li><strong><code>a[1, 2]</code></strong>: Accesses the element at the second row and third column.</li>
+</ul>
+</li>
+<li>
+<p><strong>Accessing Rows and Columns</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Numbers from 1st row = </span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Numbers from 2nd column = </span><span class="si">{</span><span class="n">a</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a[0, :]</code></strong>: Accesses all elements from the first row.</li>
+<li><strong><code>a[:, 1]</code></strong>: Accesses all elements from the second column.</li>
+</ul>
+</li>
+<li>
+<p><strong>Slicing Sub-matrices</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a[1:3, 1:3]</code></strong>: Extracts a sub-matrix from the second to third rows and second to third columns.</li>
+</ul>
+</li>
+<li>
+<p><strong>Selecting Random Rows or Columns</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a[:, [0, 2]]</code></strong>: Extracts the first and third columns.</li>
+</ul>
+</li>
+</ol>
+<h4 id="boolean-masking">Boolean Masking</h4>
+<ol>
+<li><strong>Filtering Based on Conditions</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="n">a</span><span class="p">[(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a[a &gt; 4]</code></strong>: Extracts all elements greater than 4.</li>
+<li><strong><code>a[(a &gt; 3) &amp; (a &lt; 10)]</code></strong>: Extracts all elements greater than 3 and less than 10.</li>
+</ul>
+</li>
+</ol>
+<h4 id="initializing-different-arrays">Initializing Different Arrays</h4>
+<ol>
+<li>
+<p><strong>Creating Arrays with Specific Values</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.zeros((3, 2))</code></strong>: Creates a 3x2 array filled with zeros.</li>
+<li><strong><code>np.ones((3, 2))</code></strong>: Creates a 3x2 array filled with ones.</li>
+<li><strong><code>np.full((3, 3), 2)</code></strong>: Creates a 3x3 array filled with the value 2.</li>
+<li><strong><code>np.identity(4)</code></strong>: Creates a 4x4 identity matrix.</li>
+</ul>
+</li>
+<li>
+<p><strong>Printing Arrays</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">f=</span><span class="se">\n</span><span class="s1">  </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> g=</span><span class="se">\n</span><span class="s1">  </span><span class="si">{</span><span class="n">g</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> h=</span><span class="se">\n</span><span class="s1">  </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> i=</span><span class="se">\n</span><span class="s1">  </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>print(f'\nf=\n  {f} \n g=\n  {g} \n h=\n  {h} \n i=\n  {i}')</code></strong>: Prints the initialized arrays in a readable format.</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-notes-on-indentation">Additional Notes on Indentation</h3>
+<p>Indentation is critical in Python as it defines the scope of loops, conditionals, functions, and other block structures. Proper indentation ensures that the code executes in the intended order and maintains readability.</p>
+<ul>
+<li><strong>Standard Indentation</strong>: Use 4 spaces per indentation level.</li>
+<li><strong>Consistency</strong>: Be consistent with the use of spaces or tabs. Do not mix them within the same code block.</li>
+<li><strong>Nested Structures</strong>: Each nested structure (like loops within loops, or functions within classes) should be indented one level further than its parent.</li>
+</ul>
+<h4 id="creating-random-matrices">Creating Random Matrices</h4>
+<ol>
+<li>
+<p><strong>Creating a Random 3x2 Matrix</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">random_3x2_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Random 3x2 matrix&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">random_3x2_matrix</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.random.rand(3, 2)</code></strong>: Generates a 3x2 matrix with random values between 0 and 1.</li>
+<li><strong><code>print(&quot;Random 3x2 matrix&quot;)</code></strong>: Prints a label for the matrix.</li>
+<li><strong><code>print(random_3x2_matrix)</code></strong>: Prints the generated random matrix.</li>
+</ul>
+</li>
+<li>
+<p><strong>Creating a Random 3x2x2 Matrix</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">random_3x2x2_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Random 3x2x2 matrix&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">random_3x2x2_matrix</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.random.rand(3, 2, 2)</code></strong>: Generates a 3x2x2 matrix with random values between 0 and 1. This is a 3D matrix.</li>
+<li><strong><code>\n</code></strong>: Adds a newline for better readability when printing.</li>
+<li><strong><code>print(random_3x2x2_matrix)</code></strong>: Prints the generated random 3D matrix.</li>
+</ul>
+</li>
+</ol>
+<h4 id="creating-evenly-spaced-arrays">Creating Evenly-Spaced Arrays</h4>
+<ol>
+<li>
+<p><strong>Using <code>linspace</code> to Create an Evenly-Spaced Array</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.linspace(start=1, stop=10, num=15)</code></strong>: Creates an array of 15 evenly spaced values starting from 1 and ending at 10.</li>
+<li><strong><code>print(a)</code></strong>: Prints the created array.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using <code>arange</code> to Create an Array with Specific Start, Stop, and Step</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.arange(start=2, stop=10, step=2)</code></strong>: Creates an array starting at 2, stopping before 10, with steps of 2.</li>
+<li><strong><code>print(b)</code></strong>: Prints the created array.</li>
+</ul>
+</li>
+</ol>
+<h4 id="reshaping-arrays">Reshaping Arrays</h4>
+<ol>
+<li><strong>Reshaping an Array</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Shape = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.array([[1, 2, 3], [3, 1, 2]])</code></strong>: Creates a 2x3 array.</li>
+<li><strong><code>a.shape</code></strong>: Prints the shape of the array, which is (2, 3).</li>
+<li><strong><code>a.reshape((3, 2))</code></strong>: Reshapes the array to 3x2.</li>
+<li><strong><code>print(b)</code></strong>: Prints the reshaped array.</li>
+</ul>
+</li>
+</ol>
+<h4 id="stacking-arrays">Stacking Arrays</h4>
+<ol>
+<li>
+<p><strong>Vertical Stacking</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">aa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="n">bb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="n">vertical_stack</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">vertical_stack</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.vstack((aa, bb))</code></strong>: Vertically stacks arrays <code>aa</code> and <code>bb</code>.</li>
+<li><strong><code>print(vertical_stack)</code></strong>: Prints the vertically stacked array.</li>
+</ul>
+</li>
+<li>
+<p><strong>Horizontal Stacking</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">horizontal_stack</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">horizontal_stack</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.hstack((aa, bb))</code></strong>: Horizontally stacks arrays <code>aa</code> and <code>bb</code>.</li>
+<li><strong><code>print(horizontal_stack)</code></strong>: Prints the horizontally stacked array.</li>
+</ul>
+</li>
+</ol>
+<h4 id="statistical-operations">Statistical Operations</h4>
+<ol>
+<li><strong>Basic Statistical Operations</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Min = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Max = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Sum = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Mean = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Variance = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Standard deviation = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.min(a)</code></strong>: Finds the minimum value in the array.</li>
+<li><strong><code>np.max(a)</code></strong>: Finds the maximum value in the array.</li>
+<li><strong><code>np.sum(a)</code></strong>: Calculates the sum of all elements in the array.</li>
+<li><strong><code>np.mean(a)</code></strong>: Calculates the mean (average) of the elements in the array.</li>
+<li><strong><code>np.var(a)</code></strong>: Calculates the variance of the elements in the array.</li>
+<li><strong><code>np.std(a)</code></strong>: Calculates the standard deviation of the elements in the array.</li>
+</ul>
+</li>
+</ol>
+<h3 id="advanced-numpy--broadcasting-matrix-operations-and-more">Advanced NumPy : Broadcasting, Matrix Operations, and More</h3>
+<h4 id="broadcasting">Broadcasting</h4>
+<p>Broadcasting allows NumPy to perform arithmetic operations on arrays of different shapes in a way that makes sense. This is a powerful feature that makes your code more concise and readable.</p>
+<ol>
+<li>
+<p><strong>Add 2 to All Elements in an Array</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Add 2 to all elements in a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.array([[1, 2, 3], [5, 3, 1]])</code></strong>: Creates a 2x3 array <code>a</code>.</li>
+<li><strong><code>a + 2</code></strong>: Adds 2 to each element of the array <code>a</code>.</li>
+<li><strong><code>print(b)</code></strong>: Displays the new array where each element has been increased by 2.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subtract 3 from All Elements in an Array</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Subtract 3 from all elements in a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a - 3</code></strong>: Subtracts 3 from each element of the array <code>a</code>.</li>
+<li><strong><code>print(b)</code></strong>: Displays the new array where each element has been decreased by 3.</li>
+</ul>
+</li>
+<li>
+<p><strong>Multiply All Elements in an Array by 4</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Multiply 4 to all elements in a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a * 4</code></strong>: Multiplies each element of the array <code>a</code> by 4.</li>
+<li><strong><code>print(b)</code></strong>: Displays the new array where each element has been multiplied by 4.</li>
+</ul>
+</li>
+<li>
+<p><strong>Broadcasting with Arrays of Different Shapes</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>  <span class="c1"># 3x3 array</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>  <span class="c1"># 1x3 array</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.array([[2, 3, 4]])</code></strong>: Creates a 1x3 array <code>b</code>.</li>
+<li><strong><code>a + b</code></strong>: Adds array <code>b</code> to each row of array <code>a</code> due to broadcasting.</li>
+</ul>
+</li>
+</ol>
+<h4 id="matrix-multiplication-and-dot-product">Matrix Multiplication and Dot Product</h4>
+<ol>
+<li>
+<p><strong>Element-wise Multiplication</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a * b</code></strong>: Multiplies corresponding elements of arrays <code>a</code> and <code>b</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dot Product</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;a.b = </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>a.dot(b)</code></strong>: Calculates the dot product of arrays <code>a</code> and <code>b</code>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="cross-product">Cross Product</h4>
+<ol>
+<li><strong>Matrix Multiplication Using <code>matmul</code></strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>  <span class="c1"># 3x3 array</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>  <span class="c1"># 3x2 array</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Note: the column of a = the row of b</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;axb =&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.matmul(a, b)</code></strong>: Performs matrix multiplication of <code>a</code> and <code>b</code>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="determinant">Determinant</h4>
+<ol>
+<li><strong>Calculating the Determinant of a Matrix</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="n">determinant</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">determinant</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.linalg.det(a)</code></strong>: Calculates the determinant of matrix <code>a</code>.</li>
+</ul>
+</li>
+</ol>
+<h4 id="inverse-matrix">Inverse Matrix</h4>
+<ol>
+<li><strong>Finding the Inverse of a Matrix</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;b = &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;axb=&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.linalg.inv(a)</code></strong>: Finds the inverse of matrix <code>a</code>.</li>
+<li><strong><code>np.matmul(a, b)</code></strong>: Multiplies matrix <code>a</code> with its inverse <code>b</code> to get the identity matrix.</li>
+</ul>
+</li>
+</ol>
+<h4 id="diagonal-matrix">Diagonal Matrix</h4>
+<ol>
+<li><strong>Extracting Diagonals from a Matrix</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;0th diagonal = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;1st diagonal = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;-1th diagonal = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>np.arange(9).reshape((3, 3))</code></strong>: Creates a 3x3 matrix with values from 0 to 8.</li>
+<li><strong><code>np.diag(x)</code></strong>: Extracts the main diagonal of matrix <code>x</code>.</li>
+<li><strong><code>np.diag(x, k=1)</code></strong>: Extracts the diagonal one position above the main diagonal.</li>
+<li><strong><code>np.diag(x, k=-1)</code></strong>: Extracts the diagonal one position below the main diagonal.</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+        </article></main>
+</div>
+
+
+        <hr>
+        <div style="text-align: center; font-weight: 800; margin: 20px; color:red">
+            <p class="quote" id="daily-quote">
+                
+            </p>
+        </div><footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://x.com/yogesh__sn" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/@palpasky6909/videos" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/yogesh-sn%f0%9f%87%b3%f0%9f%87%b5-1926b8184" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://www.instagram.com/livingonnature" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Yogesh SN.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="/www.yogeshsn.com.np/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
+<script>
+    
+    const quotes = [
+"The day a man becomes superior to pleasure he will also be superior to pain - Seneca",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment - Buddha",
+"Life is what happens when you're busy making other plans - John Lennon",
+"To live is the rarest thing in the world. Most people exist, that is all - Oscar Wilde",
+"The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela",
+"In the end, we will remember not the words of our enemies, but the silence of our friends - Martin Luther King Jr.",
+"The best way to predict the future is to create it - Peter Drucker",
+"You miss 100% of the shots you don't take - Wayne Gretzky",
+"I have not failed. I've just found 10,000 ways that won't work - Thomas Edison",
+"The only limit to our realization of tomorrow is our doubts of today - Franklin D. Roosevelt",
+"The purpose of our lives is to be happy - Dalai Lama",
+"Life is really simple, but we insist on making it complicated - Confucius",
+"May you live all the days of your life - Jonathan Swift",
+"Good friends, good books, and a sleepy conscience: this is the ideal life - Mark Twain",
+"To love and be loved is to feel the sun from both sides - David Viscott",
+"Keep calm and carry on - British Government, 1939",
+"Believe you can and you're halfway there - Theodore Roosevelt",
+"Act as if what you do makes a difference. It does - William James",
+"Success is not final, failure is not fatal: It is the courage to continue that counts - Winston Churchill",
+"Never bend your head. Always hold it high. Look the world straight in the eye - Helen Keller",
+"What you get by achieving your goals is not as important as what you become by achieving your goals - Zig Ziglar",
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one that has been opened for us - Helen Keller",
+"It is never too late to be what you might have been - George Eliot",
+"You must be the change you wish to see in the world - Mahatma Gandhi",
+"If you want to live a happy life, tie it to a goal, not to people or things - Albert Einstein",
+"The only impossible journey is the one you never begin - Tony Robbins",
+"It does not matter how slowly you go as long as you do not stop - Confucius",
+"Everything you’ve ever wanted is on the other side of fear - George Addair",
+"Change your thoughts and you change your world - Norman Vincent Peale",
+"No one can make you feel inferior without your consent - Eleanor Roosevelt",
+"Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
+"The best way to find yourself is to lose yourself in the service of others - Mahatma Gandhi",
+"The future belongs to those who believe in the beauty of their dreams - Eleanor Roosevelt",
+"Don't watch the clock; do what it does. Keep going - Sam Levenson",
+"If life were predictable it would cease to be life, and be without flavor - Eleanor Roosevelt",
+"In the end, it’s not the years in your life that count. It’s the life in your years - Abraham Lincoln",
+"Success usually comes to those who are too busy to be looking for it - Henry David Thoreau",
+"Hardships often prepare ordinary people for an extraordinary destiny - C.S. Lewis",
+"What lies behind us and what lies before us are tiny matters compared to what lies within us - Ralph Waldo Emerson",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle - Christian D. Larson",
+"Perfection is not attainable, but if we chase perfection we can catch excellence - Vince Lombardi",
+"Life is what happens when you're busy making other plans - John Lennon",
+"When we strive to become better than we are, everything around us becomes better too - Paulo Coelho",
+"I can't change the direction of the wind, but I can adjust my sails to always reach my destination - Jimmy Dean",
+"Life is 10% what happens to us and 90% how we react to it - Charles R. Swindoll",
+"You are never too old to set another goal or to dream a new dream - C.S. Lewis",
+"A journey of a thousand miles begins with a single step - Lao Tzu",
+"Happiness is not a goal...it's a by-product of a life well-lived - Eleanor Roosevelt",
+"In three words I can sum up everything I've learned about life: it goes on - Robert Frost",
+"You only live once, but if you do it right, once is enough - Mae West",
+"The best time to plant a tree was 20 years ago. The second best time is now - Chinese Proverb",
+"Do not wait to strike till the iron is hot; but make it hot by striking - William Butler Yeats",
+"The biggest adventure you can take is to live the life of your dreams - Oprah Winfrey",
+"If you can dream it, you can achieve it - Zig Ziglar",
+"The best way out is always through - Robert Frost",
+"The only person you are destined to become is the person you decide to be - Ralph Waldo Emerson",
+"The greatest pleasure in life is doing what people say you cannot do - Walter Bagehot",
+"Success is not how high you have climbed, but how you make a positive difference to the world - Roy T. Bennett",
+"Your time is limited, don't waste it living someone else's life - Steve Jobs",
+"The best revenge is massive success - Frank Sinatra",
+"Do what you can, with what you have, where you are - Theodore Roosevelt",
+"You have within you right now, everything you need to deal with whatever the world can throw at you - Brian Tracy",
+"The mind is everything. What you think you become - Buddha",
+"The only way to achieve the impossible is to believe it is possible - Charles Kingsleigh",
+"Don’t let yesterday take up too much of today - Will Rogers",
+"What we think, we become - Buddha",
+"We must not allow other people's limited perceptions to define us - Virginia Satir",
+"If you want to lift yourself up, lift up someone else - Booker T. Washington",
+"Start where you are. Use what you have. Do what you can - Arthur Ashe",
+"I find that the harder I work, the more luck I seem to have - Thomas Jefferson",
+"Life is short, and it is up to you to make it sweet - Sarah Louise Delany",
+"When the going gets tough, the tough get going - Joseph Kennedy",
+"When you cease to dream you cease to live - Malcolm Forbes",
+"You can't go back and change the beginning, but you can start where you are and change the ending - C.S. Lewis",
+"Your life does not get better by chance, it gets better by change - Jim Rohn",
+"The harder the conflict, the more glorious the triumph - Thomas Paine",
+"You are enough just as you are - Meghan Markle",
+"Every moment is a fresh beginning - T.S. Eliot",
+"The unexamined life is not worth living - Socrates",
+"Dream big and dare to fail - Norman Vaughan",
+"Turn your wounds into wisdom - Oprah Winfrey",
+"Don't wait. The time will never be just right - Napoleon Hill",
+"You get what you give - Jennifer Lopez",
+"Tough times never last, but tough people do - Robert H. Schuller",
+"If you do what you’ve always done, you’ll get what you’ve always gotten - Tony Robbins",
+"The secret of getting ahead is getting started - Mark Twain",
+"Only those who dare to fail greatly can ever achieve greatly - Robert F. Kennedy",
+"Keep your eyes on the stars and your feet on the ground - Theodore Roosevelt",
+"Success is not in what you have, but who you are - Bo Bennett",
+"Do not follow where the path may lead. Go instead where there is no path and leave a trail - Ralph Waldo Emerson",
+"The best way to appreciate your job is to imagine yourself without one - Oscar Wilde",
+"Change your life today. Don’t gamble on the future, act now, without delay - Simone de Beauvoir",
+"Your worth consists in what you are and not in what you have - Thomas Edison",
+"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart - Roy T. Bennett",
+"Every man must learn this simple truth: Pain is inevitable and suffering is optional",
+"In the heat of battle, the fog of war, under pressure,   The undisciplined die "
+];
+
+    
+    function displayDailyQuote() {
+        const randomIndex = Math.floor(Math.random()*quotes.length);
+        const quote = quotes[randomIndex];
+        document.getElementById('daily-quote').innerText = quote;
+    }
+
+    
+    displayDailyQuote();
+</script>

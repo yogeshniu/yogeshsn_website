@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PythonLibraries on yogeshsn</title>
+    <link>www.yogeshsn.com.np/categories/pythonlibraries/</link>
+    <description>Recent content in PythonLibraries on yogeshsn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Jul 2024 12:39:19 +0545</lastBuildDate><atom:link href="www.yogeshsn.com.np/categories/pythonlibraries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on Python</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/</link>
+      <pubDate>Tue, 09 Jul 2024 12:39:19 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Popular Built-in Modules in Python</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/builtin/</link>
+      <pubDate>Thu, 20 Jul 2023 12:40:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/builtin/</guid>
+      
+      <description>Here are the 30 most popular built-in modules/libraries of Python, along with examples and uses:
+1. abc The abc module provides the environment for creating abstract base classes.
+Example:
+from abc import ABCMeta, abstractmethod class MyAbstractClass(metaclass=ABCMeta): @abstractmethod def x(self): pass @abstractmethod def y(self): pass obj = MyAbstractClass() # Throws TypeError Use:
+Ensures that classes are properly abstracted and cannot be instantiated if they are not fully implemented. 2. argparse The argparse module provides a way to parse command-line arguments.</description>
+      
+    </item>
+    
+    <item>
+      <title>Numpy Library</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/numpy/</link>
+      <pubDate>Sat, 15 Jul 2023 13:17:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/numpy/</guid>
+      
+      <description>NumPy (Numerical Python) is a fundamental library for scientific computing in Python. It provides support for large, multi-dimensional arrays and matrices, along with a vast collection of high-level mathematical functions to operate on these arrays efficiently.
+Why NumPy is important:
+Efficient array operations Memory efficiency Vectorization capabilities Integration with other scientific Python libraries Speed: Many operations are implemented in C, making them much faster than pure Python code Examples np.array(): Create an array</description>
+      
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/pandas/</link>
+      <pubDate>Thu, 13 Jul 2023 13:14:09 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/pandas/</guid>
+      
+      <description>Pandas is a powerful open-source Python library for data manipulation and analysis. It provides easy-to-use data structures and data analysis tools for working with structured (tabular, multidimensional, potentially heterogeneous) and time series data. Pandas is built on top of NumPy and provides a high-level interface for working with large datasets efficiently.
+Some key features of Pandas include:
+Data Structures: Pandas provides two main data structures: Series and DataFrame.
+Series: A one-dimensional labeled array capable of holding data of any type.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matplotlib</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/matplotlib/</link>
+      <pubDate>Thu, 13 Jul 2023 13:12:05 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/matplotlib/</guid>
+      
+      <description>Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. It provides a wide range of tools for plotting 2D and 3D data, including line plots, scatter plots, bar charts, histograms, and more. Matplotlib is built on NumPy and is designed to work seamlessly with other Python libraries like Pandas and Scikit-Learn.
+Some key features of Matplotlib include:
+Plotting Functions: Matplotlib provides a variety of plotting functions for creating different types of plots, such as plot() for line plots, scatter() for scatter plots, bar() for bar charts, and hist() for histograms.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mostly used Built-in Functions in Python </title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/builtinfunctions/</link>
+      <pubDate>Wed, 12 Jul 2023 13:21:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/builtinfunctions/</guid>
+      
+      <description>Mostly used functions in Python&amp;hellip;
+print(): Prints the specified value or values. Example: print(&amp;quot;Hello, World!&amp;quot;) Output: Hello, World!
+input(): Reads a line from the console and returns it as a string. Example: name = input(&amp;quot;What is your name? &amp;quot;) Output: What is your name? John
+len(): Returns the length of an object (string, list, tuple, etc.). Example: my_list = [1, 2, 3, 4, 5] and print(len(my_list)) Output: 5
+max(): Returns the largest item in an iterable or the largest of two or more arguments.</description>
+      
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/math/</link>
+      <pubDate>Tue, 11 Jul 2023 12:57:46 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/math/</guid>
+      
+      <description>import math The math module in Python provides access to the mathematical functions defined by the C standard. It allows you to perform various mathematical operations, including trigonometric functions, logarithmic functions, and constants like pi and e.
+Some key features of the math module include:
+Trigonometric Functions: The math module provides functions for calculating trigonometric values, such as sine (sin()), cosine (cos()), and tangent (tan()). These functions take an angle in radians as input and return the corresponding trigonometric value.</description>
+      
+    </item>
+    
+    <item>
+      <title>Tensor Flow</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/tensorflow/</link>
+      <pubDate>Mon, 10 Jul 2023 13:23:39 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/tensorflow/</guid>
+      
+      <description>TensorFlow is an open-source machine learning library developed by Google Brain Team. It is used for building and training deep neural networks and other machine learning models. TensorFlow provides a flexible ecosystem of tools, libraries, and community resources that allow researchers to push the state-of-the-art in machine learning and developers to easily build and deploy ML-powered applications.
+Some key features of TensorFlow include:
+Flexible Architecture: TensorFlow has a flexible architecture that allows easy deployment of computation to one or more CPUs, GPUs, or TPUs in a desktop, server, or mobile device.</description>
+      
+    </item>
+    
+    <item>
+      <title>Scikit Learn</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/scikit-learn/</link>
+      <pubDate>Sun, 09 Jul 2023 13:05:42 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/scikit-learn/</guid>
+      
+      <description>Scikit-Learn (also known as sklearn) is a powerful machine learning library in Python. It provides a wide range of algorithms for classification, regression, clustering, and dimensionality reduction. Scikit-Learn is built on top of NumPy, SciPy, and matplotlib, making it easy to use and integrate with other Python libraries.
+Some key features of Scikit-Learn include:
+Consistent API: Scikit-Learn provides a consistent and intuitive API, making it easy to switch between different algorithms without changing your code significantly.</description>
+      
+    </item>
+    
+    <item>
+      <title>Keras</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/keras/</link>
+      <pubDate>Sat, 08 Jul 2023 12:51:06 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/keras/</guid>
+      
+      <description>Keras is a powerful and easy-to-use open-source Python library for building and training deep learning models. It serves as a high-level interface for the TensorFlow library, allowing developers to quickly prototype and develop neural network models with minimal code. Here are some key points about Keras:
+Introduction Keras was developed by François Chollet, a Google engineer, and was first released in 2015. It is designed to be user-friendly, modular, and extensible, enabling fast experimentation with deep neural networks.</description>
+      
+    </item>
+    
+    <item>
+      <title>Scipy</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/scipy/</link>
+      <pubDate>Wed, 05 Jul 2023 12:45:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/scipy/</guid>
+      
+      <description>SciPy (Scientific Python) is a collection of mathematical algorithms and convenience functions built on the NumPy extension of Python. It adds significant power to the interactive Python session by providing user-friendly and efficient numerical routines, such as routines for numerical integration, interpolation, optimization, linear algebra, and statistics.
+SciPy is open-source software, which means that it is free to use and modify. It is also well-supported, with a large community of users and developers contributing to its growth and improvement.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/pytorch/</link>
+      <pubDate>Tue, 04 Jul 2023 12:52:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/pytorch/</guid>
+      
+      <description>PyTorch is an open-source machine learning library that is widely used for building and training deep neural networks. It is built on the Python programming language and provides a user-friendly interface for working with tensors, which are multidimensional arrays similar to NumPy arrays but with GPU acceleration.
+Some key features of PyTorch include:
+Tensors: PyTorch uses tensors as the fundamental data structure for representing data. Tensors can be easily manipulated using various operations like addition, multiplication, and reshaping.</description>
+      
+    </item>
+    
+    <item>
+      <title>Plotly</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/plotly/</link>
+      <pubDate>Mon, 03 Jul 2023 12:55:08 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/plotly/</guid>
+      
+      <description>Plotly is an open-source library for creating interactive and visually appealing data visualizations in Python. It provides a wide range of chart types, including scatter plots, line charts, bar charts, histograms, box plots, pie charts, and more.
+Some key features of Plotly include:
+Interactive Plots: Plotly generates interactive plots that allow users to zoom, pan, hover over data points, and even export data. This makes it easy to explore and understand complex datasets.</description>
+      
+    </item>
+    
+    <item>
+      <title>Seaborn</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/seaborn/</link>
+      <pubDate>Fri, 30 Jun 2023 12:48:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/seaborn/</guid>
+      
+      <description>Seaborn is a powerful data visualization library in Python that helps you create attractive and informative statistical graphics. It is built on top of Matplotlib, another popular visualization library, and provides a high-level interface for drawing plots.
+Some key features of Seaborn include:
+Attractive Plots: Seaborn offers a range of default themes and color palettes that make your plots look appealing and professional. It also provides tools for customizing the appearance of your plots to suit your preferences.</description>
+      
+    </item>
+    
+    <item>
+      <title>Request and SYS library functions</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/requestsys/</link>
+      <pubDate>Fri, 09 Jun 2023 13:03:07 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/requestsys/</guid>
+      
+      <description>Requests Library The Requests library is the de facto standard for making HTTP requests in Python. It abstracts the complexities of making requests behind a beautiful, simple API so that you can focus on interacting with services and consuming data in your application.
+Some key features of the Requests library include:
+Sending HTTP Requests: Requests provides methods for sending various types of HTTP requests, such as GET, POST, PUT, DELETE, HEAD, and OPTIONS.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

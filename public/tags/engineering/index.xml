@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>engineering on yogeshsn</title>
+    <link>www.yogeshsn.com.np/tags/engineering/</link>
+    <description>Recent content in engineering on yogeshsn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="www.yogeshsn.com.np/tags/engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>www.yogeshsn.com.np/about/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>www.yogeshsn.com.np/about/</guid>
+      
+      <description> </description>
+      
+    </item>
+    
+  </channel>
+</rss>

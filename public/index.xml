@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yogeshsn</title>
+    <link>www.yogeshsn.com.np/</link>
+    <description>Recent content on yogeshsn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Aug 2024 17:02:22 +0545</lastBuildDate><atom:link href="www.yogeshsn.com.np/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Energy Equation</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/10/</link>
+      <pubDate>Mon, 12 Aug 2024 17:02:22 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/10/</guid>
+      
+      <description>Energy Equation in Fluid Mechanics The energy equation in fluid mechanics is a fundamental principle that describes the conservation of energy in a fluid system. It accounts for the different forms of energy present in a fluid, including kinetic energy, potential energy, internal energy (due to temperature), and the energy exchanged with the surroundings.
+$$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$
+Inline math: $E = mc^2$
+Block math: $$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$</description>
+      
+    </item>
+    
+    <item>
+      <title>Optimizing Rastrigin Function Using GA-PSO Method</title>
+      <link>www.yogeshsn.com.np/references/optimization/gapso/</link>
+      <pubDate>Mon, 08 Jul 2024 16:05:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/gapso/</guid>
+      
+      <description>You can access pdf clicking in this link.
+1. Imports: import numpy as np import random These lines import the necessary libraries. NumPy (imported as np) is a powerful library for numerical computations in Python, particularly useful for working with arrays and matrices. The random module is used for generating random numbers, which is crucial for the stochastic nature of both PSO and GA algorithms.
+2. PSO Parameters: no_of_iterations = 100 no_of_particles = 100 c1 = 1.</description>
+      
+    </item>
+    
+    <item>
+      <title>Important References</title>
+      <link>www.yogeshsn.com.np/posts/useful_resources/</link>
+      <pubDate>Thu, 04 Jul 2024 20:07:27 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/useful_resources/</guid>
+      
+      <description>Programming in Python If you love programming, you can visit here.
+Mandarin Lessons When i had joined mandarin class, i have compiled notes. Access it Here
+Optimization Different methods of optimization are shown. Feel easy to access it. Optimization
+MSHPE Semester 1 Study Materials Access this drive link using college account</description>
+      
+    </item>
+    
+    <item>
+      <title>Implementing the Simplex Method in C</title>
+      <link>www.yogeshsn.com.np/references/programming/simplexc/</link>
+      <pubDate>Thu, 04 Jul 2024 19:54:38 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/simplexc/</guid>
+      
+      <description>Overview The Simplex method is an algorithm for solving linear programming problems. This program takes the number of equations and variables as input, along with their coefficients, and then performs the Simplex method to find the optimal solution.
+Step 1: Include the Standard I/O Library The program begins by including the standard input-output library for handling input and output functions.
+#include &amp;lt;stdio.h&amp;gt; Step 2: Main Function The main function is where the program execution starts.</description>
+      
+    </item>
+    
+    <item>
+      <title>Reservoir Optimization</title>
+      <link>www.yogeshsn.com.np/references/programming/reservoiroptimization/</link>
+      <pubDate>Thu, 04 Jul 2024 19:46:26 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/reservoiroptimization/</guid>
+      
+      <description>Imports and Constants The script starts by importing the necessary libraries: numpy and pandas. It then defines the following constants:
+gamma: Acceleration due to gravity (9.81 m/s²) effi: Efficiency of the hydropower plant (0.9) env_flow: Environmental flow in m³/month Loading Data The script then loads data from a CSV file named &amp;ldquo;inflow_data1.csv&amp;rdquo;. The data includes:
+inflow_data: Inflow to the reservoir in m³/s pet_data: Potential evapotranspiration in mm/day dt_data: Demand or release from the reservoir in m³/s Important Information The script also defines several important parameters related to the reservoir:</description>
+      
+    </item>
+    
+    <item>
+      <title>Useful References</title>
+      <link>www.yogeshsn.com.np/references/optimization/extra/</link>
+      <pubDate>Thu, 04 Jul 2024 19:36:56 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/extra/</guid>
+      
+      <description>Programming in Python If you love programming, you can visit here.
+Mandarin Lessons When i had joined mandarin class, i have compiled notes. Access it Here
+Optimization Different methods of optimization are shown. Feel easy to access it. Optimization
+Big M Method
+Dynamic Program- Water allocation
+Simplex Method Using C Program
+Optimization Using Scipy
+MSHPE Semester 1 Study Materials Access this drive link using college account</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Nonlinear Programs using Particle Swarm Optimization</title>
+      <link>www.yogeshsn.com.np/references/optimization/pso/</link>
+      <pubDate>Thu, 04 Jul 2024 18:07:50 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/pso/</guid>
+      
+      <description>Setting up the Environment Install the pyswarm library: You can install the pyswarm library using pip:
+pip install pyswarm Install NumPy: The pyswarm library relies on NumPy for numerical operations. You can install NumPy using pip:
+pip install Numpy Now that your environment is set up, let&amp;rsquo;s solve an MINLP problem using particle swarm optimization.
+Solving an MINLP Problem Consider the same MINLP problem from the previous example:
+Maximize: x1 + x2*x1Subject to:-x1 + 2*x2*x1 &amp;lt;= 82*x1 + x2 &amp;lt;= 142*x1 - x2 &amp;lt;= 10x1 &amp;gt;= 0, integerx2 &amp;gt;= 0 We can model and solve this problem using the pyswarm library:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Nonlinear Programs using Genetic Algorithms</title>
+      <link>www.yogeshsn.com.np/references/optimization/ga/</link>
+      <pubDate>Thu, 04 Jul 2024 18:02:42 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/ga/</guid>
+      
+      <description>Setting up the Environment Install the geneticalgorithm library: You can install the geneticalgorithm library using pip:
+pip install geneticalgorithm Install NumPy: The geneticalgorithm library relies on NumPy for numerical operations. You can install NumPy using pip:
+pip install numpy Now that your environment is set up, let&amp;rsquo;s solve an MINLP problem using genetic algorithms.
+Solving an MINLP Problem Consider the following MINLP problem:
+Maximize: x1 + x2*x1Subject to:-x1 + 2*x2*x1 &amp;lt;= 82*x1 + x2 &amp;lt;= 142*x1 - x2 &amp;lt;= 10x1 &amp;gt;= 0, integerx2 &amp;gt;= 0 We can model and solve this problem using the geneticalgorithm library:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP</title>
+      <link>www.yogeshsn.com.np/references/optimization/minlp/</link>
+      <pubDate>Thu, 04 Jul 2024 17:53:39 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/minlp/</guid>
+      
+      <description>Setting up the Environment Download and Install Couenne: Couenne is an open-source solver for MINLP problems, developed as part of the COIN-OR project. You can download the latest version of Couenne from the COIN-OR download page. Make sure to download the binary package that matches your operating system.
+Add Couenne to your System Path: After downloading and extracting the Couenne package, you need to add the location of the couenne.exe executable to your system&amp;rsquo;s PATH environment variable.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Linear Programs with OR-Tools Chance Constrained</title>
+      <link>www.yogeshsn.com.np/references/optimization/cp/</link>
+      <pubDate>Thu, 04 Jul 2024 17:51:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/cp/</guid>
+      
+      <description>Introduction to Linear Programming Linear programming is a mathematical optimization technique used to find the best solution to a problem with a linear objective function and linear constraints. The goal is to maximize or minimize the objective function while satisfying the given constraints.
+A typical LP problem has the following components:
+Decision Variables: The unknown quantities that we want to determine, represented as x, y, z, etc. Objective Function: A linear expression involving the decision variables that we want to maximize or minimize.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Nonlinear Programs</title>
+      <link>www.yogeshsn.com.np/references/optimization/nlp/</link>
+      <pubDate>Thu, 04 Jul 2024 17:42:45 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/nlp/</guid>
+      
+      <description>Nonlinear Programming (NLP) Nonlinear programming refers to optimization problems where the objective function or constraints (or both) are nonlinear functions of the decision variables. This is in contrast to linear programming, where both the objective and constraints are linear.
+Some key characteristics of NLP problems:
+Objective function is a nonlinear function of the decision variables Constraints can be linear or nonlinear Variables can be continuous, integer, or a mix (mixed-integer nonlinear programming) Solutions may have multiple local optima, requiring specialized algorithms to find the global optimum NLP problems arise in many real-world applications where the underlying relationships are inherently nonlinear, such as chemical process optimization, portfolio management, structural design, and more.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Linear Programming (MILP) Problems</title>
+      <link>www.yogeshsn.com.np/references/optimization/mlpyomo/</link>
+      <pubDate>Thu, 04 Jul 2024 17:25:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/mlpyomo/</guid>
+      
+      <description>Example Problem In this example, we&amp;rsquo;ll solve a mixed integer linear programming problem using Pyomo:
+Objective: Minimize (3x1 + 4x2)
+Constraints:
+(x1 + 3x2 &amp;gt;= 15) (3x1 + 5x2 &amp;lt;= 72) (2x1 + x2 = 24) Variable Types:
+(x1) is a continuous variable ((x1 &amp;gt;= 0)) (x2) is an integer variable ((x2 &amp;gt;= 0)) Step-by-Step Solution with Pyomo Step 1: Import Pyomo Modules Import the necessary modules from Pyomo:
+import pyomo.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Linear Problems Using Pulp</title>
+      <link>www.yogeshsn.com.np/references/optimization/pulp/</link>
+      <pubDate>Thu, 04 Jul 2024 16:55:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/pulp/</guid>
+      
+      <description>This guide explains how to use Pulp, a Python library for linear programming, to solve optimization problems. Pulp is particularly suitable for linear programming (LP) problems and provides an easy-to-use interface for defining variables, constraints, and objective functions.
+Installation Before using Pulp, make sure you have Cython installed, then install Pulp itself:
+Install Cython: If you haven&amp;rsquo;t installed Cython yet, run:
+pip install cython Install Pulp: Install Pulp using pip:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Optimization Problems Using Pyomo</title>
+      <link>www.yogeshsn.com.np/references/optimization/pyomo/</link>
+      <pubDate>Thu, 04 Jul 2024 16:52:25 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/pyomo/</guid>
+      
+      <description>This guide explains how to use Pyomo, a Python-based open-source optimization modeling language, to solve optimization problems. Pyomo allows you to define optimization models, set constraints, and specify objective functions easily.
+Example Problem Using Pyomo In this example, we will use Pyomo to solve a linear programming problem with the following characteristics:
+Objective: Minimize 3x1 + 4x2
+Constraints:
+x1 + 3x2 &amp;gt;= 15 3x1 + 5x2 &amp;lt;= 72 2x1 + x2 = 24 Step-by-Step Solution with Pyomo Step 1: Import Pyomo Modules First, import the necessary modules from Pyomo:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Optimization Problems Using the SCIP Library</title>
+      <link>www.yogeshsn.com.np/references/optimization/scip/</link>
+      <pubDate>Thu, 04 Jul 2024 16:50:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/scip/</guid>
+      
+      <description>This guide provides a detailed explanation of how to solve optimization problems using the SCIP library in Python. SCIP is a powerful tool that can handle linear, non-linear, and integer programming problems.
+Installation Steps Download and Install SCIP:
+Visit the SCIP download page. Fill out the required form to download the application. Install the downloaded application on your computer. Install PySCIPOpt:
+Open your terminal or command prompt. Run the following command to install the PySCIPOpt package: pip install pyscipopt Example Problem: Maximizing an Objective Function In this example, we will maximize an objective function subject to certain constraints using the SCIP library.</description>
+      
+    </item>
+    
+    <item>
+      <title>Linear Programming with OR-Tools in Python</title>
+      <link>www.yogeshsn.com.np/references/optimization/ortools/</link>
+      <pubDate>Thu, 04 Jul 2024 16:45:57 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/ortools/</guid>
+      
+      <description>This guide will help you understand how to solve a simple linear programming problem using the OR-Tools library in Python. Linear programming helps us find the best outcome (such as maximum profit or lowest cost) under a given set of constraints.
+Step-by-Step Explanation Install OR-Tools Library First, you need to install the OR-Tools library. This library contains tools for optimization, including linear programming.
+pip install ortools Import the OR-Tools Linear Solver We import the necessary module from OR-Tools:</description>
+      
+    </item>
+    
+    <item>
+      <title>Hydraulic Simulation using Manning Equation</title>
+      <link>www.yogeshsn.com.np/references/programming/manning2/</link>
+      <pubDate>Wed, 19 Jun 2024 15:31:30 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/manning2/</guid>
+      
+      <description>The program begins by importing the necessary libraries, NumPy and Matplotlib, which will be used for numerical computations and data visualization, respectively.
+Next, we define the constants for this problem:
+B: the width of the channel in meters n: Manning&amp;rsquo;s roughness coefficient, which is a measure of the channel&amp;rsquo;s resistance to flow S: the slope of the energy grade line, which represents the energy loss per unit length of the channel The calculate_parameters function is the core of this program.</description>
+      
+    </item>
+    
+    <item>
+      <title>Numpy Basics</title>
+      <link>www.yogeshsn.com.np/references/programming/numpy_basics/</link>
+      <pubDate>Wed, 19 Jun 2024 15:07:54 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/numpy_basics/</guid>
+      
+      <description>The following program is sourced from Bao Nguyen
+Installing NumPy Before using NumPy, ensure it is installed on your system. Run the following command in the terminal or command prompt:
+pip install numPy Importing NumPy First, import the NumPy library. This allows us to use its functionality in your code.
+import numpy as np Basics of NumPy Arrays Creating an Array
+a = np.array([1, 2, 3]) print(f&amp;#34;Array = {a}&amp;#34;) np.array([1, 2, 3]): Creates a one-dimensional NumPy array with elements 1, 2, and 3.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix Input and Display Program</title>
+      <link>www.yogeshsn.com.np/references/programming/matrix_print/</link>
+      <pubDate>Tue, 18 Jun 2024 19:50:27 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/matrix_print/</guid>
+      
+      <description>Matrix Input and Display Program This program takes the number of rows and columns from the user, then accepts matrix elements row-wise, and finally prints the matrix in a formatted way.
+1. Input the Number of Rows and Columns R = int(input(&amp;#34;Enter number of rows: &amp;#34;)) C = int(input(&amp;#34;Enter number of columns: &amp;#34;)) int(input(&amp;quot;Enter number of rows: &amp;quot;)): Prompts the user to enter the number of rows for the matrix and converts the input to an integer.</description>
+      
+    </item>
+    
+    <item>
+      <title>BigM Method, Python Program</title>
+      <link>www.yogeshsn.com.np/references/programming/bigm_method/</link>
+      <pubDate>Mon, 17 Jun 2024 13:23:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/bigm_method/</guid>
+      
+      <description>This is done as per the assignment of System Mathematics in First Semester of Hydropower Engineering by Yogesh Sharma Neupane and Submitted to Prof Dr. Bhola Nath Ghimire.
+Linear Programming ~~ Simplex Method This Python script solves linear programming problems using the Simplex Method. The code handles both maximization and minimization problems and includes error handling to ensure valid user input.
+Step 1: Import Libraries and Define Helper Functions Import Libraries import numpy as np # For defining arrays and performing numerical operations np.</description>
+      
+    </item>
+    
+    <item>
+      <title>Dynamic Programming- Water Allocation</title>
+      <link>www.yogeshsn.com.np/references/programming/dynamic1/</link>
+      <pubDate>Mon, 17 Jun 2024 13:12:25 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/dynamic1/</guid>
+      
+      <description>Step 1: Import Libraries and Define Functions import numpy as np numpy: This library is used to handle array operations efficiently. Define the print_table_row Function def print_table_row(s, x, f, y=None, total_return=None): # Print a row of the table with the given values. if y is None: print(f&amp;#34;{s}\t\t{x}\t\t{f}\t&amp;#34;) else: print(f&amp;#34;{s}\t\t{x}\t\t{f}\t\t{y}\t\t{total_return}&amp;#34;) print_table_row: This function prints a row of the table. It adjusts the number of columns based on the current iteration. Define the table Function def table(i): # Print the table header based on the current iteration.</description>
+      
+    </item>
+    
+    <item>
+      <title>Basic- Manning Equation</title>
+      <link>www.yogeshsn.com.np/references/programming/basic1/</link>
+      <pubDate>Mon, 17 Jun 2024 12:48:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/basic1/</guid>
+      
+      <description>Solving the Manning Equation for Open Channel Flow In this tutorial, we&amp;rsquo;ll walk through how to solve the Manning equation for open channel flow using Python. The Manning equation is widely used in hydraulic engineering to calculate the flow rate in open channels. We&amp;rsquo;ll prompt the user for the necessary inputs, perform the calculations, and output the discharge capacity of the channel.
+Code Explanation # Solving the Manning Equation for open channel flow # Prompt the user for the width of the channel b = float(input(&amp;#34;Enter the width of the channel (meters): &amp;#34;)) # Prompt the user for the depth of the channel y = float(input(&amp;#34;Enter the depth of the channel (meters): &amp;#34;)) # Assume the slope of the channel is 1 in 1000 s = 1 / 1000 # Assume the Manning coefficient n = 0.</description>
+      
+    </item>
+    
+    <item>
+      <title>Data handling - Monthly Flow</title>
+      <link>www.yogeshsn.com.np/references/programming/datahandling/</link>
+      <pubDate>Sun, 02 Jun 2024 10:08:33 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/datahandling/</guid>
+      
+      <description>Note: The explanation of the code is generated with the assistance of AI
+Importing Libraries import pandas as pd import matplotlib.pyplot as plt pandas (pd): A powerful Python library for data manipulation and analysis. It provides data structures and functions to efficiently handle structured data, including tabular data such as spreadsheets and SQL tables. matplotlib.pyplot (plt): A Python plotting library that provides a MATLAB-like interface for creating a variety of charts, including line plots, scatter plots, histograms, and more.</description>
+      
+    </item>
+    
+    <item>
+      <title>Assignment1</title>
+      <link>www.yogeshsn.com.np/references/programming/assignment1/</link>
+      <pubDate>Fri, 31 May 2024 16:58:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/assignment1/</guid>
+      
+      <description>Here are five questions that you can use as assignments based on the concepts covered in our Python learning and tutorial:
+Data Handling with Pandas:
+Create a Pandas DataFrame from scratch with at least three columns (e.g., Hydropower_name, Hydropower_capacity, Location). Display the first five rows of the DataFrame. Data Analysis with Pandas:
+Load a CSV file containing student grades data (columns: StudentID, Subject, Grade). Compute and print the average grade for each subject.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pipeflow</title>
+      <link>www.yogeshsn.com.np/references/programming/pipeflow/</link>
+      <pubDate>Fri, 31 May 2024 16:11:01 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/pipeflow/</guid>
+      
+      <description>Introduction In this tutorial, we&amp;rsquo;ll explore a Python script that calculates the Reynolds number, classifies the flow type, and determines the head loss in pipes. We&amp;rsquo;ll also learn how to process multiple pipes with different properties. This code is useful for engineers and students who need to analyze fluid flow in pipes.
+Prerequisites Before diving into the code, make sure you have Python installed on your system. If you&amp;rsquo;re new to Python, you can download it from the official website: https://www.</description>
+      
+    </item>
+    
+    <item>
+      <title> Understanding Randomness and Hydropower Using Python</title>
+      <link>www.yogeshsn.com.np/posts/python_simulation_basic/</link>
+      <pubDate>Fri, 31 May 2024 12:30:53 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/python_simulation_basic/</guid>
+      
+      <description>In this blog, we will explore how randomness and numpy can be used in a practical example related to water resource engineering and hydropower. We&amp;rsquo;ll create a program that simulates the operation of a reservoir and calculates hydropower generation.
+Importing Necessary Libraries import random import numpy as np random: This module helps us generate random numbers. numpy (imported as np): This library is used for numerical operations, especially with arrays and matrices.</description>
+      
+    </item>
+    
+    <item>
+      <title>Python Tutorial: Using random and numpy Libraries</title>
+      <link>www.yogeshsn.com.np/posts/python_numpyrand/</link>
+      <pubDate>Fri, 31 May 2024 09:16:04 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/python_numpyrand/</guid>
+      
+      <description>Python Tutorial: Using random and numpy Libraries In this tutorial, we&amp;rsquo;ll learn how to use the random and numpy libraries in Python. These libraries are powerful tools for generating random numbers and performing numerical operations. We&amp;rsquo;ll cover everything step-by-step so it&amp;rsquo;s easy to understand.
+Importing Libraries import random import numpy as np import random: This imports the random module, which allows us to generate random numbers and make random choices. import numpy as np: This imports the numpy library, a powerful tool for numerical operations, and we use the alias np for convenience.</description>
+      
+    </item>
+    
+    <item>
+      <title>Exploring the Use of self in Python with Reservoir Planning</title>
+      <link>www.yogeshsn.com.np/posts/python_class/</link>
+      <pubDate>Fri, 31 May 2024 08:02:36 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/python_class/</guid>
+      
+      <description>Exploring the Use of self in Python with Reservoir Planning In this blog, we will explore how to use the self function in Python by taking an example from reservoir planning. By the end of this post, we will learn to create a class, define its behavior, and operate it using simple Python code.
+What is a Class in Python? A class in Python helps us create complex data structures that can contain both data and functions (also called methods) that work on that data.</description>
+      
+    </item>
+    
+    <item>
+      <title>How Matplotlib and Pandas are used? The Basics</title>
+      <link>www.yogeshsn.com.np/references/programming/matpand/</link>
+      <pubDate>Tue, 28 May 2024 16:46:11 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/matpand/</guid>
+      
+      <description>In this tutorial, we will be working with streamflow data and using the pandas and matplotlib libraries to analyze and visualize the data.
+Streamflow Data We will start by generating random streamflow data using the numpy library. We will create an array of 365 random numbers between 5 and 15, representing the streamflow for each day of the year.
+num_days = 365 streamflow = np.random.uniform(low=5,high=15,size=num_days) Creating a Date Range Next, we will create a date range for the data using the pandas library.</description>
+      
+    </item>
+    
+    <item>
+      <title>Exploring the Use of self in Python with Reservoir Planning</title>
+      <link>www.yogeshsn.com.np/references/programming/python_class/</link>
+      <pubDate>Sun, 31 Mar 2024 08:02:36 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_class/</guid>
+      
+      <description>Exploring the Use of self in Python with Reservoir Planning In this blog, we will explore how to use the self function in Python by taking an example from reservoir planning. By the end of this post, we will learn to create a class, define its behavior, and operate it using simple Python code.
+What is a Class in Python? A class in Python helps us create complex data structures that can contain both data and functions (also called methods) that work on that data.</description>
+      
+    </item>
+    
+    <item>
+      <title>Introduction to SciPy and Linear Programming</title>
+      <link>www.yogeshsn.com.np/posts/scipytutorial/</link>
+      <pubDate>Sat, 10 Feb 2024 07:28:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/scipytutorial/</guid>
+      
+      <description>SciPy is an open-source Python library that provides various mathematical algorithms and functions for tasks such as numerical integration, optimization, interpolation, and linear algebra. One of its key modules, scipy.optimize, offers optimization routines including linear programming.
+Linear programming (LP) is a mathematical method used to determine the best possible outcome, typically defined by an objective function, given a set of linear constraints. It has applications in various fields such as economics, engineering, and operations research.</description>
+      
+    </item>
+    
+    <item>
+      <title>Introduction to SciPy and Linear Programming</title>
+      <link>www.yogeshsn.com.np/references/programming/scipytutorial/</link>
+      <pubDate>Sat, 10 Feb 2024 07:28:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/scipytutorial/</guid>
+      
+      <description>SciPy is an open-source Python library that provides various mathematical algorithms and functions for tasks such as numerical integration, optimization, interpolation, and linear algebra. One of its key modules, scipy.optimize, offers optimization routines including linear programming.
+Linear programming (LP) is a mathematical method used to determine the best possible outcome, typically defined by an objective function, given a set of linear constraints. It has applications in various fields such as economics, engineering, and operations research.</description>
+      
+    </item>
+    
+    <item>
+      <title>Python Tutorial: Using random and numpy Libraries</title>
+      <link>www.yogeshsn.com.np/references/programming/python_numpyrand/</link>
+      <pubDate>Wed, 31 Jan 2024 09:16:04 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_numpyrand/</guid>
+      
+      <description>Python Tutorial: Using random and numpy Libraries In this tutorial, we&amp;rsquo;ll learn how to use the random and numpy libraries in Python. These libraries are powerful tools for generating random numbers and performing numerical operations. We&amp;rsquo;ll cover everything step-by-step so it&amp;rsquo;s easy to understand.
+Importing Libraries import random import numpy as np import random: This imports the random module, which allows us to generate random numbers and make random choices. import numpy as np: This imports the numpy library, a powerful tool for numerical operations, and we use the alias np for convenience.</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 12</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking12/</link>
+      <pubDate>Tue, 23 Jan 2024 07:33:46 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking12/</guid>
+      
+      <description>Chinese Language Tutorial - Part 12 时不我待 (Shí bù wǒ dài)
+Time waits for no one. Dialogue:
+A: 现在几点？ (Xiànzài jǐ diǎn?) B: 现在十二点一刻。 (Xiànzài shí&amp;rsquo;èr diǎn yí kè.) New Words:
+Pinyin Character English Translation wèn 问 to ask Xiǎomíng 小明 name of person huídá 回答 to answer Examples:
+有问题吗？ (Yǒu wèntí ma?) - Do you have any questions? 办公楼在教学楼北边 (Bàngōng lóu zài jiàoxué lóu běibian) - The teaching building is next to the Administrative building.</description>
+      
+    </item>
+    
+    <item>
+      <title>HEC HMS Part One Tutorial</title>
+      <link>www.yogeshsn.com.np/posts/hecras_2/</link>
+      <pubDate>Sun, 21 Jan 2024 10:28:59 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/hecras_2/</guid>
+      
+      <description>Tutorial on HEC-HMS: Hydrologic Engineering Center Hydrologic Modelling System
+Introduction: HEC-HMS, developed by the U.S. Army Corps of Engineers, is a robust software for hydraulic modeling of river and floodplain systems. In this tutorial, we&amp;rsquo;ll cover the step-by-step process of setting up a project, defining basin components, importing GIS data, and performing a simulation run. The primary objective is to equip users with the foundational knowledge needed to analyze river systems and derive critical information for dam break analysis.</description>
+      
+    </item>
+    
+    <item>
+      <title>SedimentLoadAnalysis</title>
+      <link>www.yogeshsn.com.np/posts/sedimentloadanalysis/</link>
+      <pubDate>Wed, 17 Jan 2024 21:21:14 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/sedimentloadanalysis/</guid>
+      
+      <description>1. Sediment Concentration ((C)): Sediment concentration is a measure of the amount of sediment present in water, typically expressed in terms of mass per unit volume. It is commonly denoted in units of milligrams per liter (mg/L) or parts per million (ppm). The sediment concentration ((C)) can be calculated using the formula:
+C = m/v
+where:
+( C ) is the sediment concentration (mg/L or ppm), ( m ) is the mass of sediment (in milligrams), ( V ) is the volume of water (in liters).</description>
+      
+    </item>
+    
+    <item>
+      <title>Tamor Storage HydroElectric Project</title>
+      <link>www.yogeshsn.com.np/posts/tamorstorage/</link>
+      <pubDate>Mon, 15 Jan 2024 10:33:09 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/tamorstorage/</guid>
+      
+      <description>Evolution of Tamor Storage HydroElectric Project In 1985, the Japan International Cooperation Agency (JICA) proposed a substantial 696MW hydroelectric project on the Tamor River, involving the construction of a 153-meter tall dam. However, the government at that time did not express much interest in pursuing the project. Moving ahead to 2012, the Nepal Electricity Authority (NEA) filed an application with the Department of Electricity Development (DoED) following a study conducted by JICA.</description>
+      
+    </item>
+    
+    <item>
+      <title>Certificate</title>
+      <link>www.yogeshsn.com.np/about/certificate/</link>
+      <pubDate>Sun, 14 Jan 2024 20:54:05 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/about/certificate/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Headworks Design Day 1</title>
+      <link>www.yogeshsn.com.np/posts/headworks_design/</link>
+      <pubDate>Sun, 14 Jan 2024 19:57:05 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/headworks_design/</guid>
+      
+      <description>Mr. Bharat Raj Pandey is a senior engineer at Hydro Consult Engineering Limited. Today, he shared valuable lessons in our hydropower engineering class, focusing on hydro headworks design.
+The initial step involves a topographical survey, requiring a D card from the survey department of Nepal to obtain XYZ coordinates. Control points are established through surveying techniques like triangulation to create a detailed map at a 1:1000 scale.
+The importance of a detailed map lies in understanding the depth and width needed for foundation work during hydropower headworks construction.</description>
+      
+    </item>
+    
+    <item>
+      <title>Week 2- January 2024</title>
+      <link>www.yogeshsn.com.np/references/discipline/week2/</link>
+      <pubDate>Sat, 13 Jan 2024 21:40:28 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/discipline/week2/</guid>
+      
+      <description>Week 2 Summary - January 2024 Highlights: Two-day training in the Water-Energy-Food-Ecosystem (WEFE) Nexus Pilot Academic Course. Insight gained on the necessity of deploying tools and engineering for meeting Sustainable Development Goals (SDGs). Physical Activities: Ran over 18 km. Completed 300 pushups, squats, sit-ups, and other exercises. Meditated for 20 minutes each day for 6 days. Enjoyed a 5+ hour hike on Friday to reconnect with nature. Productivity: Published an article on the Grand Ethiopian Renaissance Dam (GERD).</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 11</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking11/</link>
+      <pubDate>Sat, 13 Jan 2024 11:37:52 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking11/</guid>
+      
+      <description>Chinese Language Tutorial: Part 11 Vocabulary New Words xiànzài (n.) - now diǎn (mw.) - o’clock kè (mw.) - quarter bàn (num.) - half zǎofàn (n.) - breakfast shíhòu (n.) - time shàngkè (v.) - to attend class Revision cóng&amp;hellip; dào&amp;hellip; - from&amp;hellip; to&amp;hellip; shàngwǔ - morning jīntiān - today yuè - month hào (rì) - date xīngqī - week xīngqīrì - Sunday Phrases tīng xiě - dictation ba - suggestion or confirmation zánmen - we; us a - tail of spoken particle chūfā - depart; to set out xíng - OK; capable jiànmiàn - to meet chà - to be less than Dialogue Asking About Time Xiǎoyè: Xiànzài jǐ diǎn?</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 10</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking10/</link>
+      <pubDate>Sat, 13 Jan 2024 11:36:28 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking10/</guid>
+      
+      <description>Chinese Language Tutorial - Part 10: Vocabulary Pinyin Character Meaning fùqīn 父亲 father gōngzuò 工作 to work; work, job yīshēng 医生 doctor mǔqīn 母亲 mother gōngsī 公司 company zhíyuán 职员 staff member jìzhě 记者 journalist fùmǔ 父母 parents jīnnián 今年 this year duō 多 to what extent (Question) niánjì 年纪 age suì 岁 year (of age) mìmì 秘密 secret; confidential háizi 孩子 child érzi 儿子 son zhēn 真 really, very shòuhuòyuán 售货员 shop assistant jīnglǐ 经理 manager sījī 司机 driver yéye 爷爷 grandfather nǎinai 奶奶 grandmother dàngāo 蛋糕 cake míngpiàn 名片 name card jìtā 记它 to remember xǐhuan 喜欢 to like ài 爱 to love dà gē 大哥 elder brother (respectful) dà jiě 大姐 elder sister (respectful) Asking about Profession (Be careful!</description>
+      
+    </item>
+    
+    <item>
+      <title>Grand Ethiopian Renaissance Dam (GERD)</title>
+      <link>www.yogeshsn.com.np/posts/gerd/</link>
+      <pubDate>Sat, 13 Jan 2024 08:41:30 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/gerd/</guid>
+      
+      <description>The Grand Ethiopian Renaissance Dam (GERD), formerly known as Millennium Dam and sometimes referred to as Hidese Dam, is a gravity dam situated on the Blue Nile River in the Benishangul-Gumuz Region of Ethiopia. The primary purpose of this dam is to generate electricity, addressing Ethiopia’s energy shortage and facilitating electricity exports to neighboring countries. The initial planned generation capacity of 5250 MW was later increased to 6450 MW with various adjustments made over time.</description>
+      
+    </item>
+    
+    <item>
+      <title>Chinese Vocabulary</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_vocabulary/</link>
+      <pubDate>Sun, 07 Jan 2024 08:52:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_vocabulary/</guid>
+      
+      <description>Chinese Vocabulary Pinyin Character Meaning nǐ 你 you hǎo 好 good; well wǒ 我 I; me shì 是 to be; is bù 不 not shénme 什么 what míngzi 名字 name jiào 叫 to be called hāo 号 number nǎ 哪 which guó 国 country zhōngguó 中国 China rén 人 person jīntiān 今天 today zuótiān 昨天 yesterday míngtiān 明天 tomorrow wǎnshàng 晚上 evening zǎoshang 早上 morning xiàwǔ 下午 afternoon shàngwǔ 上午 before noon xiànsheng 先生 Mr.</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 9</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking9/</link>
+      <pubDate>Sun, 07 Jan 2024 07:49:22 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking9/</guid>
+      
+      <description>Chinese Language Tutorial - Part 9: Dialogue 1: Text:
+Sūn lǎoshī: Nǐ xuéxí shénme?
+Luó shān: Wǒ xuéxí hànyǔ.
+Sūn lǎoshī: Nǐ zài nǎr xuéxí hànyǔ?
+Luó shān: Wǒ zài zhōngguó wénhuà zhōngxīn xuéxí hànyǔ.
+Sūn lǎoshī: Nǐmen bān yǒu duōshao xuéshēng?
+Luó shān: Wǒmen bān yǒu sānshí gè xuéshēng.
+Sūn lǎoshī: Jǐ wèi lǎoshī jiào nǐmen?
+Luó shān: Sān wèi lǎoshī jiāo wǒmen.
+Dialogue 1: Teacher: What are you studying?</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 8</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking8/</link>
+      <pubDate>Sun, 07 Jan 2024 07:49:17 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking8/</guid>
+      
+      <description>Chinese Language Tutorial - Part 8 Nǐ shì nǎ guó rén? Which country are you from? New words:
+Pronunciation Meaning nǎ pron. which guó n. country jiào v. to call míngzi n. name guìxìng n. asking surname (politely) guì adj. expensive; honorable xìng v./n. to surname; surname jǐ wèi lǎoshī jiāo nǐmen? How many teachers teach you? New words:
+Pronunciation Meaning jǐ how many wèi for respected person jiāo v. to teach zhù v.</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 7</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking7/</link>
+      <pubDate>Sun, 07 Jan 2024 07:49:13 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking7/</guid>
+      
+      <description>Chinese Language Tutorial - Part 7 Health and Study Conversation Dialogue:
+Zhōngguó péngyǒu: Zuìjìn nǐ shēntǐ hǎo ma? (How is your health?) Lì lì: Wǒ shēntǐ hěn hǎo. (My health is very good.) Zhōngguó péngyǒu: Nǐ xuéxí máng ma? (Are you busy with studies?) Lì lì: Wǒ xuéxí bǐjiào máng. (I am relatively busy with studies.) Zhōngguó péngyǒu: Nǐ chéngjì hǎo ma? (How are your grades?) Lì lì: Mǎmahūhū. (So-so.) Zhōngguó péngyǒu: Nǐmen bān tóngxué xuéxí nǔlì ma?</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 6</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking6/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:58 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking6/</guid>
+      
+      <description>Chinese Language Tutorial - Part 6 Word Order in a Chinese Sentence A Chinese sentence typically follows the subject-predicate structure, where the subject, often a noun or pronoun, precedes the predicate, typically a verb or adjective. For example:
+Sub + Predicate: tā shì lǎoshī. pǔruì shi liúxuéshēng. tā hěn piàoliang. Sentence Making Use the given words to create sentences:
+zhè bǐ shì ____________ (This pen is ____________.) shū xīn hěn ____________ (The book is _____________.</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 5</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking5/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:53 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking5/</guid>
+      
+      <description>Chinese Language Tutorial - Part 5 New Words Verbs qù (去) - to go rènshi (认识) - to meet; to know xuéxí (学习) - to learn; to study Adjectives gāoxìng (高兴) - happy Pronouns zhè (这) - this nà (那) - that Particles de (的) - of yíxiàr (一下) - casual action (once) Nouns hànyǔ (汉语) - Chinese Language bān (班) - class kǒuyǔ (口语) - Spoken Language xuésheng (学生) - student Níbó’ěr (尼泊尔) - Nepal rén (人) - people zhè (这) - this nà (那) - that péngyou (朋友) - friend Jiādémǎndū (加德满都) - Kathmandu Bókǎlā (博卡拉) - Pokhara Lán pí ní (兰比尼) - Lumbini Proper Nouns Pǔruì (普瑞) - Pradeep Luóshān (罗山) - Roshan Lìlì (丽丽) - Sonali Additional Words hé (和) - and; with jiàoshì (教室) - classroom dà (大) - big xīn (新) - new tóngxué (同学) - classmate hòu (厚) - thick piàoliang (漂亮) - pretty; beautiful jíle (极了) - extremely nǚ’ér (女儿) - daughter cōngming (聪明) - clever kě’ài (可爱) - lovely kàn (看) - to look shuài (帅) - handsome xiǎo (小) - small, little Conversation A: Qǐngwèn, túshūguǎn zài nǎr?</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 4</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking4/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:49 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking4/</guid>
+      
+      <description>Chinese Language Tutorial - Part 4 New Words Vocabulary yào (要) - would like to; want to huàn (换) - to change qián (钱) - money duōshao (多少) - how much, how many bǎi (百) - hundred měiyuán (美元) - US dollar lúbǐ (卢比) - Rupees Measure Words bēi (杯) - cup, glass kuài (yuán) (块/元) - Chinese monetary unit gè (个) - a general measure word máo (jiǎo) (毛/角) - 1/10 of yuan fēn (分) - 1/10 of jiao píng (瓶) - bottle běn (本) - a measure word for books, etc.</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 3</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking3/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:45 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking3/</guid>
+      
+      <description>Chinese Language Tutorial - Part 3 Food and Drinks Vocabulary chī (吃) - to eat shénme (什么) - what jiǎozi (饺子) - dumpling mǐfàn (米饭) - cooked rice miàntiáo (面条) - noodle miànbāo (面包) - bread bāozi (包子) - steamed stuffed bun Conversation A: 你吃什么？ (Nǐ chī shénme?)
+B: 我吃饺子。 (Wǒ chī jiǎozi.)
+Drinks Vocabulary hē (喝) - to drink píjiǔ (啤酒) - beer chá (茶) - tea kāfēi (咖啡) - coffee shuǐ (水) - water niúnǎi (牛奶) - milk Kěkǒu-kělè (可口可乐) - Coca-cola Conversation A: 你喝什么？ (Nǐ hē shénme?</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 2</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking2/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:42 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking2/</guid>
+      
+      <description>Chinese Language Tutorial - Part 2 New Vocabulary Verbs Qǐng (请) - Please jìn (进) - Enter zuò (坐) - Sit tīng (听) - Listen shuō (说) - Speak dú (读) - Read Interrogative Particle ma (吗) - A question particle Pronouns wǒ (我) - I, me tā (他/她) - He/She tāmen (他们/她们) - They, them Adverbs and Particles hěn (很) - Very ne (呢) - A particle indicating a question yě (也) - Too, also Family Members bàba (爸爸) - Father māma (妈妈) - Mother gēge (哥哥) - Elder brother jiějie (姐姐) - Elder sister dìdi (弟弟) - Younger brother mèimei (妹妹) - Younger sister Tone Positions mā (马) - Ma (first tone) hǎo (好) - Good (third tone) zuò (坐) - Sit (4th tone) mì (米) - Rice (4th tone) jīng (京) - Capital (1st tone) liù (六) - Six (4th tone) guì (贵) - Expensive (4th tone) Conversation A: 你好吗？ (Nǐ hǎo ma?</description>
+      
+    </item>
+    
+    <item>
+      <title>Learn Basic Chinese - 1</title>
+      <link>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking1/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:37 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/chinese_speaking/chinese_speaking1/</guid>
+      
+      <description>Chinese Language Tutorial - Part 1 Tones Chinese is a tonal language, and tones play a crucial role in distinguishing meanings. There are four basic tones:
+ā (first tone) á (second tone) ǎ (third tone) à (fourth tone) Tone Drills Practice the tones with the following examples:
+mā (马) - horse mà (骂) - scold Why are Tones Important? Tones change the meaning of a word, emphasizing the importance of proper pronunciation.</description>
+      
+    </item>
+    
+    <item>
+      <title> Understanding Randomness and Hydropower</title>
+      <link>www.yogeshsn.com.np/references/programming/python_simulation_basic/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:34 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_simulation_basic/</guid>
+      
+      <description>In this blog, we will explore how randomness and numpy can be used in a practical example related to water resource engineering and hydropower. We&amp;rsquo;ll create a program that simulates the operation of a reservoir and calculates hydropower generation.
+Importing Necessary Libraries import random import numpy as np random: This module helps us generate random numbers. numpy (imported as np): This library is used for numerical operations, especially with arrays and matrices.</description>
+      
+    </item>
+    
+    <item>
+      <title>Week 1- January 2024</title>
+      <link>www.yogeshsn.com.np/references/discipline/week1/</link>
+      <pubDate>Sat, 06 Jan 2024 08:43:28 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/discipline/week1/</guid>
+      
+      <description>Monthly Plan for January 2024 This week is about to end. Today is January 6, 2024. I posted a message on January 1st highlighting the need for good planning, dedication, and hard work. In the final lines, I made a commitment to follow up with posts that would underscore my plans and activity lists, focusing on my dreams.
+For this reason, I&amp;rsquo;ve come up with a subtle plan for this month, which aims to yield benefits in five major areas: Physical Wellbeing, Mental Toughness, Spiritual Understanding, Social Connection, and Career Orientation.</description>
+      
+    </item>
+    
+    <item>
+      <title>Unveiling Nepal Hydropower Potential: Recap the Webinar</title>
+      <link>www.yogeshsn.com.np/posts/energyforum3/</link>
+      <pubDate>Thu, 04 Jan 2024 21:13:28 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/energyforum3/</guid>
+      
+      <description>Unlocking Nepal&amp;rsquo;s Hydropower Potential: A Gateway to Cross-Border Energy Trade In a recent webinar hosted by the Nepal Hydropower Association, Sushil Aryal took center stage, shedding light on Nepal&amp;rsquo;s thriving hydropower sector and the exciting possibilities of cross-border energy trade. As a participant in this enlightening session, here&amp;rsquo;s an in-depth exploration of the key insights shared and the ensuing discussions that unfolded.
+Nepal&amp;rsquo;s Hydropower Landscape: Current State and Future Projections Aryal commenced the presentation by underscoring the substantial progress made by the Nepal Electricity Authority (NEA).</description>
+      
+    </item>
+    
+    <item>
+      <title>A Comprehensive Exploration of Huberman Labs AMA14 </title>
+      <link>www.yogeshsn.com.np/posts/hubberman1/</link>
+      <pubDate>Tue, 02 Jan 2024 06:25:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/hubberman1/</guid>
+      
+      <description>Unveiling the Depths: A Comprehensive Exploration of Huberman Lab&amp;rsquo;s AMA #14 Note: Important points are taken from following video, later processed by AI to make a comprehensive summary of Hubberman Podcast AMA #14: 2023 Philanthropy, Evening Routine, Light Therapy, Health Metrics &amp;amp; More 1. Mind Mastery: Unleashing the Power of Anterior Mid-Singulate Cortex Professor Andrew Huberman leads us into the intricate landscape of cognitive enhancement, centered around the anterior mid-singulate cortex.</description>
+      
+    </item>
+    
+    <item>
+      <title>Happy New Year 2024</title>
+      <link>www.yogeshsn.com.np/posts/happynewyear2024/</link>
+      <pubDate>Mon, 01 Jan 2024 05:57:27 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/happynewyear2024/</guid>
+      
+      <description>Reflecting on 2023: A Year of Growth and Resilience 2023 emerged as a pivotal year in my life, marked by a myriad of choices, trade-offs, and compromises. It became a defining moment, propelling me to face challenges, prove my worth, and put in considerable effort.
+Embracing Opportunities and Academic Pursuits The year commenced with fresh opportunities, leading me to various parts of Nepal to refine my engineering skills. By the end of April, a significant decision awaited me as I joined the Master&amp;rsquo;s program at Pulchowk Campus.</description>
+      
+    </item>
+    
+    <item>
+      <title>Nepalese Cultural Tapestry: Gurung and Kirat Celebrations</title>
+      <link>www.yogeshsn.com.np/posts/loshar_udhauli/</link>
+      <pubDate>Sun, 31 Dec 2023 17:43:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/loshar_udhauli/</guid>
+      
+      <description>Embracing Nepalese Diversity: A Glimpse into Local Cultures and Celebrations In the span of a week, I had the incredible opportunity to immerse myself in the rich history, diverse cultures, and enchanting rituals of the Gurung and Rai/Limbu communities in Nepal. On December 26, 2023, a friend and I embarked on a journey to the pilgrimage site of Kirats at Hattiban, Lalitpur, Nepal, to witness the festivals of Chasok Tangnam and Udhauli.</description>
+      
+    </item>
+    
+    <item>
+      <title>Exploring Hydrological Methods for Sustainable River Management</title>
+      <link>www.yogeshsn.com.np/posts/tennantmethod/</link>
+      <pubDate>Sun, 31 Dec 2023 06:23:34 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/tennantmethod/</guid>
+      
+      <description>Department of Energy Development (DoED) Nepal Guideline In accordance with the Guidelines for the Study of Hydropower Projects 2018, the DoED specifies that a compensation flow (10% of the lowest monthly flow or the amount recommended by IEE/EIA study) should be released downstream. This should be deducted from the available dry season flows for the computation of energy estimates.
+The government of Nepal plans to harness 10,000 MW by 2026 through various projects.</description>
+      
+    </item>
+    
+    <item>
+      <title>Popularwebsite</title>
+      <link>www.yogeshsn.com.np/references/popular_sites/popularwebsite/</link>
+      <pubDate>Sat, 30 Dec 2023 13:18:14 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/popular_sites/popularwebsite/</guid>
+      
+      <description>Embracing the Digital Frontier: A Journey into Online Learning In this era of rapid technological advancement, the opportunities for learning and personal growth are virtually limitless. Whether you&amp;rsquo;re a student seeking additional resources or an individual eager to acquire new skills, the internet offers a treasure trove of knowledge at your fingertips. In this blog post, we&amp;rsquo;ll explore some remarkable online platforms that cater to various interests and educational needs.</description>
+      
+    </item>
+    
+    <item>
+      <title>Daniel Lieberman Thoughts on Exercise, Sleep and Health</title>
+      <link>www.yogeshsn.com.np/posts/first/</link>
+      <pubDate>Sat, 30 Dec 2023 08:07:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/first/</guid>
+      
+      <description>Exercise is crucial for preventing diseases and maintaining good health.
+Retirement can lead to muscle loss and negative health effects.
+Physical activity has benefits for reducing cancer risks, depression, and anxiety.
+Common exercise myths, including optimal sleep duration and steps per day, are debunked.
+Physical activity is vital for slowing the aging process, and lack of it can lead to a shorter lifespan.
+Environmental factors play a crucial role in the development of diseases.</description>
+      
+    </item>
+    
+    <item>
+      <title>GOTinNepal</title>
+      <link>www.yogeshsn.com.np/posts/gotinnepal/</link>
+      <pubDate>Thu, 23 Nov 2023 14:43:53 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/gotinnepal/</guid>
+      
+      <description>कति आन्दोलन भए यो देशमा, कति विद्रोह भए , कति जनता मारिए परिवर्तन का शब्दहरूमा । यो व्यवस्था त्यो व्यवस्था, राजा, राणा, पंचायत, प्रजातन्त्र , लोकतन्त्र, गणतन्त्र, के के नामका अभ्यास भए यो सानो मुलुकमा , कति चोटि ढातिए, ठगिए सोझा साझा नेपालीहरु । फेरि ढुङ्गेयुग को कुरा चल्दै छ , हो, हाम्रा देश , सीमित स्वार्थी मानिसहरूको कब्जा मा छ, तर लोकतन्त्र अभ्यास आफैमा गलत पक्कै होइन । के राजा लाई मात्र देशको माया लागेको हो र, के राजाले सक्छन् यो देशको प्रगाति गर्न, नेपालको स्वाधीनता जोगाउन , गरिबी हटाउन , रोजगारी बढाउन, देशलाई आतमनिर्भर को मार्गमा डोर्याउन ?</description>
+      
+    </item>
+    
+    <item>
+      <title>Humanity</title>
+      <link>www.yogeshsn.com.np/posts/humanity/</link>
+      <pubDate>Mon, 30 Oct 2023 14:37:17 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/humanity/</guid>
+      
+      <description>Humanity is not a new word; we all know about it. It is a quality a rational thinker possesses which distinguish himself as a kind, a non-harming and loving being. But is it that simple? NO, I don’t think so. Humanity is a complex issue because it involves thoughts and emotions. The word derived from Latin humanitas which means “human nature, kindness”. Some argue Humanity is the human race, while other define qualities such as love, compassion and even creativity, in understanding humanity.</description>
+      
+    </item>
+    
+    <item>
+      <title>भिन्न भिन्न</title>
+      <link>www.yogeshsn.com.np/posts/vinnavinna/</link>
+      <pubDate>Mon, 18 Sep 2023 14:22:08 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/vinnavinna/</guid>
+      
+      <description>ऊ पानी म आगो, हाम्रो जात मिलेन
+ऊ भोगी म भोको, हाम्रो साथ मिलेन
+मेरो आसु मेरो परिचय थियो
+ऊ खुसीहरुको पर्याय थियो
+म मासु लुस्ने, ऊ साग रुचाउने
+संगत कसरी बक्लिन्थ्यो, जब भाग मिलेन
+म उसमा खोट भेट्थे, आफू भित्र रोग देख्थे
+उसँग सपना थिए, म निरासाको सिरक भित्रै लुकिरन्थे
+म ईश्वर खोज्दथे, ऊ ईश्वर देख्दथ्यो
+ऊ उत्साह, म निरिह, हाम्रो थान मिलेन
+बाक्लिदै थियो सम्बन्धमा बादल, विश्वासको आकाश छोपिएपछी</description>
+      
+    </item>
+    
+    <item>
+      <title>Aastha</title>
+      <link>www.yogeshsn.com.np/posts/aastha/</link>
+      <pubDate>Sun, 03 Sep 2023 14:46:13 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/aastha/</guid>
+      
+      <description>मानिसहरुको आस्था ईश्वर प्रति कति धेरै हुन्छ है, एउटा ७० नाघेका बुवा , ५००-१००० को लाइनमा हुनुहुन्थ्यो, मैले सोधें हजुर आराम गर्नुस्, अनि पछि परिवार छिर्ने बेलामा जाँदा हुदैँन? उहाँले आफ्नो धर्म खेर जाने तर्क राख्नुभयो। म सोचें, जीवन भरिका पाप मन्दिर आउँदैमा पखालिन्छ र? मठ मन्दिर, चर्च मश्चिद, देव मूर्ति त आस्थाका प्रतीक मात्र त हुन्, धर्म त आफ्नै कर्म हुनुपर्ने । नत्र जीवन भरी भ्रष्ट, शोसक अनि हिंसक भएका, मर्ने बेला गंगा स्नान गरेर स्वर्ग पुग्छन्?</description>
+      
+    </item>
+    
+    <item>
+      <title>Navier-Stokes Equation</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/9/</link>
+      <pubDate>Sat, 12 Aug 2023 16:11:07 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/9/</guid>
+      
+      <description>Navier-Stokes Equation: Significance in Fluid Dynamics The Navier-Stokes equation is one of the cornerstone equations in the field of fluid dynamics. It provides a mathematical framework to describe the motion of fluid substances such as liquids and gases. The equation is derived from Newton&amp;rsquo;s second law, which relates the change in momentum of a fluid particle to the forces acting on it.
+Key Components of the Navier-Stokes Equation: Inertia: Represents the fluid&amp;rsquo;s resistance to changes in motion.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ensuring accuracy in Computational Fluid Dynamics (CFD)</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/8/</link>
+      <pubDate>Sat, 12 Aug 2023 14:57:47 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/8/</guid>
+      
+      <description>Ensuring accuracy in Computational Fluid Dynamics (CFD) simulations is crucial for obtaining reliable results that can be used for engineering analysis, design, and decision-making. Achieving accuracy in CFD simulations involves several key considerations:
+1. Grid Refinement Role:
+Grid refinement involves increasing the resolution of the computational mesh, particularly in regions where the solution exhibits steep gradients or complex flow features (e.g., near walls, around sharp corners, or in regions of high turbulence).</description>
+      
+    </item>
+    
+    <item>
+      <title>Systematic Errors</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/7/</link>
+      <pubDate>Sat, 12 Aug 2023 13:18:29 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/7/</guid>
+      
+      <description>In Computational Fluid Dynamics (CFD), the numerical solutions are subject to three main types of systematic errors: modeling errors, discretization errors, and iteration (or convergence) errors. Each of these errors has distinct characteristics and implications for the accuracy and reliability of the simulation results.
+1. Modeling Errors Explanation:
+Definition: Modeling errors arise from the simplifications and assumptions made during the formulation of the mathematical model used to describe the physical problem.</description>
+      
+    </item>
+    
+    <item>
+      <title>Conservation, Boundedness, and Accuracy</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/6/</link>
+      <pubDate>Sat, 12 Aug 2023 12:23:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/6/</guid>
+      
+      <description>Influence of Conservation, Boundedness, and Accuracy on Numerical Solution Methods in CFD Conservation:
+Definition and Importance: Conservation in numerical methods refers to the accurate representation of conserved quantities, such as mass, momentum, and energy, within the computational domain. Since CFD solves conservation laws, the numerical scheme must also respect these laws both locally (within individual control volumes) and globally (over the entire domain). If a method does not conserve these quantities, it can lead to incorrect solutions, such as the creation or loss of mass or energy, which would physically be impossible.</description>
+      
+    </item>
+    
+    <item>
+      <title>Consistency, Stability, and Convergence</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/5/</link>
+      <pubDate>Sat, 12 Aug 2023 11:48:53 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/5/</guid>
+      
+      <description>Consistency, Stability, and Convergence in Numerical Solution Methods Consistency:
+Definition: Consistency refers to how closely a discretized equation approximates the original differential equation. A method is consistent if the difference between the discretized equation and the exact differential equation (called truncation error) goes to zero as the grid spacing (∆x, ∆t) tends to zero. Importance: Consistency ensures that as we refine the grid (make the mesh finer), the numerical solution approximates the true solution of the differential equation better.</description>
+      
+    </item>
+    
+    <item>
+      <title>Grids</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/4/</link>
+      <pubDate>Sat, 12 Aug 2023 11:48:20 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/4/</guid>
+      
+      <description>Structured Grids:
+Advantages:
+Simplicity: Structured grids are straightforward to implement and are logically similar to Cartesian grids. Connectivity: Each grid point has a fixed number of neighbors, simplifying programming. Efficient Solvers: The algebraic equation system has a regular structure, which allows for efficient numerical solvers. Disadvantages:
+Limited Flexibility: Structured grids can only be used for simple geometries, making them less suitable for complex domains. Grid Point Distribution: It&amp;rsquo;s hard to concentrate grid points in specific regions without creating very small or thin cells in other areas, leading to inefficient use of computational resources.</description>
+      
+    </item>
+    
+    <item>
+      <title>Coordinate and Basis Vector Systems</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/3/</link>
+      <pubDate>Sat, 12 Aug 2023 11:47:38 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/3/</guid>
+      
+      <description>Influence of Coordinate and Basis Vector Systems in CFD Formulation In Computational Fluid Dynamics (CFD), the formulation of conservation equations—such as those for mass, momentum, and energy—depends significantly on the choice of coordinate and basis vector systems. These systems define how we describe the geometry of the problem, represent vector and tensor quantities, and discretize the governing equations. The choice of coordinate system and basis vectors can affect both the mathematical complexity of the equations and the computational efficiency of the solution.</description>
+      
+    </item>
+    
+    <item>
+      <title>FDM, FVM and FEM</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/2/</link>
+      <pubDate>Sat, 12 Aug 2023 11:47:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/2/</guid>
+      
+      <description>The finite difference, finite volume, and finite element methods are widely used numerical techniques in Computational Fluid Dynamics (CFD). Each method has unique characteristics that make it suitable for different classes of problems. Here&amp;rsquo;s a comparison and contrast of these methods:
+1. Finite Difference Method (FDM) Overview: The finite difference method involves discretizing the domain into a grid and approximating the derivatives in the governing equations using difference equations (e.g., forward, backward, or central differences).</description>
+      
+    </item>
+    
+    <item>
+      <title>Mathematical Model in CFD</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/1/</link>
+      <pubDate>Sat, 12 Aug 2023 11:46:23 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/1/</guid>
+      
+      <description>Selecting an appropriate mathematical model is crucial for obtaining accurate and reliable results in Computational Fluid Dynamics (CFD). The mathematical model essentially defines the governing equations and assumptions that describe the physical phenomena being simulated. Here&amp;rsquo;s why it&amp;rsquo;s important and what factors should be considered:
+Importance of Selecting the Appropriate Mathematical Model Accuracy of Results: The mathematical model determines how closely the numerical solution approximates the real physical system. If the model is too simplified, it may not capture essential physical behaviors, leading to inaccurate results.</description>
+      
+    </item>
+    
+    <item>
+      <title>Engineering Colleges in Nepal </title>
+      <link>www.yogeshsn.com.np/posts/college_draft/</link>
+      <pubDate>Sat, 05 Aug 2023 08:18:19 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/college_draft/</guid>
+      
+      <description>Engineering in Nepal: A Comprehensive Overview नेपालमा इन्जिनियरिङ शिक्षा नेपालमा इन्जिनियरिङ शिक्षा छिटो बढिरहेको छ, धेरै संस्थाहरूले विभिन्न कार्यक्रमहरू प्रस्ताव गर्दैछन्। यो वृद्धि देशको विकासका लागि दक्ष इन्जिनियरहरूको बढ्दो मागले प्रेरित गरिएको हो।
+प्रमुख इन्जिनियरिङ विषयहरू:
+सिभिल इन्जिनियरिङ इलेक्ट्रिकल इन्जिनियरिङ इलेक्ट्रोनिक्स र संचार इन्जिनियरिङ मेकानिकल इन्जिनियरिङ कम्प्युटर इन्जिनियरिङ सूचना प्रविधि सीट र विश्वविद्यालयहरू इन्जिनियरिङ कार्यक्रमहरूमा उपलब्ध सीटहरू वार्षिक रूपमा परिवर्तन हुन्छन्, जसमा प्रभाव पार्ने तत्वहरू:
+नयाँ इन्जिनियरिङ कलेजहरूको स्थापना सरकारी शैक्षिक नीतिहरू आर्थिक वृद्धि र इन्जिनियरहरूको माग प्रमुख इन्जिनियरिङ कलेज र विश्वविद्यालयहरू:</description>
+      
+    </item>
+    
+    <item>
+      <title>Popular Built-in Modules in Python</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/builtin/</link>
+      <pubDate>Thu, 20 Jul 2023 12:40:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/builtin/</guid>
+      
+      <description>Here are the 30 most popular built-in modules/libraries of Python, along with examples and uses:
+1. abc The abc module provides the environment for creating abstract base classes.
+Example:
+from abc import ABCMeta, abstractmethod class MyAbstractClass(metaclass=ABCMeta): @abstractmethod def x(self): pass @abstractmethod def y(self): pass obj = MyAbstractClass() # Throws TypeError Use:
+Ensures that classes are properly abstracted and cannot be instantiated if they are not fully implemented. 2. argparse The argparse module provides a way to parse command-line arguments.</description>
+      
+    </item>
+    
+    <item>
+      <title>Numpy Library</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/numpy/</link>
+      <pubDate>Sat, 15 Jul 2023 13:17:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/numpy/</guid>
+      
+      <description>NumPy (Numerical Python) is a fundamental library for scientific computing in Python. It provides support for large, multi-dimensional arrays and matrices, along with a vast collection of high-level mathematical functions to operate on these arrays efficiently.
+Why NumPy is important:
+Efficient array operations Memory efficiency Vectorization capabilities Integration with other scientific Python libraries Speed: Many operations are implemented in C, making them much faster than pure Python code Examples np.array(): Create an array</description>
+      
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/pandas/</link>
+      <pubDate>Thu, 13 Jul 2023 13:14:09 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/pandas/</guid>
+      
+      <description>Pandas is a powerful open-source Python library for data manipulation and analysis. It provides easy-to-use data structures and data analysis tools for working with structured (tabular, multidimensional, potentially heterogeneous) and time series data. Pandas is built on top of NumPy and provides a high-level interface for working with large datasets efficiently.
+Some key features of Pandas include:
+Data Structures: Pandas provides two main data structures: Series and DataFrame.
+Series: A one-dimensional labeled array capable of holding data of any type.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matplotlib</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/matplotlib/</link>
+      <pubDate>Thu, 13 Jul 2023 13:12:05 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/matplotlib/</guid>
+      
+      <description>Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. It provides a wide range of tools for plotting 2D and 3D data, including line plots, scatter plots, bar charts, histograms, and more. Matplotlib is built on NumPy and is designed to work seamlessly with other Python libraries like Pandas and Scikit-Learn.
+Some key features of Matplotlib include:
+Plotting Functions: Matplotlib provides a variety of plotting functions for creating different types of plots, such as plot() for line plots, scatter() for scatter plots, bar() for bar charts, and hist() for histograms.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mostly used Built-in Functions in Python </title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/builtinfunctions/</link>
+      <pubDate>Wed, 12 Jul 2023 13:21:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/builtinfunctions/</guid>
+      
+      <description>Mostly used functions in Python&amp;hellip;
+print(): Prints the specified value or values. Example: print(&amp;quot;Hello, World!&amp;quot;) Output: Hello, World!
+input(): Reads a line from the console and returns it as a string. Example: name = input(&amp;quot;What is your name? &amp;quot;) Output: What is your name? John
+len(): Returns the length of an object (string, list, tuple, etc.). Example: my_list = [1, 2, 3, 4, 5] and print(len(my_list)) Output: 5
+max(): Returns the largest item in an iterable or the largest of two or more arguments.</description>
+      
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/math/</link>
+      <pubDate>Tue, 11 Jul 2023 12:57:46 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/math/</guid>
+      
+      <description>import math The math module in Python provides access to the mathematical functions defined by the C standard. It allows you to perform various mathematical operations, including trigonometric functions, logarithmic functions, and constants like pi and e.
+Some key features of the math module include:
+Trigonometric Functions: The math module provides functions for calculating trigonometric values, such as sine (sin()), cosine (cos()), and tangent (tan()). These functions take an angle in radians as input and return the corresponding trigonometric value.</description>
+      
+    </item>
+    
+    <item>
+      <title>Tensor Flow</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/tensorflow/</link>
+      <pubDate>Mon, 10 Jul 2023 13:23:39 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/tensorflow/</guid>
+      
+      <description>TensorFlow is an open-source machine learning library developed by Google Brain Team. It is used for building and training deep neural networks and other machine learning models. TensorFlow provides a flexible ecosystem of tools, libraries, and community resources that allow researchers to push the state-of-the-art in machine learning and developers to easily build and deploy ML-powered applications.
+Some key features of TensorFlow include:
+Flexible Architecture: TensorFlow has a flexible architecture that allows easy deployment of computation to one or more CPUs, GPUs, or TPUs in a desktop, server, or mobile device.</description>
+      
+    </item>
+    
+    <item>
+      <title>Scikit Learn</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/scikit-learn/</link>
+      <pubDate>Sun, 09 Jul 2023 13:05:42 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/scikit-learn/</guid>
+      
+      <description>Scikit-Learn (also known as sklearn) is a powerful machine learning library in Python. It provides a wide range of algorithms for classification, regression, clustering, and dimensionality reduction. Scikit-Learn is built on top of NumPy, SciPy, and matplotlib, making it easy to use and integrate with other Python libraries.
+Some key features of Scikit-Learn include:
+Consistent API: Scikit-Learn provides a consistent and intuitive API, making it easy to switch between different algorithms without changing your code significantly.</description>
+      
+    </item>
+    
+    <item>
+      <title>Keras</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/keras/</link>
+      <pubDate>Sat, 08 Jul 2023 12:51:06 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/keras/</guid>
+      
+      <description>Keras is a powerful and easy-to-use open-source Python library for building and training deep learning models. It serves as a high-level interface for the TensorFlow library, allowing developers to quickly prototype and develop neural network models with minimal code. Here are some key points about Keras:
+Introduction Keras was developed by François Chollet, a Google engineer, and was first released in 2015. It is designed to be user-friendly, modular, and extensible, enabling fast experimentation with deep neural networks.</description>
+      
+    </item>
+    
+    <item>
+      <title>Scipy</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/scipy/</link>
+      <pubDate>Wed, 05 Jul 2023 12:45:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/scipy/</guid>
+      
+      <description>SciPy (Scientific Python) is a collection of mathematical algorithms and convenience functions built on the NumPy extension of Python. It adds significant power to the interactive Python session by providing user-friendly and efficient numerical routines, such as routines for numerical integration, interpolation, optimization, linear algebra, and statistics.
+SciPy is open-source software, which means that it is free to use and modify. It is also well-supported, with a large community of users and developers contributing to its growth and improvement.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/pytorch/</link>
+      <pubDate>Tue, 04 Jul 2023 12:52:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/pytorch/</guid>
+      
+      <description>PyTorch is an open-source machine learning library that is widely used for building and training deep neural networks. It is built on the Python programming language and provides a user-friendly interface for working with tensors, which are multidimensional arrays similar to NumPy arrays but with GPU acceleration.
+Some key features of PyTorch include:
+Tensors: PyTorch uses tensors as the fundamental data structure for representing data. Tensors can be easily manipulated using various operations like addition, multiplication, and reshaping.</description>
+      
+    </item>
+    
+    <item>
+      <title>Plotly</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/plotly/</link>
+      <pubDate>Mon, 03 Jul 2023 12:55:08 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/plotly/</guid>
+      
+      <description>Plotly is an open-source library for creating interactive and visually appealing data visualizations in Python. It provides a wide range of chart types, including scatter plots, line charts, bar charts, histograms, box plots, pie charts, and more.
+Some key features of Plotly include:
+Interactive Plots: Plotly generates interactive plots that allow users to zoom, pan, hover over data points, and even export data. This makes it easy to explore and understand complex datasets.</description>
+      
+    </item>
+    
+    <item>
+      <title>Seaborn</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/seaborn/</link>
+      <pubDate>Fri, 30 Jun 2023 12:48:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/seaborn/</guid>
+      
+      <description>Seaborn is a powerful data visualization library in Python that helps you create attractive and informative statistical graphics. It is built on top of Matplotlib, another popular visualization library, and provides a high-level interface for drawing plots.
+Some key features of Seaborn include:
+Attractive Plots: Seaborn offers a range of default themes and color palettes that make your plots look appealing and professional. It also provides tools for customizing the appearance of your plots to suit your preferences.</description>
+      
+    </item>
+    
+    <item>
+      <title>Request and SYS library functions</title>
+      <link>www.yogeshsn.com.np/references/programming/python_learn/requestsys/</link>
+      <pubDate>Fri, 09 Jun 2023 13:03:07 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_learn/requestsys/</guid>
+      
+      <description>Requests Library The Requests library is the de facto standard for making HTTP requests in Python. It abstracts the complexities of making requests behind a beautiful, simple API so that you can focus on interacting with services and consuming data in your application.
+Some key features of the Requests library include:
+Sending HTTP Requests: Requests provides methods for sending various types of HTTP requests, such as GET, POST, PUT, DELETE, HEAD, and OPTIONS.</description>
+      
+    </item>
+    
+    <item>
+      <title>Program: Calculating Sediment Load</title>
+      <link>www.yogeshsn.com.np/references/programming/sedimentload/</link>
+      <pubDate>Tue, 31 Jan 2023 14:49:27 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/sedimentload/</guid>
+      
+      <description>In this program, we&amp;rsquo;ll calculate the sediment load in a river based on user input. The sediment load is the amount of sediment carried by the river, which can be calculated using the sediment concentration and the discharge of the river.
+Concepts Covered: User Input: Taking input from the user. Lambda Functions: Small anonymous functions used for simple operations. Try-Except: Handling potential errors during user input and calculations.
+Lets Begin def main(): This line defines a function named main().</description>
+      
+    </item>
+    
+    <item>
+      <title>Gratitude</title>
+      <link>www.yogeshsn.com.np/posts/gratitude/</link>
+      <pubDate>Sun, 13 Nov 2022 14:30:49 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/gratitude/</guid>
+      
+      <description>Gratitude can only bring us happiness and lighten the heaviness of our soul. I have wondered how I started and where I am going. Though I do not have answers of the past or the future, i believe in present. Therefore
+Today, I will live
+I will enjoy the sunshine. I will feel the drizzle. I will listen to the birds, and I will smell the petals. I will be lost in blues and green for hours.</description>
+      
+    </item>
+    
+    <item>
+      <title>Swayam: Your Gateway to Free Online Learning</title>
+      <link>www.yogeshsn.com.np/single/</link>
+      <pubDate>Sun, 30 Oct 2022 08:07:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/single/</guid>
+      
+      <description>single</description>
+      
+    </item>
+    
+    <item>
+      <title>Enigma</title>
+      <link>www.yogeshsn.com.np/posts/enigma/</link>
+      <pubDate>Thu, 08 Sep 2022 14:25:26 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/enigma/</guid>
+      
+      <description>As I opened my eyes and tried to see,
+The Gods were imprisoned, and the demons were free.
+I tried to decode what it means,
+Dark was the cloud, the world of sins.
+I wanted to go, they had me frozen,
+I was the target, the spear was thrown.
+Spear of love, Spear of hate,
+Spear of joy, Spear of threat,
+Spear of pain, Spear of shame,
+What was that, I could not combat!</description>
+      
+    </item>
+    
+    <item>
+      <title>अन्तिम दिन हो भने</title>
+      <link>www.yogeshsn.com.np/posts/antimdin/</link>
+      <pubDate>Tue, 30 Aug 2022 14:19:45 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/antimdin/</guid>
+      
+      <description>यदि
+आजको दिन
+अन्तिम दिन हो भने
+म स्मरण गर्न चाहन्छु
+म सुकृया टक्राउँछु
+जल, हावा, अग्नि, माटो
+म मेरो अहम सेलाउँछु
+यदि मसँग आज बाहेक
+कुनै भोलि छैनन् भने
+म खुसी खुसी
+दुस्मनी टुक्राउन चाहन्छु
+शत्रुको मुस्कान मुस्कुराउन चाहन्छु
+मेरा अंग, अन्न्, अंस, अंसु र अक्षर
+यही अञ्जुलीमा अँगाल्न चाहन्छु
+म बिर्सन चाहन्छु
+डाहा, ईख, रिस र आवेग ले
+कोरिएका काहनीहरू
+बरु सम्झन्छु
+माया, दया, विश्वास र साहस ले</description>
+      
+    </item>
+    
+    <item>
+      <title>Balloon</title>
+      <link>www.yogeshsn.com.np/posts/baloon/</link>
+      <pubDate>Mon, 04 Jul 2022 14:23:51 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/baloon/</guid>
+      
+      <description>An affectionate girl
+once abandoned by a boy
+started taking all men
+Her enemy , her rivals
+The sweet turns into bitter
+The dreams into darkness
+A daring lad, in his adventure
+Meet his perfect lass
+They vow to be together
+For rest of all lives
+He was cheated
+He now vows not to love again
+The vigour decays to lethargy
+A father hopes his child a best
+Delivers everything, without eating</description>
+      
+    </item>
+    
+    <item>
+      <title>Samjana</title>
+      <link>www.yogeshsn.com.np/posts/samjana/</link>
+      <pubDate>Thu, 30 Dec 2021 14:26:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/samjana/</guid>
+      
+      <description>सोचेको जैले हुँदैन पूरा, के गर्नु सोचेर
+मागेको त विशै होला, सम्हाल्नु बुझेर यो कस्तो जालो,सारै अफ्ठ्यारो, माकुरा अल्झिने मायाको बाटो, फर्केकै बेश, स्वार्थ बल्झिने
+देखको सपना, बुझेको संसार, भोगेको येथार्थ सम्हाल्ननै गारो , यो मेरो मन, फुटेको माथ होला है आराम भनेरै होनी, पौडेको म पनि सोचेको थिन, डुबिन्छ भन्ने , कसरी निस्कनी
+नाफा र घाटा हुँदैन रैछ, मुटुको व्यापारमा हुँदो त रैछ, गहिरो छाल , यहाँ हरेक चालमा पोखेथे मैले मनको चाह , खुलेरै प्रशंसा सुन्दथ्यो तर कसरी पत्थर, घाउ केवल सहन्छ</description>
+      
+    </item>
+    
+    <item>
+      <title>Strategic Leadership</title>
+      <link>www.yogeshsn.com.np/posts/day1_10/</link>
+      <pubDate>Tue, 01 Jan 2019 19:38:01 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_10/</guid>
+      
+      <description>Strategic Leadership in the 21st Century: Navigating the Complexities of Business Introduction Welcome to the prestigious MBA program at Harvard University, where we embark on a transformative journey to cultivate strategic leaders equipped to navigate the dynamic landscape of the 21st-century business world. In this article, we will delve into key aspects of strategic leadership, supported by real-life case studies and demonstrations, aiming to empower you with the knowledge and skills essential for success.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pricing Strategies</title>
+      <link>www.yogeshsn.com.np/posts/day1_9/</link>
+      <pubDate>Tue, 01 Jan 2019 19:05:30 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_9/</guid>
+      
+      <description>10. Pricing Strategies: Finding the Right Value for Your Services Determining the right pricing for your services is a critical aspect of business success. Here are key insights and strategies to help you establish a pricing model that reflects the true value of your offerings.
+1. Know Your Worth:
+Assess the value of your services and charge accordingly. Avoid undervaluing your expertise or lowering prices in the hope of future work.</description>
+      
+    </item>
+    
+    <item>
+      <title>Sales Cycle</title>
+      <link>www.yogeshsn.com.np/posts/day1_8/</link>
+      <pubDate>Tue, 01 Jan 2019 19:05:23 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_8/</guid>
+      
+      <description>Sales Cycle: Navigating the Path to Revenue Understanding the sales cycle is essential for businesses aiming to convert leads into customers and generate revenue. Let&amp;rsquo;s map out the process of earning money from a customer&amp;rsquo;s pocket, explore the time frame, and discuss strategies for managing expenses until there is payback.
+1. Sales Cycle Mapping: Earning Money from Customer&amp;rsquo;s Pocket A. Lead Generation:
+Identify and attract potential customers through marketing efforts, including content marketing, advertising, and social media.</description>
+      
+    </item>
+    
+    <item>
+      <title>Customer Acquisition</title>
+      <link>www.yogeshsn.com.np/posts/day1_7/</link>
+      <pubDate>Tue, 01 Jan 2019 19:05:17 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_7/</guid>
+      
+      <description>8. Customer Acquisition: Strategies for Success Acquiring customers is a crucial aspect of business growth, and it requires strategic planning and effective networking. Here are key insights and strategies to ensure successful customer acquisition:
+1. Focus on Value Over Volume: Rather than targeting a broad audience, focus on reaching those who truly value your products or services. Remember that you are paid for the value you provide, not just your time.</description>
+      
+    </item>
+    
+    <item>
+      <title>Branding</title>
+      <link>www.yogeshsn.com.np/posts/day1_6/</link>
+      <pubDate>Tue, 01 Jan 2019 19:05:13 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_6/</guid>
+      
+      <description>7. Persona Development and Branding: Crafting an Authentic Online Presence In the digital age, establishing a strong online presence is vital for personal and business success. Persona development and branding play pivotal roles in shaping how you are perceived in the virtual world. Let&amp;rsquo;s explore the steps to create an impactful website and portfolio, connect with social media, and make a meaningful promotion that resonates with your audience.
+Persona Development: Understanding Your Identity Define Your Persona:</description>
+      
+    </item>
+    
+    <item>
+      <title>Decision Making</title>
+      <link>www.yogeshsn.com.np/posts/day1_5/</link>
+      <pubDate>Tue, 01 Jan 2019 19:02:42 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_5/</guid>
+      
+      <description>6. Decision Making Unit: Understanding the Dynamics In the business landscape, understanding the decision-making unit (DMU) is crucial. The DMU comprises individuals and entities that influence the purchase decision. Let&amp;rsquo;s explore this concept and its significance, along with insights into product development and customer engagement.
+Decision Making Unit: Identifying Key Players Primary Decision-Maker:
+Who has the authority to make the final decision? What criteria influence their choices? Influencers:
+What external factors influence the decision?</description>
+      
+    </item>
+    
+    <item>
+      <title>Pilot Market</title>
+      <link>www.yogeshsn.com.np/posts/day1_4/</link>
+      <pubDate>Tue, 01 Jan 2019 19:02:37 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_4/</guid>
+      
+      <description>5. Focused Pilot Market: Case Studies and Key Questions Let&amp;rsquo;s delve into case studies that highlight the importance of a focused pilot market strategy and explore the key questions to identify the suitability of your chosen market segment.
+Case Study 1: Amazon&amp;rsquo;s Strategic Evolution Amazon, founded by Jeff Bezos, began its journey as an online bookstore. The focused pilot market strategy allowed Amazon to test its business model, build customer trust, and optimize its logistics.</description>
+      
+    </item>
+    
+    <item>
+      <title>Market Segmentation</title>
+      <link>www.yogeshsn.com.np/posts/day1_3/</link>
+      <pubDate>Tue, 01 Jan 2019 19:00:47 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_3/</guid>
+      
+      <description>4. Market Segmentation: Crafting Success Through Customer-Centric Strategies Understanding your target market is fundamental to any successful business venture. Market segmentation involves breaking down a broad market into smaller, more manageable segments based on various criteria. Let&amp;rsquo;s explore the key components of effective market segmentation and how you can leverage it to benefit both your customers and your business.
+A. Look Through the Customer&amp;rsquo;s Eyes: Understanding Perspectives Viewing the market from the customer&amp;rsquo;s perspective is crucial.</description>
+      
+    </item>
+    
+    <item>
+      <title>Priority Management</title>
+      <link>www.yogeshsn.com.np/posts/day1_2/</link>
+      <pubDate>Tue, 01 Jan 2019 18:59:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_2/</guid>
+      
+      <description>2. Office Setup: Creating Your Productive Work Environment Setting up an effective office space is crucial for entrepreneurs and freelancers. Your work environment can significantly impact your productivity and overall well-being. Let&amp;rsquo;s explore the key steps to establish an office that fosters creativity and efficiency.
+A. Hire a Room or House: Tailor Your Environment to Your Needs Consider your budget and explore options for hiring a dedicated room or house to serve as your workspace.</description>
+      
+    </item>
+    
+    <item>
+      <title>Freelancing </title>
+      <link>www.yogeshsn.com.np/posts/day1_1/</link>
+      <pubDate>Tue, 01 Jan 2019 18:56:39 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/posts/day1_1/</guid>
+      
+      <description>Embarking on the Entrepreneurial Journey: Navigating Loneliness and Embracing Challenges Starting a business is a transformative journey filled with challenges, loneliness, and the constant scrutiny of others. However, it is also a path that can lead to immense personal and professional growth. In this guide, we will explore the initial steps of starting a business, focusing on the early stages of freelancing and skill development.
+1. Freelancing: The First Form of Startup Embarking on the entrepreneurial journey often starts with freelancing.</description>
+      
+    </item>
+    
+    <item>
+      <title>Yogesh Sharma Neupane</title>
+      <link>www.yogeshsn.com.np/about/yogesh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>www.yogeshsn.com.np/about/yogesh/</guid>
+      
+      <description>Civil Engineer Specializing in Hydropower | Travel and Sports Lover | Running Enthusiast
+Personal Information Nationality: Nepalese Email: yogeshsn1012@gmail.com Website: www.yogeshsn.com.np Address (Work): Lalitpur Metropolitan City, 44600, Lalitpur, Nepal Education MSc in Hydropower Engineering | Pulchowk Campus | Ongoing Bachelors in Civil Engineering | Pulchowk Campus Work Experience Site Engineer / Surveyor Duration: March 4, 2023 - May 5, 2023 Company: Engineering and Planning Solution Consultant (P) Ltd Responsibilities: Completed successful topography surveys for Prakashpur Water Supply Project and Khayarghari Kerawari Water Supply Project.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

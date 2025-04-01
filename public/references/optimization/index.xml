@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on yogeshsn</title>
+    <link>www.yogeshsn.com.np/references/optimization/</link>
+    <description>Recent content in Optimization on yogeshsn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Jul 2024 17:08:57 +0545</lastBuildDate><atom:link href="www.yogeshsn.com.np/references/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing Rastrigin Function Using GA-PSO Method</title>
+      <link>www.yogeshsn.com.np/references/optimization/gapso/</link>
+      <pubDate>Mon, 08 Jul 2024 16:05:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/gapso/</guid>
+      
+      <description>You can access pdf clicking in this link.
+1. Imports: import numpy as np import random These lines import the necessary libraries. NumPy (imported as np) is a powerful library for numerical computations in Python, particularly useful for working with arrays and matrices. The random module is used for generating random numbers, which is crucial for the stochastic nature of both PSO and GA algorithms.
+2. PSO Parameters: no_of_iterations = 100 no_of_particles = 100 c1 = 1.</description>
+      
+    </item>
+    
+    <item>
+      <title>Useful References</title>
+      <link>www.yogeshsn.com.np/references/optimization/extra/</link>
+      <pubDate>Thu, 04 Jul 2024 19:36:56 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/extra/</guid>
+      
+      <description>Programming in Python If you love programming, you can visit here.
+Mandarin Lessons When i had joined mandarin class, i have compiled notes. Access it Here
+Optimization Different methods of optimization are shown. Feel easy to access it. Optimization
+Big M Method
+Dynamic Program- Water allocation
+Simplex Method Using C Program
+Optimization Using Scipy
+MSHPE Semester 1 Study Materials Access this drive link using college account</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Nonlinear Programs using Particle Swarm Optimization</title>
+      <link>www.yogeshsn.com.np/references/optimization/pso/</link>
+      <pubDate>Thu, 04 Jul 2024 18:07:50 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/pso/</guid>
+      
+      <description>Setting up the Environment Install the pyswarm library: You can install the pyswarm library using pip:
+pip install pyswarm Install NumPy: The pyswarm library relies on NumPy for numerical operations. You can install NumPy using pip:
+pip install Numpy Now that your environment is set up, let&amp;rsquo;s solve an MINLP problem using particle swarm optimization.
+Solving an MINLP Problem Consider the same MINLP problem from the previous example:
+Maximize: x1 + x2*x1Subject to:-x1 + 2*x2*x1 &amp;lt;= 82*x1 + x2 &amp;lt;= 142*x1 - x2 &amp;lt;= 10x1 &amp;gt;= 0, integerx2 &amp;gt;= 0 We can model and solve this problem using the pyswarm library:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Nonlinear Programs using Genetic Algorithms</title>
+      <link>www.yogeshsn.com.np/references/optimization/ga/</link>
+      <pubDate>Thu, 04 Jul 2024 18:02:42 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/ga/</guid>
+      
+      <description>Setting up the Environment Install the geneticalgorithm library: You can install the geneticalgorithm library using pip:
+pip install geneticalgorithm Install NumPy: The geneticalgorithm library relies on NumPy for numerical operations. You can install NumPy using pip:
+pip install numpy Now that your environment is set up, let&amp;rsquo;s solve an MINLP problem using genetic algorithms.
+Solving an MINLP Problem Consider the following MINLP problem:
+Maximize: x1 + x2*x1Subject to:-x1 + 2*x2*x1 &amp;lt;= 82*x1 + x2 &amp;lt;= 142*x1 - x2 &amp;lt;= 10x1 &amp;gt;= 0, integerx2 &amp;gt;= 0 We can model and solve this problem using the geneticalgorithm library:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Nonlinear Programs Pyomo-Couenne and SCIP</title>
+      <link>www.yogeshsn.com.np/references/optimization/minlp/</link>
+      <pubDate>Thu, 04 Jul 2024 17:53:39 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/minlp/</guid>
+      
+      <description>Setting up the Environment Download and Install Couenne: Couenne is an open-source solver for MINLP problems, developed as part of the COIN-OR project. You can download the latest version of Couenne from the COIN-OR download page. Make sure to download the binary package that matches your operating system.
+Add Couenne to your System Path: After downloading and extracting the Couenne package, you need to add the location of the couenne.exe executable to your system&amp;rsquo;s PATH environment variable.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Linear Programs with OR-Tools Chance Constrained</title>
+      <link>www.yogeshsn.com.np/references/optimization/cp/</link>
+      <pubDate>Thu, 04 Jul 2024 17:51:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/cp/</guid>
+      
+      <description>Introduction to Linear Programming Linear programming is a mathematical optimization technique used to find the best solution to a problem with a linear objective function and linear constraints. The goal is to maximize or minimize the objective function while satisfying the given constraints.
+A typical LP problem has the following components:
+Decision Variables: The unknown quantities that we want to determine, represented as x, y, z, etc. Objective Function: A linear expression involving the decision variables that we want to maximize or minimize.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Nonlinear Programs</title>
+      <link>www.yogeshsn.com.np/references/optimization/nlp/</link>
+      <pubDate>Thu, 04 Jul 2024 17:42:45 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/nlp/</guid>
+      
+      <description>Nonlinear Programming (NLP) Nonlinear programming refers to optimization problems where the objective function or constraints (or both) are nonlinear functions of the decision variables. This is in contrast to linear programming, where both the objective and constraints are linear.
+Some key characteristics of NLP problems:
+Objective function is a nonlinear function of the decision variables Constraints can be linear or nonlinear Variables can be continuous, integer, or a mix (mixed-integer nonlinear programming) Solutions may have multiple local optima, requiring specialized algorithms to find the global optimum NLP problems arise in many real-world applications where the underlying relationships are inherently nonlinear, such as chemical process optimization, portfolio management, structural design, and more.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Mixed Integer Linear Programming (MILP) Problems</title>
+      <link>www.yogeshsn.com.np/references/optimization/mlpyomo/</link>
+      <pubDate>Thu, 04 Jul 2024 17:25:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/mlpyomo/</guid>
+      
+      <description>Example Problem In this example, we&amp;rsquo;ll solve a mixed integer linear programming problem using Pyomo:
+Objective: Minimize (3x1 + 4x2)
+Constraints:
+(x1 + 3x2 &amp;gt;= 15) (3x1 + 5x2 &amp;lt;= 72) (2x1 + x2 = 24) Variable Types:
+(x1) is a continuous variable ((x1 &amp;gt;= 0)) (x2) is an integer variable ((x2 &amp;gt;= 0)) Step-by-Step Solution with Pyomo Step 1: Import Pyomo Modules Import the necessary modules from Pyomo:
+import pyomo.</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Linear Problems Using Pulp</title>
+      <link>www.yogeshsn.com.np/references/optimization/pulp/</link>
+      <pubDate>Thu, 04 Jul 2024 16:55:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/pulp/</guid>
+      
+      <description>This guide explains how to use Pulp, a Python library for linear programming, to solve optimization problems. Pulp is particularly suitable for linear programming (LP) problems and provides an easy-to-use interface for defining variables, constraints, and objective functions.
+Installation Before using Pulp, make sure you have Cython installed, then install Pulp itself:
+Install Cython: If you haven&amp;rsquo;t installed Cython yet, run:
+pip install cython Install Pulp: Install Pulp using pip:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Optimization Problems Using Pyomo</title>
+      <link>www.yogeshsn.com.np/references/optimization/pyomo/</link>
+      <pubDate>Thu, 04 Jul 2024 16:52:25 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/pyomo/</guid>
+      
+      <description>This guide explains how to use Pyomo, a Python-based open-source optimization modeling language, to solve optimization problems. Pyomo allows you to define optimization models, set constraints, and specify objective functions easily.
+Example Problem Using Pyomo In this example, we will use Pyomo to solve a linear programming problem with the following characteristics:
+Objective: Minimize 3x1 + 4x2
+Constraints:
+x1 + 3x2 &amp;gt;= 15 3x1 + 5x2 &amp;lt;= 72 2x1 + x2 = 24 Step-by-Step Solution with Pyomo Step 1: Import Pyomo Modules First, import the necessary modules from Pyomo:</description>
+      
+    </item>
+    
+    <item>
+      <title>Solving Optimization Problems Using the SCIP Library</title>
+      <link>www.yogeshsn.com.np/references/optimization/scip/</link>
+      <pubDate>Thu, 04 Jul 2024 16:50:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/scip/</guid>
+      
+      <description>This guide provides a detailed explanation of how to solve optimization problems using the SCIP library in Python. SCIP is a powerful tool that can handle linear, non-linear, and integer programming problems.
+Installation Steps Download and Install SCIP:
+Visit the SCIP download page. Fill out the required form to download the application. Install the downloaded application on your computer. Install PySCIPOpt:
+Open your terminal or command prompt. Run the following command to install the PySCIPOpt package: pip install pyscipopt Example Problem: Maximizing an Objective Function In this example, we will maximize an objective function subject to certain constraints using the SCIP library.</description>
+      
+    </item>
+    
+    <item>
+      <title>Linear Programming with OR-Tools in Python</title>
+      <link>www.yogeshsn.com.np/references/optimization/ortools/</link>
+      <pubDate>Thu, 04 Jul 2024 16:45:57 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/optimization/ortools/</guid>
+      
+      <description>This guide will help you understand how to solve a simple linear programming problem using the OR-Tools library in Python. Linear programming helps us find the best outcome (such as maximum profit or lowest cost) under a given set of constraints.
+Step-by-Step Explanation Install OR-Tools Library First, you need to install the OR-Tools library. This library contains tools for optimization, including linear programming.
+pip install ortools Import the OR-Tools Linear Solver We import the necessary module from OR-Tools:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

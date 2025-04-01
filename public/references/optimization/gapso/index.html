@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Optimizing Rastrigin Function Using GA-PSO Method | yogeshsn</title>
+<meta property="og:title" content="Optimizing Rastrigin Function Using GA-PSO Method | yogeshsn" />
+<meta name="twitter:title" content="Optimizing Rastrigin Function Using GA-PSO Method | yogeshsn" />
+<meta itemprop="name" content="Optimizing Rastrigin Function Using GA-PSO Method | yogeshsn" />
+<meta name="application-name" content="Optimizing Rastrigin Function Using GA-PSO Method | yogeshsn" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="www.yogeshsn.com.np" />
+  <meta property="og:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image:src" content="www.yogeshsn.com.np" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.1">
+
+    
+
+    <link rel="canonical" href="www.yogeshsn.com.np/references/optimization/gapso/">
+    <link href="/www.yogeshsn.com.np/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/www.yogeshsn.com.np/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/www.yogeshsn.com.np/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/www.yogeshsn.com.np/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/www.yogeshsn.com.np/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/www.yogeshsn.com.np/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/www.yogeshsn.com.np/favicon.ico">
+
+
+
+
+<link rel="manifest" href="/www.yogeshsn.com.np/site.webmanifest">
+
+<meta name="msapplication-config" content="/www.yogeshsn.com.np/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/www.yogeshsn.com.np/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "" class="notransition">
+
+<script src="/www.yogeshsn.com.np/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="www.yogeshsn.com.np/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/about/yogesh">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/references/">
+                        References
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Optimizing Rastrigin Function Using GA-PSO Method</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-07-08T16:05:44&#43;05:45" itemprop="datePublished"> Jul 8, 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p><a href="https://www.yogeshsn.com.np/pdf.html?file=pdfs/gapso.pdf&amp;title=Hybrid%20GA%20PSO">You can access pdf clicking in this link.</a></p>
+<h3 id="1-imports">1. Imports:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span></code></pre></div><p>These lines import the necessary libraries. NumPy (imported as np) is a powerful library for numerical computations in Python, particularly useful for working with arrays and matrices. The random module is used for generating random numbers, which is crucial for the stochastic nature of both PSO and GA algorithms.</p>
+<h3 id="2-pso-parameters">2. PSO Parameters:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">no_of_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">no_of_particles</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">c1</span> <span class="o">=</span> <span class="mf">1.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">c2</span> <span class="o">=</span> <span class="mf">1.9</span>
+</span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">lower_bound</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.12</span>
+</span></span><span class="line"><span class="cl"><span class="n">upper_bound</span> <span class="o">=</span> <span class="mf">5.12</span>
+</span></span><span class="line"><span class="cl"><span class="n">no_of_dimension</span> <span class="o">=</span> <span class="mi">7</span>
+</span></span></code></pre></div><p>These variables define the parameters for the Particle Swarm Optimization (PSO) algorithm:</p>
+<ul>
+<li><code>no_of_iterations</code>: The number of times the PSO algorithm will update particle positions and velocities.</li>
+<li><code>no_of_particles</code>: The number of particles in the swarm.</li>
+<li><code>c1</code> and <code>c2</code>: Cognitive and social learning factors, respectively. They control how much the particle&rsquo;s movement is influenced by its personal best position and the global best position.</li>
+<li><code>w</code>: Inertia weight, which determines how much of the previous velocity is retained in the next iteration.</li>
+<li><code>lower_bound</code> and <code>upper_bound</code>: The search space boundaries for each dimension.</li>
+<li><code>no_of_dimension</code>: The number of dimensions in the search space.</li>
+</ul>
+<h3 id="3-ga-parameters">3. GA Parameters:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ga_population_size</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl"><span class="n">ga_top_n</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="n">ga_mutation_rate</span> <span class="o">=</span> <span class="mf">0.1</span>
+</span></span></code></pre></div><p>These variables define the parameters for the Genetic Algorithm (GA):</p>
+<ul>
+<li><code>ga_population_size</code>: The number of individuals in each generation.</li>
+<li><code>ga_top_n</code>: The number of top solutions to select for breeding the next generation.</li>
+<li><code>ga_mutation_rate</code>: The probability of mutation occurring for each gene (dimension) of an individual.</li>
+</ul>
+<h3 id="4-main-function">4. Main Function:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Initialize PSO particles and velocities</span>
+</span></span><span class="line"><span class="cl">    <span class="n">particles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">no_of_particles</span><span class="p">,</span> <span class="n">no_of_dimension</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">velocities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">no_of_particles</span><span class="p">,</span> <span class="n">no_of_dimension</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_best</span> <span class="o">=</span> <span class="n">particles</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_best_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">functions</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">g_best_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_best_value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">g_best</span> <span class="o">=</span> <span class="n">p_best</span><span class="p">[</span><span class="n">g_best_index</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Step 1: Run PSO</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pso_g_best</span><span class="p">,</span> <span class="n">pso_p_best</span> <span class="o">=</span> <span class="n">pso</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">p_best</span><span class="p">,</span> <span class="n">g_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;PSO Best Solution: </span><span class="si">{</span><span class="n">pso_g_best</span><span class="si">}</span><span class="s2">, Fitness: </span><span class="si">{</span><span class="n">functions</span><span class="p">(</span><span class="n">pso_g_best</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Step 2: Apply GA to the best solutions found by PSO</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ga_population</span> <span class="o">=</span> <span class="n">ga</span><span class="p">(</span><span class="n">pso_p_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Step 3: Combine PSO and GA results</span>
+</span></span><span class="line"><span class="cl">    <span class="n">combined_population</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">pso_p_best</span><span class="p">,</span> <span class="n">ga_population</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">final_best_solution</span><span class="p">,</span> <span class="n">final_fitness_values</span> <span class="o">=</span> <span class="n">rank_solutions</span><span class="p">(</span><span class="n">combined_population</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hybrid Best Solution: </span><span class="si">{</span><span class="n">final_best_solution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Fitness: </span><span class="si">{</span><span class="n">final_fitness_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></div><p><em>The main function orchestrates the hybrid PSO-GA algorithm:</em></p>
+<p>a. PSO Initialization:</p>
+<ul>
+<li><code>particles</code>: Initializes particle positions randomly within the search space.</li>
+<li><code>velocities</code>: Initializes particle velocities randomly between -1 and 1.</li>
+<li><code>p_best</code>: Initially set to the current particle positions.</li>
+<li><code>p_best_value</code>: Calculates the fitness of each particle&rsquo;s personal best position.</li>
+<li><code>g_best</code>: Selects the global best particle based on fitness values.</li>
+</ul>
+<p>b. Algorithm Execution:</p>
+<ul>
+<li>Step 1: Runs the PSO algorithm and prints the best solution found.</li>
+<li>Step 2: Applies the GA to the best solutions found by PSO.</li>
+<li>Step 3: Combines the results from PSO and GA, ranks the solutions, and prints the best hybrid solution.</li>
+</ul>
+<p>c. Script Execution:
+The <code>if __name__ == &quot;__main__&quot;:</code> block ensures that the <code>main()</code> function is only executed if the script is run directly (not imported as a module).</p>
+<p>This initialization and introduction section sets up the foundation for the hybrid PSO-GA algorithm, defining key parameters and outlining the overall structure of the optimization process. It prepares the necessary components for both the PSO and GA parts of the algorithm, which are then implemented in the subsequent sections of the code.</p>
+<h2 id="part-2">Part 2</h2>
+<ol>
+<li>PSO Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pso</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">p_best</span><span class="p">,</span> <span class="n">g_best</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">no_of_iterations</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">no_of_particles</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_best</span><span class="p">(</span><span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">functions</span><span class="p">(</span><span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">functions</span><span class="p">(</span><span class="n">g_best</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">g_best</span> <span class="o">=</span> <span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">                             <span class="n">c1</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">                             <span class="n">c2</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">g_best</span> <span class="o">-</span> <span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">g_best</span><span class="p">,</span> <span class="n">p_best</span>
+</span></span></code></pre></div><p>This function implements the core PSO algorithm:</p>
+<ul>
+<li>It iterates for a specified number of iterations (<code>no_of_iterations</code>).</li>
+<li>For each particle in each iteration:
+<ol>
+<li>Updates the particle&rsquo;s personal best position (<code>p_best[i]</code>).</li>
+<li>Updates the global best position (<code>g_best</code>) if the particle&rsquo;s personal best is better.</li>
+<li>Updates the particle&rsquo;s velocity using the PSO velocity equation.</li>
+<li>Updates the particle&rsquo;s position by adding the velocity.</li>
+<li>Clips the particle&rsquo;s position to ensure it stays within the search space bounds.</li>
+</ol>
+</li>
+<li>Finally, it returns the global best solution and all particles&rsquo; personal best solutions.</li>
+</ul>
+<ol start="2">
+<li>Find Best Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">find_best</span><span class="p">(</span><span class="n">particle_position</span><span class="p">,</span> <span class="n">p_best</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">functions</span><span class="p">(</span><span class="n">particle_position</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">functions</span><span class="p">(</span><span class="n">p_best</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p_best</span> <span class="o">=</span> <span class="n">particle_position</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">p_best</span>
+</span></span></code></pre></div><p>This function compares a particle&rsquo;s current position with its personal best:</p>
+<ul>
+<li>If the current position has a better fitness value, it becomes the new personal best.</li>
+<li>It returns the updated personal best position.</li>
+</ul>
+<ol start="3">
+<li>Fitness Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">functions</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><p>This is the objective function that the PSO algorithm is trying to optimize:</p>
+<ul>
+<li>It implements the Rastrigin function, a common benchmark problem in optimization.</li>
+<li>The function is defined for any number of dimensions.</li>
+<li>It&rsquo;s a challenging function with many local optima, making it suitable for testing optimization algorithms.</li>
+</ul>
+<h2 id="part-3">Part 3:</h2>
+<p>Key aspects of the PSO implementation:</p>
+<ol>
+<li>
+<p>Velocity Update: The velocity update equation is a crucial part of PSO:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span> <span class="o">*</span> <span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">c1</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">c2</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="n">g_best</span> <span class="o">-</span> <span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</span></span></code></pre></div><ul>
+<li><code>w * velocities[i]</code>: The inertia component, maintaining the particle&rsquo;s current direction.</li>
+<li><code>c1 * random.random() * (p_best[i] - particles[i])</code>: The cognitive component, pulling the particle towards its personal best position.</li>
+<li><code>c2 * random.random() * (g_best - particles[i])</code>: The social component, pulling the particle towards the global best position.</li>
+</ul>
+</li>
+<li>
+<p>Position Update: After updating the velocity, the particle&rsquo;s position is updated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Boundary Handling: To keep particles within the search space, their positions are clipped:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">particles</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Global Best Update: The global best is updated when a better solution is found:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="n">functions</span><span class="p">(</span><span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">functions</span><span class="p">(</span><span class="n">g_best</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">g_best</span> <span class="o">=</span> <span class="n">p_best</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span></code></pre></div></li>
+</ol>
+<p>This PSO implementation follows the standard PSO algorithm, with the addition of boundary handling to ensure particles stay within the defined search space. The algorithm balances exploration (searching new areas) and exploitation (refining solutions in promising areas) through its velocity update mechanism and the influence of personal and global best positions.</p>
+<p>The PSO section of your code provides a robust implementation of the algorithm, capable of handling multi-dimensional optimization problems. It&rsquo;s designed to work in conjunction with the GA section to form a hybrid optimization approach.</p>
+<h2 id="part-4">Part 4</h2>
+<ol>
+<li>GA Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">ga</span><span class="p">(</span><span class="n">population</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ranked_solutions</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rank_solutions</span><span class="p">(</span><span class="n">population</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">best_solutions</span> <span class="o">=</span> <span class="n">select_best_solutions</span><span class="p">(</span><span class="n">ranked_solutions</span><span class="p">,</span> <span class="n">ga_top_n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">new_population</span> <span class="o">=</span> <span class="n">create_new_generation</span><span class="p">(</span><span class="n">best_solutions</span><span class="p">,</span> <span class="n">ga_population_size</span><span class="p">,</span> <span class="n">ga_mutation_rate</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">new_population</span>
+</span></span></code></pre></div><p>This function implements the main GA process:</p>
+<ol>
+<li>It ranks the solutions in the current population based on their fitness.</li>
+<li>It selects the best solutions from the ranked population.</li>
+<li>It creates a new generation using the best solutions.</li>
+<li>It returns the new population.</li>
+</ol>
+<p>The GA function encapsulates the core genetic algorithm steps: selection, crossover (implicitly in create_new_generation), and mutation. Let&rsquo;s break down each component:</p>
+<ol start="2">
+<li>Rank Solutions Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rank_solutions</span><span class="p">(</span><span class="n">solutions</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fitness_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">functions</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">solutions</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ranked_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">fitness_values</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Descending order for maximization</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">solutions</span><span class="p">[</span><span class="n">ranked_indices</span><span class="p">],</span> <span class="n">fitness_values</span><span class="p">[</span><span class="n">ranked_indices</span><span class="p">]</span>
+</span></span></code></pre></div><p>This function ranks the solutions based on their fitness:</p>
+<ul>
+<li>It applies the fitness function (<code>functions</code>) to each solution in the population.</li>
+<li>It sorts the solutions in descending order of fitness (for maximization problems).</li>
+<li>It returns the sorted solutions and their corresponding fitness values.</li>
+</ul>
+<p>The use of <code>np.apply_along_axis</code> is an efficient way to apply the fitness function to each solution in the population. The <code>[::-1]</code> in <code>np.argsort(fitness_values)[::-1]</code> reverses the order to sort in descending order, suitable for maximization problems.</p>
+<ol start="3">
+<li>Select Best Solutions Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">select_best_solutions</span><span class="p">(</span><span class="n">ranked_solutions</span><span class="p">,</span> <span class="n">top_n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ranked_solutions</span><span class="p">[:</span><span class="n">top_n</span><span class="p">]</span>
+</span></span></code></pre></div><p>This function implements the selection process:</p>
+<ul>
+<li>It simply returns the top <code>top_n</code> solutions from the ranked solutions.</li>
+<li>This is a form of elitism, where the best solutions are guaranteed to be selected for the next generation.</li>
+</ul>
+<p>The selection process is crucial in GA as it determines which solutions will contribute to the next generation. This implementation uses a straightforward truncation selection, which can be very effective but may lead to a loss of diversity if <code>top_n</code> is too small relative to the population size.</p>
+<ol start="4">
+<li>Create New Generation Function:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_new_generation</span><span class="p">(</span><span class="n">best_solutions</span><span class="p">,</span> <span class="n">pop_size</span><span class="p">,</span> <span class="n">mutation_rate</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">new_population</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pop_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">parent1</span><span class="p">,</span> <span class="n">parent2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">best_solutions</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">child</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">best_solutions</span><span class="p">[</span><span class="n">parent1</span><span class="p">]</span> <span class="o">+</span> <span class="n">best_solutions</span><span class="p">[</span><span class="n">parent2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">mutation_rate</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mutation_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">child</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">child</span> <span class="o">+=</span> <span class="n">mutation_vector</span>
+</span></span><span class="line"><span class="cl">        <span class="n">child</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">new_population</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_population</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="part-5">Part 5:</h2>
+<p>This function creates a new generation through crossover and mutation:</p>
+<p>a. Crossover:</p>
+<ul>
+<li>For each new child, two parents are randomly selected from the best solutions.</li>
+<li>The child is created by taking the average of the two parents: <code>0.5 * (best_solutions[parent1] + best_solutions[parent2])</code>.</li>
+<li>This is a form of arithmetic crossover, which works well for real-valued representations.</li>
+</ul>
+<p>b. Mutation:</p>
+<ul>
+<li>Each child has a chance to mutate, determined by the <code>mutation_rate</code>.</li>
+<li>If mutation occurs, a random vector is added to the child.</li>
+<li>The mutation vector has values uniformly distributed between -1 and 1.</li>
+<li>This allows for both small and large mutations, promoting exploration of the search space.</li>
+</ul>
+<p>c. Boundary Handling:</p>
+<ul>
+<li>After crossover and mutation, the child&rsquo;s values are clipped to ensure they remain within the problem&rsquo;s bounds.</li>
+</ul>
+<p>d. Population Creation:</p>
+<ul>
+<li>This process is repeated until a new population of size <code>pop_size</code> is created.</li>
+<li>The new population is returned as a NumPy array for efficient processing.</li>
+</ul>
+<p>Key Aspects of the GA Implementation:</p>
+<ol>
+<li>
+<p>Representation: The solutions are represented as real-valued vectors, which is appropriate for the continuous optimization problem at hand (the Rastrigin function).</p>
+</li>
+<li>
+<p>Selection: The implementation uses elitism by selecting the top <code>ga_top_n</code> solutions. This ensures that the best solutions are always preserved, but it may lead to premature convergence if not balanced with sufficient exploration.</p>
+</li>
+<li>
+<p>Crossover: The arithmetic crossover (taking the average of two parents) is used. This is a common approach for real-valued GAs, as it allows for the creation of children that are &ldquo;in between&rdquo; their parents in the search space.</p>
+</li>
+<li>
+<p>Mutation: The mutation operator adds a random vector to the child. This allows for both small tweaks (when the random values are close to zero) and larger jumps in the search space (when the random values are closer to -1 or 1). The mutation rate controls how often this occurs.</p>
+</li>
+<li>
+<p>Boundary Handling: The <code>np.clip</code> function ensures that all solutions remain within the specified bounds of the search space. This is crucial for maintaining valid solutions throughout the evolutionary process.</p>
+</li>
+<li>
+<p>Diversity: The current implementation doesn&rsquo;t have explicit diversity preservation mechanisms beyond mutation. In more advanced implementations, techniques like niching or diversity-based selection could be added to maintain population diversity.</p>
+</li>
+<li>
+<p>Termination: The GA function doesn&rsquo;t include a termination condition. Instead, it creates one new generation each time it&rsquo;s called. The number of generations is implicitly controlled by how many times the <code>ga</code> function is called in the main loop.</p>
+</li>
+</ol>
+<p>Potential Improvements and Variations:</p>
+<ol>
+<li>
+<p>Parent Selection: Instead of random selection from the top solutions, you could implement tournament selection or roulette wheel selection, which might better balance exploration and exploitation.</p>
+</li>
+<li>
+<p>Adaptive Parameters: The mutation rate and the number of top solutions selected could be made adaptive, changing based on the population&rsquo;s diversity or the improvement rate.</p>
+</li>
+<li>
+<p>Different Crossover Operators: For real-valued problems, you could experiment with other crossover methods like SBX (Simulated Binary Crossover) or BLX-α (Blend Crossover).</p>
+</li>
+<li>
+<p>Local Search: You could incorporate a local search step after mutation to fine-tune solutions, creating a memetic algorithm.</p>
+</li>
+<li>
+<p>Multi-objective Optimization: If dealing with multi-objective problems, you could extend the GA to use Pareto ranking and maintain a set of non-dominated solutions.</p>
+</li>
+</ol>
+<h2 id="integration-with-pso">Integration with PSO:</h2>
+<p>In your hybrid approach, the GA is applied to the best solutions found by PSO. This is an interesting way to combine the two algorithms:</p>
+<ol>
+<li>PSO first explores the search space and identifies promising regions.</li>
+<li>GA then takes these good solutions and attempts to refine them further through the evolutionary process.</li>
+</ol>
+<p>This combination leverages PSO&rsquo;s ability to quickly converge on good solutions with GA&rsquo;s ability to maintain population diversity and potentially escape local optima.</p>
+<p>The GA implementation in your code provides a solid foundation for genetic optimization. It incorporates the key elements of selection, crossover, and mutation in a way that&rsquo;s well-suited for real-valued optimization problems. When combined with PSO in the hybrid approach, it creates a powerful optimization tool capable of tackling complex, multi-modal problems like the Rastrigin function.</p>
+<h2 id="main-function">Main Function:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Initialize PSO particles and velocities</span>
+</span></span><span class="line"><span class="cl">    <span class="n">particles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">no_of_particles</span><span class="p">,</span> <span class="n">no_of_dimension</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">velocities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">no_of_particles</span><span class="p">,</span> <span class="n">no_of_dimension</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_best</span> <span class="o">=</span> <span class="n">particles</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_best_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">functions</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">g_best_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_best_value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">g_best</span> <span class="o">=</span> <span class="n">p_best</span><span class="p">[</span><span class="n">g_best_index</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Step 1: Run PSO</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pso_g_best</span><span class="p">,</span> <span class="n">pso_p_best</span> <span class="o">=</span> <span class="n">pso</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">p_best</span><span class="p">,</span> <span class="n">g_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;PSO Best Solution: </span><span class="si">{</span><span class="n">pso_g_best</span><span class="si">}</span><span class="s2">, Fitness: </span><span class="si">{</span><span class="n">functions</span><span class="p">(</span><span class="n">pso_g_best</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Step 2: Apply GA to the best solutions found by PSO</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ga_population</span> <span class="o">=</span> <span class="n">ga</span><span class="p">(</span><span class="n">pso_p_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Step 3: Combine PSO and GA results</span>
+</span></span><span class="line"><span class="cl">    <span class="n">combined_population</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">pso_p_best</span><span class="p">,</span> <span class="n">ga_population</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">final_best_solution</span><span class="p">,</span> <span class="n">final_fitness_values</span> <span class="o">=</span> <span class="n">rank_solutions</span><span class="p">(</span><span class="n">combined_population</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hybrid Best Solution: </span><span class="si">{</span><span class="n">final_best_solution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Fitness: </span><span class="si">{</span><span class="n">final_fitness_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></div><p>Let&rsquo;s break down this hybrid approach step by step:</p>
+<ol>
+<li>
+<p>Initialization:
+The main function starts by initializing the PSO components:</p>
+<ul>
+<li><code>particles</code>: An array of particle positions, randomly initialized within the search space bounds.</li>
+<li><code>velocities</code>: An array of particle velocities, randomly initialized between -1 and 1.</li>
+<li><code>p_best</code>: Initially set to the current particle positions.</li>
+<li><code>p_best_value</code>: The fitness values of the initial particle positions.</li>
+<li><code>g_best</code>: The global best position, initially set to the best among the initial particles.</li>
+</ul>
+<p>This initialization sets the stage for the PSO algorithm, creating a diverse initial population of solutions spread across the search space.</p>
+</li>
+<li>
+<p>Step 1: Running PSO</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pso_g_best</span><span class="p">,</span> <span class="n">pso_p_best</span> <span class="o">=</span> <span class="n">pso</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">p_best</span><span class="p">,</span> <span class="n">g_best</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;PSO Best Solution: </span><span class="si">{</span><span class="n">pso_g_best</span><span class="si">}</span><span class="s2">, Fitness: </span><span class="si">{</span><span class="n">functions</span><span class="p">(</span><span class="n">pso_g_best</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>The PSO algorithm is executed first. It returns:</p>
+<ul>
+<li><code>pso_g_best</code>: The global best solution found by PSO.</li>
+<li><code>pso_p_best</code>: The personal best positions of all particles.</li>
+</ul>
+<p>The best solution found by PSO is then printed, giving an intermediate result before the hybrid approach continues.</p>
+</li>
+<li>
+<p>Step 2: Applying GA</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ga_population</span> <span class="o">=</span> <span class="n">ga</span><span class="p">(</span><span class="n">pso_p_best</span><span class="p">)</span>
+</span></span></code></pre></div><p>The GA is then applied to the personal best positions found by PSO. This is a key aspect of the hybrid approach:</p>
+<ul>
+<li>Instead of starting with a random population, GA begins with the already good solutions found by PSO.</li>
+<li>This allows GA to focus on refining these promising solutions rather than exploring the entire search space from scratch.</li>
+</ul>
+</li>
+<li>
+<p>Step 3: Combining PSO and GA Results</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">combined_population</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">pso_p_best</span><span class="p">,</span> <span class="n">ga_population</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">final_best_solution</span><span class="p">,</span> <span class="n">final_fitness_values</span> <span class="o">=</span> <span class="n">rank_solutions</span><span class="p">(</span><span class="n">combined_population</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hybrid Best Solution: </span><span class="si">{</span><span class="n">final_best_solution</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Fitness: </span><span class="si">{</span><span class="n">final_fitness_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>The final step combines the results from both algorithms:</p>
+<ul>
+<li>The personal best solutions from PSO (<code>pso_p_best</code>) and the population produced by GA (<code>ga_population</code>) are combined into a single population.</li>
+<li>This combined population is then ranked to find the overall best solution.</li>
+<li>The best solution from this hybrid approach is printed, showing the final result of the optimization process.</li>
+</ul>
+</li>
+</ol>
+<p>Key Aspects of the Hybrid Approach:</p>
+<ol>
+<li>
+<p>Synergy between PSO and GA:</p>
+<ul>
+<li>PSO is known for its ability to quickly converge on promising areas of the search space.</li>
+<li>GA is effective at maintaining diversity and can potentially escape local optima through its crossover and mutation operators.</li>
+<li>By using PSO first and then applying GA to its results, the hybrid approach aims to leverage the strengths of both algorithms.</li>
+</ul>
+</li>
+<li>
+<p>Information Transfer:</p>
+<ul>
+<li>The personal best positions from PSO are used as the initial population for GA.</li>
+<li>This transfer of information allows GA to start from a set of already good solutions, potentially leading to faster convergence to the global optimum.</li>
+</ul>
+</li>
+<li>
+<p>Exploration vs. Exploitation:</p>
+<ul>
+<li>PSO provides a good initial exploration of the search space.</li>
+<li>GA then focuses on exploiting the promising regions found by PSO, while still maintaining some level of exploration through its genetic operators.</li>
+</ul>
+</li>
+<li>
+<p>Diversity Preservation:</p>
+<ul>
+<li>While PSO might converge quickly, potentially losing diversity, the subsequent application of GA can reintroduce diversity through its crossover and mutation operations.</li>
+</ul>
+</li>
+<li>
+<p>Final Evaluation:</p>
+<ul>
+<li>By combining the results of both algorithms and ranking them together, the approach ensures that the best overall solution is selected, regardless of which algorithm produced it.</li>
+</ul>
+</li>
+</ol>
+<p>Potential Variations and Improvements:</p>
+<ol>
+<li>
+<p>Iterative Hybrid:
+Instead of running PSO once followed by GA, you could implement an iterative approach where PSO and GA alternate multiple times. This could potentially lead to even better results by repeatedly benefiting from the strengths of both algorithms.</p>
+</li>
+<li>
+<p>Adaptive Parameter Tuning:
+The parameters for both PSO and GA (like inertia weight, learning factors, mutation rate) could be made adaptive, changing based on the progress of the optimization process.</p>
+</li>
+<li>
+<p>Multi-Swarm Approach:
+Multiple swarms could be used in the PSO phase, each focusing on different regions of the search space. The best solutions from each swarm could then be fed into the GA phase.</p>
+</li>
+<li>
+<p>Local Search:
+A local search procedure could be added after the GA phase to further refine the best solutions found.</p>
+</li>
+<li>
+<p>Parallel Implementation:
+The hybrid approach lends itself well to parallelization. PSO particles could be evaluated in parallel, and the GA operations could also be parallelized for larger population sizes.</p>
+</li>
+<li>
+<p>Problem-Specific Modifications:
+Depending on the specific optimization problem, custom operators or problem-specific knowledge could be incorporated into either the PSO or GA phases.</p>
+</li>
+</ol>
+<p>Execution Flow:
+The <code>if __name__ == &quot;__main__&quot;:</code> block ensures that the <code>main()</code> function is only executed if the script is run directly, not if it&rsquo;s imported as a module. This is a common Python idiom that allows the same file to be both imported and run as a script.</p>
+<p>Conclusion:
+This hybrid PSO-GA approach represents a sophisticated optimization strategy that aims to combine the strengths of two powerful metaheuristic algorithms. By first using PSO to quickly identify promising regions of the search space and then applying GA to refine and potentially improve upon these solutions, the hybrid method attempts to overcome the limitations of each individual algorithm.</p>
+<p>The implementation provided in your code offers a solid foundation for this hybrid approach. It&rsquo;s flexible enough to be applied to various optimization problems and can serve as a starting point for further enhancements and adaptations to specific problem domains.</p>
+<p>The printing of both the PSO best solution and the final hybrid best solution allows for a comparison of the performance, showcasing the potential benefits of the hybrid approach over using PSO alone. This hybrid method represents an interesting direction in the field of optimization, combining global search capabilities with evolutionary refinement to tackle complex, multimodal optimization problems.</p>
+
+            </div>
+        </article></main>
+</div>
+
+
+        <hr>
+        <div style="text-align: center; font-weight: 800; margin: 20px; color:red">
+            <p class="quote" id="daily-quote">
+                
+            </p>
+        </div><footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://x.com/yogesh__sn" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/@palpasky6909/videos" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/yogesh-sn%f0%9f%87%b3%f0%9f%87%b5-1926b8184" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://www.instagram.com/livingonnature" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Yogesh SN.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="/www.yogeshsn.com.np/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
+<script>
+    
+    const quotes = [
+"The day a man becomes superior to pleasure he will also be superior to pain - Seneca",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment - Buddha",
+"Life is what happens when you're busy making other plans - John Lennon",
+"To live is the rarest thing in the world. Most people exist, that is all - Oscar Wilde",
+"The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela",
+"In the end, we will remember not the words of our enemies, but the silence of our friends - Martin Luther King Jr.",
+"The best way to predict the future is to create it - Peter Drucker",
+"You miss 100% of the shots you don't take - Wayne Gretzky",
+"I have not failed. I've just found 10,000 ways that won't work - Thomas Edison",
+"The only limit to our realization of tomorrow is our doubts of today - Franklin D. Roosevelt",
+"The purpose of our lives is to be happy - Dalai Lama",
+"Life is really simple, but we insist on making it complicated - Confucius",
+"May you live all the days of your life - Jonathan Swift",
+"Good friends, good books, and a sleepy conscience: this is the ideal life - Mark Twain",
+"To love and be loved is to feel the sun from both sides - David Viscott",
+"Keep calm and carry on - British Government, 1939",
+"Believe you can and you're halfway there - Theodore Roosevelt",
+"Act as if what you do makes a difference. It does - William James",
+"Success is not final, failure is not fatal: It is the courage to continue that counts - Winston Churchill",
+"Never bend your head. Always hold it high. Look the world straight in the eye - Helen Keller",
+"What you get by achieving your goals is not as important as what you become by achieving your goals - Zig Ziglar",
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one that has been opened for us - Helen Keller",
+"It is never too late to be what you might have been - George Eliot",
+"You must be the change you wish to see in the world - Mahatma Gandhi",
+"If you want to live a happy life, tie it to a goal, not to people or things - Albert Einstein",
+"The only impossible journey is the one you never begin - Tony Robbins",
+"It does not matter how slowly you go as long as you do not stop - Confucius",
+"Everything you’ve ever wanted is on the other side of fear - George Addair",
+"Change your thoughts and you change your world - Norman Vincent Peale",
+"No one can make you feel inferior without your consent - Eleanor Roosevelt",
+"Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
+"The best way to find yourself is to lose yourself in the service of others - Mahatma Gandhi",
+"The future belongs to those who believe in the beauty of their dreams - Eleanor Roosevelt",
+"Don't watch the clock; do what it does. Keep going - Sam Levenson",
+"If life were predictable it would cease to be life, and be without flavor - Eleanor Roosevelt",
+"In the end, it’s not the years in your life that count. It’s the life in your years - Abraham Lincoln",
+"Success usually comes to those who are too busy to be looking for it - Henry David Thoreau",
+"Hardships often prepare ordinary people for an extraordinary destiny - C.S. Lewis",
+"What lies behind us and what lies before us are tiny matters compared to what lies within us - Ralph Waldo Emerson",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle - Christian D. Larson",
+"Perfection is not attainable, but if we chase perfection we can catch excellence - Vince Lombardi",
+"Life is what happens when you're busy making other plans - John Lennon",
+"When we strive to become better than we are, everything around us becomes better too - Paulo Coelho",
+"I can't change the direction of the wind, but I can adjust my sails to always reach my destination - Jimmy Dean",
+"Life is 10% what happens to us and 90% how we react to it - Charles R. Swindoll",
+"You are never too old to set another goal or to dream a new dream - C.S. Lewis",
+"A journey of a thousand miles begins with a single step - Lao Tzu",
+"Happiness is not a goal...it's a by-product of a life well-lived - Eleanor Roosevelt",
+"In three words I can sum up everything I've learned about life: it goes on - Robert Frost",
+"You only live once, but if you do it right, once is enough - Mae West",
+"The best time to plant a tree was 20 years ago. The second best time is now - Chinese Proverb",
+"Do not wait to strike till the iron is hot; but make it hot by striking - William Butler Yeats",
+"The biggest adventure you can take is to live the life of your dreams - Oprah Winfrey",
+"If you can dream it, you can achieve it - Zig Ziglar",
+"The best way out is always through - Robert Frost",
+"The only person you are destined to become is the person you decide to be - Ralph Waldo Emerson",
+"The greatest pleasure in life is doing what people say you cannot do - Walter Bagehot",
+"Success is not how high you have climbed, but how you make a positive difference to the world - Roy T. Bennett",
+"Your time is limited, don't waste it living someone else's life - Steve Jobs",
+"The best revenge is massive success - Frank Sinatra",
+"Do what you can, with what you have, where you are - Theodore Roosevelt",
+"You have within you right now, everything you need to deal with whatever the world can throw at you - Brian Tracy",
+"The mind is everything. What you think you become - Buddha",
+"The only way to achieve the impossible is to believe it is possible - Charles Kingsleigh",
+"Don’t let yesterday take up too much of today - Will Rogers",
+"What we think, we become - Buddha",
+"We must not allow other people's limited perceptions to define us - Virginia Satir",
+"If you want to lift yourself up, lift up someone else - Booker T. Washington",
+"Start where you are. Use what you have. Do what you can - Arthur Ashe",
+"I find that the harder I work, the more luck I seem to have - Thomas Jefferson",
+"Life is short, and it is up to you to make it sweet - Sarah Louise Delany",
+"When the going gets tough, the tough get going - Joseph Kennedy",
+"When you cease to dream you cease to live - Malcolm Forbes",
+"You can't go back and change the beginning, but you can start where you are and change the ending - C.S. Lewis",
+"Your life does not get better by chance, it gets better by change - Jim Rohn",
+"The harder the conflict, the more glorious the triumph - Thomas Paine",
+"You are enough just as you are - Meghan Markle",
+"Every moment is a fresh beginning - T.S. Eliot",
+"The unexamined life is not worth living - Socrates",
+"Dream big and dare to fail - Norman Vaughan",
+"Turn your wounds into wisdom - Oprah Winfrey",
+"Don't wait. The time will never be just right - Napoleon Hill",
+"You get what you give - Jennifer Lopez",
+"Tough times never last, but tough people do - Robert H. Schuller",
+"If you do what you’ve always done, you’ll get what you’ve always gotten - Tony Robbins",
+"The secret of getting ahead is getting started - Mark Twain",
+"Only those who dare to fail greatly can ever achieve greatly - Robert F. Kennedy",
+"Keep your eyes on the stars and your feet on the ground - Theodore Roosevelt",
+"Success is not in what you have, but who you are - Bo Bennett",
+"Do not follow where the path may lead. Go instead where there is no path and leave a trail - Ralph Waldo Emerson",
+"The best way to appreciate your job is to imagine yourself without one - Oscar Wilde",
+"Change your life today. Don’t gamble on the future, act now, without delay - Simone de Beauvoir",
+"Your worth consists in what you are and not in what you have - Thomas Edison",
+"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart - Roy T. Bennett",
+"Every man must learn this simple truth: Pain is inevitable and suffering is optional",
+"In the heat of battle, the fog of war, under pressure,   The undisciplined die "
+];
+
+    
+    function displayDailyQuote() {
+        const randomIndex = Math.floor(Math.random()*quotes.length);
+        const quote = quotes[randomIndex];
+        document.getElementById('daily-quote').innerText = quote;
+    }
+
+    
+    displayDailyQuote();
+</script>

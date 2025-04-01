@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computational Fluid Dynamics on yogeshsn</title>
+    <link>www.yogeshsn.com.np/references/numericalmodelling/</link>
+    <description>Recent content in Computational Fluid Dynamics on yogeshsn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Aug 2024 17:08:57 +0545</lastBuildDate><atom:link href="www.yogeshsn.com.np/references/numericalmodelling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Energy Equation</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/10/</link>
+      <pubDate>Mon, 12 Aug 2024 17:02:22 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/10/</guid>
+      
+      <description>Energy Equation in Fluid Mechanics The energy equation in fluid mechanics is a fundamental principle that describes the conservation of energy in a fluid system. It accounts for the different forms of energy present in a fluid, including kinetic energy, potential energy, internal energy (due to temperature), and the energy exchanged with the surroundings.
+$$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$
+Inline math: $E = mc^2$
+Block math: $$ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} $$</description>
+      
+    </item>
+    
+    <item>
+      <title>Navier-Stokes Equation</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/9/</link>
+      <pubDate>Sat, 12 Aug 2023 16:11:07 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/9/</guid>
+      
+      <description>Navier-Stokes Equation: Significance in Fluid Dynamics The Navier-Stokes equation is one of the cornerstone equations in the field of fluid dynamics. It provides a mathematical framework to describe the motion of fluid substances such as liquids and gases. The equation is derived from Newton&amp;rsquo;s second law, which relates the change in momentum of a fluid particle to the forces acting on it.
+Key Components of the Navier-Stokes Equation: Inertia: Represents the fluid&amp;rsquo;s resistance to changes in motion.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ensuring accuracy in Computational Fluid Dynamics (CFD)</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/8/</link>
+      <pubDate>Sat, 12 Aug 2023 14:57:47 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/8/</guid>
+      
+      <description>Ensuring accuracy in Computational Fluid Dynamics (CFD) simulations is crucial for obtaining reliable results that can be used for engineering analysis, design, and decision-making. Achieving accuracy in CFD simulations involves several key considerations:
+1. Grid Refinement Role:
+Grid refinement involves increasing the resolution of the computational mesh, particularly in regions where the solution exhibits steep gradients or complex flow features (e.g., near walls, around sharp corners, or in regions of high turbulence).</description>
+      
+    </item>
+    
+    <item>
+      <title>Systematic Errors</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/7/</link>
+      <pubDate>Sat, 12 Aug 2023 13:18:29 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/7/</guid>
+      
+      <description>In Computational Fluid Dynamics (CFD), the numerical solutions are subject to three main types of systematic errors: modeling errors, discretization errors, and iteration (or convergence) errors. Each of these errors has distinct characteristics and implications for the accuracy and reliability of the simulation results.
+1. Modeling Errors Explanation:
+Definition: Modeling errors arise from the simplifications and assumptions made during the formulation of the mathematical model used to describe the physical problem.</description>
+      
+    </item>
+    
+    <item>
+      <title>Conservation, Boundedness, and Accuracy</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/6/</link>
+      <pubDate>Sat, 12 Aug 2023 12:23:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/6/</guid>
+      
+      <description>Influence of Conservation, Boundedness, and Accuracy on Numerical Solution Methods in CFD Conservation:
+Definition and Importance: Conservation in numerical methods refers to the accurate representation of conserved quantities, such as mass, momentum, and energy, within the computational domain. Since CFD solves conservation laws, the numerical scheme must also respect these laws both locally (within individual control volumes) and globally (over the entire domain). If a method does not conserve these quantities, it can lead to incorrect solutions, such as the creation or loss of mass or energy, which would physically be impossible.</description>
+      
+    </item>
+    
+    <item>
+      <title>Consistency, Stability, and Convergence</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/5/</link>
+      <pubDate>Sat, 12 Aug 2023 11:48:53 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/5/</guid>
+      
+      <description>Consistency, Stability, and Convergence in Numerical Solution Methods Consistency:
+Definition: Consistency refers to how closely a discretized equation approximates the original differential equation. A method is consistent if the difference between the discretized equation and the exact differential equation (called truncation error) goes to zero as the grid spacing (∆x, ∆t) tends to zero. Importance: Consistency ensures that as we refine the grid (make the mesh finer), the numerical solution approximates the true solution of the differential equation better.</description>
+      
+    </item>
+    
+    <item>
+      <title>Grids</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/4/</link>
+      <pubDate>Sat, 12 Aug 2023 11:48:20 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/4/</guid>
+      
+      <description>Structured Grids:
+Advantages:
+Simplicity: Structured grids are straightforward to implement and are logically similar to Cartesian grids. Connectivity: Each grid point has a fixed number of neighbors, simplifying programming. Efficient Solvers: The algebraic equation system has a regular structure, which allows for efficient numerical solvers. Disadvantages:
+Limited Flexibility: Structured grids can only be used for simple geometries, making them less suitable for complex domains. Grid Point Distribution: It&amp;rsquo;s hard to concentrate grid points in specific regions without creating very small or thin cells in other areas, leading to inefficient use of computational resources.</description>
+      
+    </item>
+    
+    <item>
+      <title>Coordinate and Basis Vector Systems</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/3/</link>
+      <pubDate>Sat, 12 Aug 2023 11:47:38 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/3/</guid>
+      
+      <description>Influence of Coordinate and Basis Vector Systems in CFD Formulation In Computational Fluid Dynamics (CFD), the formulation of conservation equations—such as those for mass, momentum, and energy—depends significantly on the choice of coordinate and basis vector systems. These systems define how we describe the geometry of the problem, represent vector and tensor quantities, and discretize the governing equations. The choice of coordinate system and basis vectors can affect both the mathematical complexity of the equations and the computational efficiency of the solution.</description>
+      
+    </item>
+    
+    <item>
+      <title>FDM, FVM and FEM</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/2/</link>
+      <pubDate>Sat, 12 Aug 2023 11:47:10 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/2/</guid>
+      
+      <description>The finite difference, finite volume, and finite element methods are widely used numerical techniques in Computational Fluid Dynamics (CFD). Each method has unique characteristics that make it suitable for different classes of problems. Here&amp;rsquo;s a comparison and contrast of these methods:
+1. Finite Difference Method (FDM) Overview: The finite difference method involves discretizing the domain into a grid and approximating the derivatives in the governing equations using difference equations (e.g., forward, backward, or central differences).</description>
+      
+    </item>
+    
+    <item>
+      <title>Mathematical Model in CFD</title>
+      <link>www.yogeshsn.com.np/references/numericalmodelling/1/</link>
+      <pubDate>Sat, 12 Aug 2023 11:46:23 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/numericalmodelling/1/</guid>
+      
+      <description>Selecting an appropriate mathematical model is crucial for obtaining accurate and reliable results in Computational Fluid Dynamics (CFD). The mathematical model essentially defines the governing equations and assumptions that describe the physical phenomena being simulated. Here&amp;rsquo;s why it&amp;rsquo;s important and what factors should be considered:
+Importance of Selecting the Appropriate Mathematical Model Accuracy of Results: The mathematical model determines how closely the numerical solution approximates the real physical system. If the model is too simplified, it may not capture essential physical behaviors, leading to inaccurate results.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

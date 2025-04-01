@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming is Fun on yogeshsn</title>
+    <link>www.yogeshsn.com.np/references/programming/</link>
+    <description>Recent content in Programming is Fun on yogeshsn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Jan 2024 12:37:55 +0545</lastBuildDate><atom:link href="www.yogeshsn.com.np/references/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing the Simplex Method in C</title>
+      <link>www.yogeshsn.com.np/references/programming/simplexc/</link>
+      <pubDate>Thu, 04 Jul 2024 19:54:38 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/simplexc/</guid>
+      
+      <description>Overview The Simplex method is an algorithm for solving linear programming problems. This program takes the number of equations and variables as input, along with their coefficients, and then performs the Simplex method to find the optimal solution.
+Step 1: Include the Standard I/O Library The program begins by including the standard input-output library for handling input and output functions.
+#include &amp;lt;stdio.h&amp;gt; Step 2: Main Function The main function is where the program execution starts.</description>
+      
+    </item>
+    
+    <item>
+      <title>Reservoir Optimization</title>
+      <link>www.yogeshsn.com.np/references/programming/reservoiroptimization/</link>
+      <pubDate>Thu, 04 Jul 2024 19:46:26 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/reservoiroptimization/</guid>
+      
+      <description>Imports and Constants The script starts by importing the necessary libraries: numpy and pandas. It then defines the following constants:
+gamma: Acceleration due to gravity (9.81 m/s²) effi: Efficiency of the hydropower plant (0.9) env_flow: Environmental flow in m³/month Loading Data The script then loads data from a CSV file named &amp;ldquo;inflow_data1.csv&amp;rdquo;. The data includes:
+inflow_data: Inflow to the reservoir in m³/s pet_data: Potential evapotranspiration in mm/day dt_data: Demand or release from the reservoir in m³/s Important Information The script also defines several important parameters related to the reservoir:</description>
+      
+    </item>
+    
+    <item>
+      <title>Hydraulic Simulation using Manning Equation</title>
+      <link>www.yogeshsn.com.np/references/programming/manning2/</link>
+      <pubDate>Wed, 19 Jun 2024 15:31:30 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/manning2/</guid>
+      
+      <description>The program begins by importing the necessary libraries, NumPy and Matplotlib, which will be used for numerical computations and data visualization, respectively.
+Next, we define the constants for this problem:
+B: the width of the channel in meters n: Manning&amp;rsquo;s roughness coefficient, which is a measure of the channel&amp;rsquo;s resistance to flow S: the slope of the energy grade line, which represents the energy loss per unit length of the channel The calculate_parameters function is the core of this program.</description>
+      
+    </item>
+    
+    <item>
+      <title>Numpy Basics</title>
+      <link>www.yogeshsn.com.np/references/programming/numpy_basics/</link>
+      <pubDate>Wed, 19 Jun 2024 15:07:54 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/numpy_basics/</guid>
+      
+      <description>The following program is sourced from Bao Nguyen
+Installing NumPy Before using NumPy, ensure it is installed on your system. Run the following command in the terminal or command prompt:
+pip install numPy Importing NumPy First, import the NumPy library. This allows us to use its functionality in your code.
+import numpy as np Basics of NumPy Arrays Creating an Array
+a = np.array([1, 2, 3]) print(f&amp;#34;Array = {a}&amp;#34;) np.array([1, 2, 3]): Creates a one-dimensional NumPy array with elements 1, 2, and 3.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix Input and Display Program</title>
+      <link>www.yogeshsn.com.np/references/programming/matrix_print/</link>
+      <pubDate>Tue, 18 Jun 2024 19:50:27 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/matrix_print/</guid>
+      
+      <description>Matrix Input and Display Program This program takes the number of rows and columns from the user, then accepts matrix elements row-wise, and finally prints the matrix in a formatted way.
+1. Input the Number of Rows and Columns R = int(input(&amp;#34;Enter number of rows: &amp;#34;)) C = int(input(&amp;#34;Enter number of columns: &amp;#34;)) int(input(&amp;quot;Enter number of rows: &amp;quot;)): Prompts the user to enter the number of rows for the matrix and converts the input to an integer.</description>
+      
+    </item>
+    
+    <item>
+      <title>BigM Method, Python Program</title>
+      <link>www.yogeshsn.com.np/references/programming/bigm_method/</link>
+      <pubDate>Mon, 17 Jun 2024 13:23:35 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/bigm_method/</guid>
+      
+      <description>This is done as per the assignment of System Mathematics in First Semester of Hydropower Engineering by Yogesh Sharma Neupane and Submitted to Prof Dr. Bhola Nath Ghimire.
+Linear Programming ~~ Simplex Method This Python script solves linear programming problems using the Simplex Method. The code handles both maximization and minimization problems and includes error handling to ensure valid user input.
+Step 1: Import Libraries and Define Helper Functions Import Libraries import numpy as np # For defining arrays and performing numerical operations np.</description>
+      
+    </item>
+    
+    <item>
+      <title>Dynamic Programming- Water Allocation</title>
+      <link>www.yogeshsn.com.np/references/programming/dynamic1/</link>
+      <pubDate>Mon, 17 Jun 2024 13:12:25 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/dynamic1/</guid>
+      
+      <description>Step 1: Import Libraries and Define Functions import numpy as np numpy: This library is used to handle array operations efficiently. Define the print_table_row Function def print_table_row(s, x, f, y=None, total_return=None): # Print a row of the table with the given values. if y is None: print(f&amp;#34;{s}\t\t{x}\t\t{f}\t&amp;#34;) else: print(f&amp;#34;{s}\t\t{x}\t\t{f}\t\t{y}\t\t{total_return}&amp;#34;) print_table_row: This function prints a row of the table. It adjusts the number of columns based on the current iteration. Define the table Function def table(i): # Print the table header based on the current iteration.</description>
+      
+    </item>
+    
+    <item>
+      <title>Basic- Manning Equation</title>
+      <link>www.yogeshsn.com.np/references/programming/basic1/</link>
+      <pubDate>Mon, 17 Jun 2024 12:48:03 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/basic1/</guid>
+      
+      <description>Solving the Manning Equation for Open Channel Flow In this tutorial, we&amp;rsquo;ll walk through how to solve the Manning equation for open channel flow using Python. The Manning equation is widely used in hydraulic engineering to calculate the flow rate in open channels. We&amp;rsquo;ll prompt the user for the necessary inputs, perform the calculations, and output the discharge capacity of the channel.
+Code Explanation # Solving the Manning Equation for open channel flow # Prompt the user for the width of the channel b = float(input(&amp;#34;Enter the width of the channel (meters): &amp;#34;)) # Prompt the user for the depth of the channel y = float(input(&amp;#34;Enter the depth of the channel (meters): &amp;#34;)) # Assume the slope of the channel is 1 in 1000 s = 1 / 1000 # Assume the Manning coefficient n = 0.</description>
+      
+    </item>
+    
+    <item>
+      <title>Data handling - Monthly Flow</title>
+      <link>www.yogeshsn.com.np/references/programming/datahandling/</link>
+      <pubDate>Sun, 02 Jun 2024 10:08:33 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/datahandling/</guid>
+      
+      <description>Note: The explanation of the code is generated with the assistance of AI
+Importing Libraries import pandas as pd import matplotlib.pyplot as plt pandas (pd): A powerful Python library for data manipulation and analysis. It provides data structures and functions to efficiently handle structured data, including tabular data such as spreadsheets and SQL tables. matplotlib.pyplot (plt): A Python plotting library that provides a MATLAB-like interface for creating a variety of charts, including line plots, scatter plots, histograms, and more.</description>
+      
+    </item>
+    
+    <item>
+      <title>Assignment1</title>
+      <link>www.yogeshsn.com.np/references/programming/assignment1/</link>
+      <pubDate>Fri, 31 May 2024 16:58:00 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/assignment1/</guid>
+      
+      <description>Here are five questions that you can use as assignments based on the concepts covered in our Python learning and tutorial:
+Data Handling with Pandas:
+Create a Pandas DataFrame from scratch with at least three columns (e.g., Hydropower_name, Hydropower_capacity, Location). Display the first five rows of the DataFrame. Data Analysis with Pandas:
+Load a CSV file containing student grades data (columns: StudentID, Subject, Grade). Compute and print the average grade for each subject.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pipeflow</title>
+      <link>www.yogeshsn.com.np/references/programming/pipeflow/</link>
+      <pubDate>Fri, 31 May 2024 16:11:01 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/pipeflow/</guid>
+      
+      <description>Introduction In this tutorial, we&amp;rsquo;ll explore a Python script that calculates the Reynolds number, classifies the flow type, and determines the head loss in pipes. We&amp;rsquo;ll also learn how to process multiple pipes with different properties. This code is useful for engineers and students who need to analyze fluid flow in pipes.
+Prerequisites Before diving into the code, make sure you have Python installed on your system. If you&amp;rsquo;re new to Python, you can download it from the official website: https://www.</description>
+      
+    </item>
+    
+    <item>
+      <title>How Matplotlib and Pandas are used? The Basics</title>
+      <link>www.yogeshsn.com.np/references/programming/matpand/</link>
+      <pubDate>Tue, 28 May 2024 16:46:11 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/matpand/</guid>
+      
+      <description>In this tutorial, we will be working with streamflow data and using the pandas and matplotlib libraries to analyze and visualize the data.
+Streamflow Data We will start by generating random streamflow data using the numpy library. We will create an array of 365 random numbers between 5 and 15, representing the streamflow for each day of the year.
+num_days = 365 streamflow = np.random.uniform(low=5,high=15,size=num_days) Creating a Date Range Next, we will create a date range for the data using the pandas library.</description>
+      
+    </item>
+    
+    <item>
+      <title>Exploring the Use of self in Python with Reservoir Planning</title>
+      <link>www.yogeshsn.com.np/references/programming/python_class/</link>
+      <pubDate>Sun, 31 Mar 2024 08:02:36 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_class/</guid>
+      
+      <description>Exploring the Use of self in Python with Reservoir Planning In this blog, we will explore how to use the self function in Python by taking an example from reservoir planning. By the end of this post, we will learn to create a class, define its behavior, and operate it using simple Python code.
+What is a Class in Python? A class in Python helps us create complex data structures that can contain both data and functions (also called methods) that work on that data.</description>
+      
+    </item>
+    
+    <item>
+      <title>Introduction to SciPy and Linear Programming</title>
+      <link>www.yogeshsn.com.np/references/programming/scipytutorial/</link>
+      <pubDate>Sat, 10 Feb 2024 07:28:44 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/scipytutorial/</guid>
+      
+      <description>SciPy is an open-source Python library that provides various mathematical algorithms and functions for tasks such as numerical integration, optimization, interpolation, and linear algebra. One of its key modules, scipy.optimize, offers optimization routines including linear programming.
+Linear programming (LP) is a mathematical method used to determine the best possible outcome, typically defined by an objective function, given a set of linear constraints. It has applications in various fields such as economics, engineering, and operations research.</description>
+      
+    </item>
+    
+    <item>
+      <title>Python Tutorial: Using random and numpy Libraries</title>
+      <link>www.yogeshsn.com.np/references/programming/python_numpyrand/</link>
+      <pubDate>Wed, 31 Jan 2024 09:16:04 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_numpyrand/</guid>
+      
+      <description>Python Tutorial: Using random and numpy Libraries In this tutorial, we&amp;rsquo;ll learn how to use the random and numpy libraries in Python. These libraries are powerful tools for generating random numbers and performing numerical operations. We&amp;rsquo;ll cover everything step-by-step so it&amp;rsquo;s easy to understand.
+Importing Libraries import random import numpy as np import random: This imports the random module, which allows us to generate random numbers and make random choices. import numpy as np: This imports the numpy library, a powerful tool for numerical operations, and we use the alias np for convenience.</description>
+      
+    </item>
+    
+    <item>
+      <title> Understanding Randomness and Hydropower</title>
+      <link>www.yogeshsn.com.np/references/programming/python_simulation_basic/</link>
+      <pubDate>Sat, 06 Jan 2024 20:00:34 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/python_simulation_basic/</guid>
+      
+      <description>In this blog, we will explore how randomness and numpy can be used in a practical example related to water resource engineering and hydropower. We&amp;rsquo;ll create a program that simulates the operation of a reservoir and calculates hydropower generation.
+Importing Necessary Libraries import random import numpy as np random: This module helps us generate random numbers. numpy (imported as np): This library is used for numerical operations, especially with arrays and matrices.</description>
+      
+    </item>
+    
+    <item>
+      <title>Program: Calculating Sediment Load</title>
+      <link>www.yogeshsn.com.np/references/programming/sedimentload/</link>
+      <pubDate>Tue, 31 Jan 2023 14:49:27 +0545</pubDate>
+      
+      <guid>www.yogeshsn.com.np/references/programming/sedimentload/</guid>
+      
+      <description>In this program, we&amp;rsquo;ll calculate the sediment load in a river based on user input. The sediment load is the amount of sediment carried by the river, which can be calculated using the sediment concentration and the discharge of the river.
+Concepts Covered: User Input: Taking input from the user. Lambda Functions: Small anonymous functions used for simple operations. Try-Except: Handling potential errors during user input and calculations.
+Lets Begin def main(): This line defines a function named main().</description>
+      
+    </item>
+    
+  </channel>
+</rss>

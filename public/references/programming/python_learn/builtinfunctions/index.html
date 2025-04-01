@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Mostly used Built-in Functions in Python  | yogeshsn</title>
+<meta property="og:title" content="Mostly used Built-in Functions in Python  | yogeshsn" />
+<meta name="twitter:title" content="Mostly used Built-in Functions in Python  | yogeshsn" />
+<meta itemprop="name" content="Mostly used Built-in Functions in Python  | yogeshsn" />
+<meta name="application-name" content="Mostly used Built-in Functions in Python  | yogeshsn" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="www.yogeshsn.com.np" />
+  <meta property="og:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image" content="www.yogeshsn.com.np" />
+  <meta name="twitter:image:src" content="www.yogeshsn.com.np" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.1">
+
+    
+
+    <link rel="canonical" href="www.yogeshsn.com.np/references/programming/python_learn/builtinfunctions/">
+    <link href="/www.yogeshsn.com.np/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/www.yogeshsn.com.np/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/www.yogeshsn.com.np/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/www.yogeshsn.com.np/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/www.yogeshsn.com.np/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/www.yogeshsn.com.np/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/www.yogeshsn.com.np/favicon.ico">
+
+
+
+
+<link rel="manifest" href="/www.yogeshsn.com.np/site.webmanifest">
+
+<meta name="msapplication-config" content="/www.yogeshsn.com.np/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/www.yogeshsn.com.np/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "" class="notransition">
+
+<script src="/www.yogeshsn.com.np/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="www.yogeshsn.com.np/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/about/yogesh">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/references/">
+                        References
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="www.yogeshsn.com.np/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Mostly used Built-in Functions in Python </h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-07-12T13:21:10&#43;05:45" itemprop="datePublished"> Jul 12, 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p>Mostly used functions in Python&hellip;</p>
+<ol>
+<li>
+<p><strong>print()</strong>: Prints the specified value or values.
+Example: <code>print(&quot;Hello, World!&quot;)</code>
+Output: <code>Hello, World!</code></p>
+</li>
+<li>
+<p><strong>input()</strong>: Reads a line from the console and returns it as a string.
+Example: <code>name = input(&quot;What is your name? &quot;)</code>
+Output: <code>What is your name? John</code></p>
+</li>
+<li>
+<p><strong>len()</strong>: Returns the length of an object (string, list, tuple, etc.).
+Example: <code>my_list = [1, 2, 3, 4, 5]</code> and <code>print(len(my_list))</code>
+Output: <code>5</code></p>
+</li>
+<li>
+<p><strong>max()</strong>: Returns the largest item in an iterable or the largest of two or more arguments.
+Example: <code>numbers = [10, 20, 30, 40, 50]</code> and <code>print(max(numbers))</code>
+Output: <code>50</code></p>
+</li>
+<li>
+<p><strong>min()</strong>: Returns the smallest item in an iterable or the smallest of two or more arguments.
+Example: <code>numbers = [10, 20, 30, 40, 50]</code> and <code>print(min(numbers))</code>
+Output: <code>10</code></p>
+</li>
+<li>
+<p><strong>abs()</strong>: Returns the absolute value of a number.
+Example: <code>x = -10</code> and <code>print(abs(x))</code>
+Output: <code>10</code></p>
+</li>
+<li>
+<p><strong>round()</strong>: Returns a floating-point number rounded to a specified number of decimal places.
+Example: <code>x = 3.14159</code> and <code>print(round(x, 2))</code>
+Output: <code>3.14</code></p>
+</li>
+<li>
+<p><strong>int()</strong>: Converts a number or string to an integer.
+Example: <code>x = &quot;42&quot;</code> and <code>print(int(x))</code>
+Output: <code>42</code></p>
+</li>
+<li>
+<p><strong>float()</strong>: Converts a number or string to a floating-point number.
+Example: <code>x = &quot;3.14&quot;</code> and <code>print(float(x))</code>
+Output: <code>3.14</code></p>
+</li>
+<li>
+<p><strong>str()</strong>: Converts an object to a string.
+Example: <code>x = 42</code> and <code>print(str(x))</code>
+Output: <code>&quot;42&quot;</code></p>
+</li>
+<li>
+<p><strong>bool()</strong>: Converts a value to a boolean (True or False).
+Example: <code>x = 0</code> and <code>print(bool(x))</code>
+Output: <code>False</code></p>
+</li>
+<li>
+<p><strong>ord()</strong>: Returns an integer representing the Unicode character.
+Example: <code>print(ord('A'))</code>
+Output: <code>65</code></p>
+</li>
+<li>
+<p><strong>chr()</strong>: Returns a string representing a Unicode character.
+Example: <code>print(chr(65))</code>
+Output: <code>'A'</code></p>
+</li>
+<li>
+<p><strong>range()</strong>: Returns a sequence of numbers starting from a specified beginning and ending at a specified end.
+Example: <code>for i in range(5):</code> and <code>print(i)</code>
+Output: <code>0 1 2 3 4</code></p>
+</li>
+<li>
+<p><strong>sorted()</strong>: Returns a new sorted list from the elements of its argument.
+Example: <code>numbers = [3, 1, 4, 1, 5, 9]</code> and <code>print(sorted(numbers))</code>
+Output: <code>[1, 1, 3, 4, 5, 9]</code></p>
+</li>
+<li>
+<p><strong>reversed()</strong>: Returns a reverse iterator over the elements of an iterable.
+Example: <code>my_list = [1, 2, 3, 4, 5]</code> and <code>print(list(reversed(my_list)))</code>
+Output: <code>[5, 4, 3, 2, 1]</code></p>
+</li>
+<li>
+<p><strong>zip()</strong>: Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
+Example: <code>names = ['Alice', 'Bob', 'Charlie']</code> and <code>ages = [25, 30, 35]</code> and <code>print(list(zip(names, ages)))</code>
+Output: <code>[('Alice', 25), ('Bob', 30), ('Charlie', 35)]</code></p>
+</li>
+<li>
+<p><strong>map()</strong>: Returns an iterator that applies a function to each item of an iterable.
+Example: <code>numbers = [1, 2, 3, 4, 5]</code> and <code>print(list(map(lambda x: x**2, numbers)))</code>
+Output: <code>[1, 4, 9, 16, 25]</code></p>
+</li>
+<li>
+<p><strong>filter()</strong>: Returns an iterator that filters elements from an iterable based on a condition.
+Example: <code>numbers = [1, 2, 3, 4, 5]</code> and <code>print(list(filter(lambda x: x % 2 == 0, numbers)))</code>
+Output: <code>[2, 4]</code></p>
+</li>
+<li>
+<p><strong>reduce()</strong>: Applies a rolling function to the elements of an iterable.
+Example: <code>from functools import reduce</code> and <code>numbers = [1, 2, 3, 4, 5]</code> and <code>print(reduce(lambda x, y: x + y, numbers))</code>
+Output: <code>15</code></p>
+</li>
+<li>
+<p><strong>all()</strong>: Returns True if all elements of an iterable are true.
+Example: <code>my_list = [True, True, True]</code> and <code>print(all(my_list))</code>
+Output: <code>True</code></p>
+</li>
+<li>
+<p><strong>any()</strong>: Returns True if at least one element of an iterable is true.
+Example: <code>my_list = [False, True, False]</code> and <code>print(any(my_list))</code>
+Output: <code>True</code></p>
+</li>
+<li>
+<p><strong>enumerate()</strong>: Returns an iterator that produces tuples containing the index and value for each item in an iterable.
+Example: <code>my_list = ['apple', 'banana', 'cherry']</code> and <code>print(list(enumerate(my_list)))</code>
+Output: <code>[(0, 'apple'), (1, 'banana'), (2, 'cherry')]</code></p>
+</li>
+<li>
+<p><strong>zip_longest()</strong>: Returns an iterator that aggregates elements from each of the iterables.
+Example: <code>names = ['Alice', 'Bob', 'Charlie']</code> and <code>ages = [25, 30]</code> and <code>print(list(zip_longest(names, ages, fillvalue=0)))</code>
+Output: <code>[('Alice', 25), ('Bob', 30), ('Charlie', 0)]</code></p>
+</li>
+<li>
+<p><strong>itertools.count()</strong>: Returns a count object that produces a sequence of numbers starting from a specified number.
+Example: <code>import itertools</code> and <code>counter = itertools.count(start=10, step=2)</code> and <code>print(list(itertools.islice(counter, 5)))</code>
+Output: <code>[10, 12, 14, 16, 18]</code></p>
+</li>
+<li>
+<p><strong>itertools.cycle()</strong>: Returns an iterator that produces elements from an iterable in a cycle.
+Example: <code>import itertools</code> and <code>colors = ['red', 'green', 'blue']</code> and <code>for color in itertools.cycle(colors):</code> and <code>print(color)</code>
+Output: <code>red green blue red green blue ...</code> (continues indefinitely)</p>
+</li>
+<li>
+<p><strong>itertools.repeat()</strong>: Returns an iterator that produces a specified value repeatedly.
+Example: <code>import itertools</code> and <code>print(list(itertools.repeat(42, 3)))</code>
+Output: <code>[42, 42, 42]</code></p>
+</li>
+<li>
+<p><strong>itertools.chain()</strong>: Returns an iterator that produces elements from each of the iterables.
+Example: <code>import itertools</code> and <code>numbers = [1, 2, 3]</code> and <code>letters = ['a', 'b', 'c']</code> and <code>print(list(itertools.chain(numbers, letters)))</code>
+Output: <code>[1, 2, 3, 'a', 'b', 'c']</code></p>
+</li>
+<li>
+<p><strong>itertools.compress()</strong>: Returns an iterator that filters elements from an iterable based on a condition.
+Example: <code>import itertools</code> and <code>data = [1, 2, 3, 4, 5]</code> and <code>selectors = [True, False, True, False, True]</code> and <code>print(list(itertools.compress(data, selectors)))</code>
+Output: <code>[1, 3, 5]</code></p>
+</li>
+<li>
+<p><strong>itertools.dropwhile()</strong>: Returns an iterator that drops elements from the start of an iterable until a condition is met.
+Example: <code>import itertools</code> and <code>numbers = [2, 4, 6, 8, 10, 1, 3, 5]</code> and <code>print(list(itertools.dropwhile(lambda x: x % 2 == 0, numbers)))</code>
+Output: <code>[1, 3, 5]</code></p>
+</li>
+</ol>
+<p>These built-in functions cover a wide range of functionality, from basic data manipulation to advanced itertools operations. Mastering these functions can significantly improve your Python programming efficiency and productivity.</p>
+<h2 id="citations">Citations:</h2>
+<p>[1] <a href="https://blog.hubspot.com/website/python-built-in-functions">https://blog.hubspot.com/website/python-built-in-functions</a> <br>
+[2] <a href="https://www.shiksha.com/online-courses/articles/different-types-of-python-built-in-functions/">https://www.shiksha.com/online-courses/articles/different-types-of-python-built-in-functions/</a> <br>
+[3] <a href="https://sunscrapers.com/blog/30-built-in-python-modules-you-should-be-using-now/">https://sunscrapers.com/blog/30-built-in-python-modules-you-should-be-using-now/</a>   <br>
+[4] <a href="https://realpython.com/python-built-in-functions/">https://realpython.com/python-built-in-functions/</a> <br>
+[5] <a href="https://www.simplilearn.com/tutorials/python-tutorial/python-functions">https://www.simplilearn.com/tutorials/python-tutorial/python-functions</a><br>
+[6] <a href="https://www.linkedin.com/pulse/introduction-python-data-types-built-in-functions-suraj-kumar-soni">https://www.linkedin.com/pulse/introduction-python-data-types-built-in-functions-suraj-kumar-soni</a><br>
+[7] <a href="https://www.geeksforgeeks.org/python-functions/">https://www.geeksforgeeks.org/python-functions/</a><br>
+[8] <a href="https://www.digitalocean.com/community/tutorials/built-in-python-3-functions-for-working-with-numbers">https://www.digitalocean.com/community/tutorials/built-in-python-3-functions-for-working-with-numbers</a></p>
+
+            </div>
+        </article></main>
+</div>
+
+
+        <hr>
+        <div style="text-align: center; font-weight: 800; margin: 20px; color:red">
+            <p class="quote" id="daily-quote">
+                
+            </p>
+        </div><footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://x.com/yogesh__sn" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+<a href="https://www.youtube.com/@palpasky6909/videos" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/yogesh-sn%f0%9f%87%b3%f0%9f%87%b5-1926b8184" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://www.instagram.com/livingonnature" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Yogesh SN.
+        
+    </small>
+</footer><a href="#" title="" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script src="/www.yogeshsn.com.np/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
+<script>
+    
+    const quotes = [
+"The day a man becomes superior to pleasure he will also be superior to pain - Seneca",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment - Buddha",
+"Life is what happens when you're busy making other plans - John Lennon",
+"To live is the rarest thing in the world. Most people exist, that is all - Oscar Wilde",
+"The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela",
+"In the end, we will remember not the words of our enemies, but the silence of our friends - Martin Luther King Jr.",
+"The best way to predict the future is to create it - Peter Drucker",
+"You miss 100% of the shots you don't take - Wayne Gretzky",
+"I have not failed. I've just found 10,000 ways that won't work - Thomas Edison",
+"The only limit to our realization of tomorrow is our doubts of today - Franklin D. Roosevelt",
+"The purpose of our lives is to be happy - Dalai Lama",
+"Life is really simple, but we insist on making it complicated - Confucius",
+"May you live all the days of your life - Jonathan Swift",
+"Good friends, good books, and a sleepy conscience: this is the ideal life - Mark Twain",
+"To love and be loved is to feel the sun from both sides - David Viscott",
+"Keep calm and carry on - British Government, 1939",
+"Believe you can and you're halfway there - Theodore Roosevelt",
+"Act as if what you do makes a difference. It does - William James",
+"Success is not final, failure is not fatal: It is the courage to continue that counts - Winston Churchill",
+"Never bend your head. Always hold it high. Look the world straight in the eye - Helen Keller",
+"What you get by achieving your goals is not as important as what you become by achieving your goals - Zig Ziglar",
+"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one that has been opened for us - Helen Keller",
+"It is never too late to be what you might have been - George Eliot",
+"You must be the change you wish to see in the world - Mahatma Gandhi",
+"If you want to live a happy life, tie it to a goal, not to people or things - Albert Einstein",
+"The only impossible journey is the one you never begin - Tony Robbins",
+"It does not matter how slowly you go as long as you do not stop - Confucius",
+"Everything you’ve ever wanted is on the other side of fear - George Addair",
+"Change your thoughts and you change your world - Norman Vincent Peale",
+"No one can make you feel inferior without your consent - Eleanor Roosevelt",
+"Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
+"The best way to find yourself is to lose yourself in the service of others - Mahatma Gandhi",
+"The future belongs to those who believe in the beauty of their dreams - Eleanor Roosevelt",
+"Don't watch the clock; do what it does. Keep going - Sam Levenson",
+"If life were predictable it would cease to be life, and be without flavor - Eleanor Roosevelt",
+"In the end, it’s not the years in your life that count. It’s the life in your years - Abraham Lincoln",
+"Success usually comes to those who are too busy to be looking for it - Henry David Thoreau",
+"Hardships often prepare ordinary people for an extraordinary destiny - C.S. Lewis",
+"What lies behind us and what lies before us are tiny matters compared to what lies within us - Ralph Waldo Emerson",
+"The only way to do great work is to love what you do - Steve Jobs",
+"Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle - Christian D. Larson",
+"Perfection is not attainable, but if we chase perfection we can catch excellence - Vince Lombardi",
+"Life is what happens when you're busy making other plans - John Lennon",
+"When we strive to become better than we are, everything around us becomes better too - Paulo Coelho",
+"I can't change the direction of the wind, but I can adjust my sails to always reach my destination - Jimmy Dean",
+"Life is 10% what happens to us and 90% how we react to it - Charles R. Swindoll",
+"You are never too old to set another goal or to dream a new dream - C.S. Lewis",
+"A journey of a thousand miles begins with a single step - Lao Tzu",
+"Happiness is not a goal...it's a by-product of a life well-lived - Eleanor Roosevelt",
+"In three words I can sum up everything I've learned about life: it goes on - Robert Frost",
+"You only live once, but if you do it right, once is enough - Mae West",
+"The best time to plant a tree was 20 years ago. The second best time is now - Chinese Proverb",
+"Do not wait to strike till the iron is hot; but make it hot by striking - William Butler Yeats",
+"The biggest adventure you can take is to live the life of your dreams - Oprah Winfrey",
+"If you can dream it, you can achieve it - Zig Ziglar",
+"The best way out is always through - Robert Frost",
+"The only person you are destined to become is the person you decide to be - Ralph Waldo Emerson",
+"The greatest pleasure in life is doing what people say you cannot do - Walter Bagehot",
+"Success is not how high you have climbed, but how you make a positive difference to the world - Roy T. Bennett",
+"Your time is limited, don't waste it living someone else's life - Steve Jobs",
+"The best revenge is massive success - Frank Sinatra",
+"Do what you can, with what you have, where you are - Theodore Roosevelt",
+"You have within you right now, everything you need to deal with whatever the world can throw at you - Brian Tracy",
+"The mind is everything. What you think you become - Buddha",
+"The only way to achieve the impossible is to believe it is possible - Charles Kingsleigh",
+"Don’t let yesterday take up too much of today - Will Rogers",
+"What we think, we become - Buddha",
+"We must not allow other people's limited perceptions to define us - Virginia Satir",
+"If you want to lift yourself up, lift up someone else - Booker T. Washington",
+"Start where you are. Use what you have. Do what you can - Arthur Ashe",
+"I find that the harder I work, the more luck I seem to have - Thomas Jefferson",
+"Life is short, and it is up to you to make it sweet - Sarah Louise Delany",
+"When the going gets tough, the tough get going - Joseph Kennedy",
+"When you cease to dream you cease to live - Malcolm Forbes",
+"You can't go back and change the beginning, but you can start where you are and change the ending - C.S. Lewis",
+"Your life does not get better by chance, it gets better by change - Jim Rohn",
+"The harder the conflict, the more glorious the triumph - Thomas Paine",
+"You are enough just as you are - Meghan Markle",
+"Every moment is a fresh beginning - T.S. Eliot",
+"The unexamined life is not worth living - Socrates",
+"Dream big and dare to fail - Norman Vaughan",
+"Turn your wounds into wisdom - Oprah Winfrey",
+"Don't wait. The time will never be just right - Napoleon Hill",
+"You get what you give - Jennifer Lopez",
+"Tough times never last, but tough people do - Robert H. Schuller",
+"If you do what you’ve always done, you’ll get what you’ve always gotten - Tony Robbins",
+"The secret of getting ahead is getting started - Mark Twain",
+"Only those who dare to fail greatly can ever achieve greatly - Robert F. Kennedy",
+"Keep your eyes on the stars and your feet on the ground - Theodore Roosevelt",
+"Success is not in what you have, but who you are - Bo Bennett",
+"Do not follow where the path may lead. Go instead where there is no path and leave a trail - Ralph Waldo Emerson",
+"The best way to appreciate your job is to imagine yourself without one - Oscar Wilde",
+"Change your life today. Don’t gamble on the future, act now, without delay - Simone de Beauvoir",
+"Your worth consists in what you are and not in what you have - Thomas Edison",
+"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart - Roy T. Bennett",
+"Every man must learn this simple truth: Pain is inevitable and suffering is optional",
+"In the heat of battle, the fog of war, under pressure,   The undisciplined die "
+];
+
+    
+    function displayDailyQuote() {
+        const randomIndex = Math.floor(Math.random()*quotes.length);
+        const quote = quotes[randomIndex];
+        document.getElementById('daily-quote').innerText = quote;
+    }
+
+    
+    displayDailyQuote();
+</script>
